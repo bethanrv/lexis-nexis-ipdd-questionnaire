@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reed Tech IPDD Survey</title>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+	<!-- style sheet -->
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom font -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+
+	<!-- Google Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Materialize Components...
+	     CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+<body style="background-color: black;">
+
+	<!-- Landing Area -->
+	<div id="landingArea"> 
+
+		<!-- reed tech lexis nexis backlinks -->
+		<div id="backlinks" class="row" style="padding-top: 2vh;">
+			<div class="col s3"> </div>
+			<div class="col s2 center-align backlink txt" onclick="window.location.href = 'https://www.reedtech.com/';"> Reed Tech  </div>
+			<div class="col s2 center-align backlink"> | </div>
+			<div class="col s2 center-align backlink txt" onclick="window.location.href = 'https://www.lexisnexis.com/en-us/gateway.page';"> LexisNexis </div>
+			<div class="col s3"> </div>
+		</div>
+
+
+		<!-- Welcome message -->
+		<div class="welcomeContainer center-align">
+
+			<p> Welcome to our 2020 IPDD Questionnaire </p>
+
+		</div>
+
+
+		<!-- Survey Description -->
+		<div class="center-align descContainer" style="padding-top: 3vh;"> 
+			<p> This survey is composed of Four Sections </p>
+			<p class="subElem"> - Background </p>
+			<p class="subElem"> - Decision Making </p>
+			<p class="subElem"> - Use Patterns </p>
+			<p class="subElem"> - IPDD Specific </p>
+		</div>
+
+
+		<!-- start prompt -->
+		<div class="center-align promtContainer" onclick="startSurvey();">
+
+			<i class="material-icons navBtn"> arrow_forward </i>
+			<p> Get Started </p>
+
+		</div>
+	</div>
+
+	<!-- Screening Conclusion Section -->
+	<div id="conclusionArea" class="displayOff center-align descContainer" style="padding: 10vh;"> 
+		<p> This concludes screening. Unfortunately, you are not eligible to complete the rest of the survey. </p>
+		<p> Thank you for your time. </p>
+	</div>
+
+	<!-- Survey part 1 area... screening -->
+	<div id="survey1area" class="displayOff"> 
+
+		<!--Header-->
+		<div class="center-align header"> 
+			<p> Part One - Background </p>
+		</div>
+
+		<!-- Question Counter -->
+		<div class="questionCount center-align"> 
+			<p id="questionCount"> Question 1/14 </p>
+		</div>
+
+		<!-- Question Area -->
+		<div class="questionContainer center-align"> 
+			<p id="questionTxt"> What country or region does you company operate in? </p>
+
+			<div class="row center-align">
+				<div class="col s4"> </div>
+				<div class="col s4">
+					<!--Question 1-->
+					<div class="row">
+					<div id="q1Area" class="input-field multipleChoice col s12" onchange="fadeInNav()">
+					    <select id="q1MultiInput"> 
+					       <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Asia (Multiple countries)">Asia (Multiple countries)</option>
+					      <option value="Asia (Other)">Asia (Other)</option>
+					      <option value="China">China</option>
+					      <option value="Europe (Other)">Europe (Other)</option>
+					      <option value="France">France</option>
+					      <option value="Germany">Germany</option>
+					      <option value="Global">Global</option>
+					      <option value="Global (Asia focus)">Global (Asia focus)</option>
+					      <option value="Global (Europe focus)">Global (Europe focus)</option>
+					      <option value="Global (US focus)">Global (US focus)</option>
+					      <option value="India">India</option>
+					      <option value="Japan">Japan</option>
+					      <option value="Korea">Korea</option>
+					      <option value="United Kingdom">United Kingdom</option>
+					      <option value="United States">United States</option>
+					      <option value="Other">Other (Enter)</option>
+
+
+					    </select>
+					    <label></label>
+					</div>
+				</div>
+
+					<!-- q1OtherInput -->
+					<div id="q1OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q1OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+					<!-- Question 2 -->
+					<div id="q2Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q2MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Asia (Other)">Asia (Other)</option>
+					      <option value="China">China</option>
+					      <option value="Europe (Other)">Europe (Other)</option>
+					      <option value="France">France</option>
+					      <option value="Germany">Germany</option>
+					      <option value="India">India</option>
+					      <option value="Japan">Japan</option>
+					      <option value="Korea">Korea</option>
+					      <option value="United Kingdom">United Kingdom</option>
+					      <option value="United States">United States</option>
+					      <option value="Other">Other</option>
+
+
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q2OtherInput -->
+					<div id="q2OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q2OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+					<!-- Question 3 -->
+					<div id="q3Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q3MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Corporation">Corporation</option>
+					      <option value="Government/Academic">Government/Academic</option>
+					      <option value="Information Vendor">Information Vendor (search and analytics solutions)</option>
+					      <option value="Law Firm">Law Firm</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q3OtherInput -->
+					<div id="q3OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q3OtherInput" class="whiteTxt"  type="text" name="other" onchange="fadeInNavFwd();" placeholder="Specify organization. . . ">
+					</div>
+
+					<!-- Question 4 -->
+					<div id="q4Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q4MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Data consumer / processor">Data consumer / processor</option>
+					      <option value="Influencer in decision making ">Influencer in decision making</option>
+					      <option value="Decision maker but not user">Decision maker but not user</option>
+					      <option value="Decision maker and user">Decision maker and user</option>
+					      <option value="Have heard but not used / no idea">Have heard but not used / no idea </option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- Question 5 -->
+					<div id="q5Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q5MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Aerospace">Aerospace</option>
+					      <option value="Agriculture">Agriculture</option>
+					      <option value="Automobile">Automobile</option>
+					      <option value="Chemical (ex. pharmaceutical)">Chemical (ex. pharmaceutical)</option>
+					      <option value="Computer / software">Computer / software</option>
+					      <option value="Construction">Construction</option>
+					      <option value="Consultancy & Services ">Consultancy & Services </option>
+					      <option value="Defense">Defense</option>
+					      <option value="Education">Education</option>
+					      <option value="Computer / software">Computer / software</option>
+					      <option value="Energy">Energy</option>
+					      <option value="Entertainment">Entertainment</option>
+					      <option value="Financial services">Financial services</option>
+					      <option value="Food">Food</option>
+					      <option value="Health care">Health care</option>
+					      <option value="Hospitality">Hospitality</option>
+					      <option value="IT">IT</option>
+					      <option value="Manufacturing">Manufacturing</option>
+					      <option value="Media">Media</option>
+					      <option value="Telecommunications">Telecommunications</option>
+					      <option value="Transport">Transport</option>
+					      <option value="Other">  Other (Enter)</option>
+
+					    </select>
+					    <label></label>
+					</div>
+
+
+					<!-- q5OtherInput -->
+					<div id="q5OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q5OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+
+					<!-- Question 6 -->
+					<div id="q6Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q6MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Search">Search</option>
+					      <option value="Analytics">Analytics</option>
+					      <option value="Both">Both</option>
+					      <option value="Other">Other</option>
+					    </select>
+					    <label></label>
+					</div>
+
+
+					<!-- Question 7 -->
+					<div id="q7Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q7MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Legal">Legal</option>
+					      <option value="IP">IP</option>
+					      <option value="R&D">R&D</option>
+					      <option value="Purchase">Purchase</option>
+					      <option value="Software Development">Software Development</option>
+					      <option value="Business Manager / Strategy">Business Manager / Strategy</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q7OtherInput -->
+					<div id="q7OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q7OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+					<!-- Question 8 -->
+					<div id="q8Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q8MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Prosecution">Prosecution</option>
+					      <option value="Litigation">Litigation</option>
+					      <option value="Both">Both</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q8OtherInput -->
+					<div id="q8OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q8OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+					<!-- Question 9 -->
+					<div id="q9Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q9MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Lawyer">Lawyer</option>
+					      <option value="Paralegal">Paralegal</option>
+					      <option value="Patent Specialist">Patent Specialist</option>
+					      <option value="Manager">Manager</option>
+					      <option value="Purchase">Purchase</option>
+					      <option value="Librarian">Librarian</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q9OtherInput -->
+					<div id="q9OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q9OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+					<!-- Question 10 -->
+					<div id="q10Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q10MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Search">Search</option>
+					      <option value="Analytics">Analytics</option>
+					      <option value="Both">Both</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q10OtherInput -->
+					<div id="q10OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q10OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+
+					<!-- Question 11 -->
+					<div id="q11Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q11MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Legal">Legal</option>
+					      <option value="IP">IP</option>
+					      <option value="R&D">R&D</option>
+					      <option value="Purchase">Purchase</option>
+					      <option value="Sofrware Development">Software Development</option>
+					      <option value="Examiner">Examiner</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q11OtherInput -->
+					<div id="q11OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q11OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+
+					<!-- Question 12 -->
+					<div id="q12Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q12MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Search">Search</option>
+					      <option value="Analytics">Analytics</option>
+					      <option value="Both">Both</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q12OtherInput -->
+					<div id="q12OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q12OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+
+					<!-- Question 13 -->
+					<div id="q13Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+					    <select id="q13MultiInput"> 
+					      <option value="" disabled selected>
+					      	
+					      </option>
+					      <option value="Owner / CEO">Owner / CEO</option>
+					      <option value="Product Manager">Product Manager / Head </option>
+					      <option value="R&D">R&D</option>
+					      <option value="Purchase">Purchase</option>
+					      <option value="Software Development">Software Development</option>
+					      <option value="Other">Other (Enter)</option>
+					    </select>
+					    <label></label>
+					</div>
+
+					<!-- q13OtherInput -->
+					<div id="q13OtherInputArea" class="center-align txtInput displayOff"> 
+						<input id="q13OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>
+
+
+					<!-- Question 14 -->
+
+					<div id="q14Area" class="displayOff row">
+						<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd()">
+						    <select multiple id="q14MultiInput"> 
+						      <option value="" disabled selected>
+						      	
+						      </option>
+						      <option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
+						      <option value="Questel (Fampat/ Data Scope)">Questel (Fampat/ Data Scope) </option>
+						      <option value="LexisNexis / IPDD">LexisNexis / IPDD</option>
+						      <option value="IFI Claims  (Claims Direct)">IFI Claims  (Claims Direct)</option>
+						      <option value="Lighthouse IP">Lighthouse IP</option>
+						      <option value="Google Patents">Google Patents</option>
+						      <option value="European Patent Office (espacenet)">European Patent Office (espacenet)</option>
+						      <option value="USPTO">USPTO</option> 
+						    </select>
+						    <label></label>
+						</div>
+						<input id="otherIPDDInput" class="userInput displayOff"  type="text" name="others" placeholder="separte by commas... 1, 2, 3">
+						<p id="otherIPDDPrompt" class="subElem addElemPrompt"> + Others not listed? </p>
+					</div>
+
+					<!-- question nav btns -->
+					<div id="QNavBtns" class="questionNavBtns row displayOff center-align">
+						<div id="fwdNav" class=""> <i class="material-icons navBtn"> arrow_forward </i> </div>
+					</div>
+					
+			    </div>
+				<div class="col s4"> </div>
+			</div>
+
+
+			 
+
+		</div>
+
+	</div> <!-- end section  1 -->
+
+	<!-- Survey part 2 area... decisions -->
+	<div id="survey2area" class="displayOff"> 
+
+		<!--Header-->
+		<div class="center-align header"> 
+			<p> Part Two - Decision Criteria </p>
+		</div>
+
+		<!-- Question Counter -->
+		<div class="questionCount center-align"> 
+			<p id="questionCount2"> Question 1/5 </p>
+		</div>
+
+		<!-- Question Area -->
+		<div  class="questionContainer center-align" style="padding: 2vh;"> 
+			<p id="qCont"> When acquiring a patent database, how important are the following data base criteria? Please allocate a 100 points total.  </p>
+
+
+			<!-- Question 1 - #15 -->
+			<div id="q15area">
+				<div class="row questionTxt">
+
+					<p> * Page will only advance after 100 points have been allocated. </p>
+					<p id="q1Points">0/100 </p>
+
+
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem1-1" class="txtInput pointElem1"  type="number" name="coverage" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p> Coverage / Quality of the  underlying data </p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem1-2" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Additional content beyond patent databases</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem1-3" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(1,5);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Pricing and T&C</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem1-4" class="txtInput pointElem1" type="number" name="ease" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5)" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Ease of data delivery</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem1-5" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Other</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+			</div>
+
+			<!-- q15 - specify other(s) -->
+			<div id='q15othersInputArea' class="displayOff">
+				<p> Specify Other(s) </p>
+				<div class="row">
+					<div class="col s3"> </div>
+					<div class="col s6"> <input id="q15othersInput" class="txtInput whiteTxt" type="text" name="q15othersInput" placeholder="separte with commas. . .  1, 2, 3" oninput="fadeInNavFwd2()"> </div>
+					<div class="col s3"> </div>
+				</div>
+			</div>
+
+
+			<!-- Question - #16 -->
+			<div id="q16area" class="displayOff">
+
+				<div class="center-align"> 
+					<p style="font-size: 1em;">Within accuracy of underlying data, how important are the following criteria to you? Please allocate 100 points</p>
+				</div>
+
+				<div class="row questionTxt">
+
+					<p id="q2Points">0/100 </p>
+
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem2-1" class="txtInput pointElem1"  type="number" name="Breadth" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7); " min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p> Breadth of data (e.g. # of patent offices covered) </p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem2-2" class="txtInput pointElem1" type="number" name="Depth" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7);"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Depth of data (e.g. # of patent offices for which provider has full text documents)</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem2-3" class="txtInput pointElem1" type="number" name="cleanliness" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(2,7);"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Data cleanliness (e.g accurate ultimate owner identified,  legal status etc.)</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem2-4" class="txtInput pointElem1" type="number" name="updates" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Data update frequency</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem2-5" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Translation quality</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem2-6" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Additional information added (e.g. manual summaries)</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem2-7" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Other</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+			</div>
+
+
+			<!-- q16 - specify other(s) -->
+			<div id='q16othersInputArea' class="displayOff">
+				<p> Specify Other(s) </p>
+				<div class="row">
+					<div class="col s3"> </div>
+					<div class="col s6"> <input id="q16othersInput" class="txtInput whiteTxt" type="text" name="q16othersInput" placeholder="separte with commas. . .  1, 2, 3" oninput="fadeInNavFwd2()"> </div>
+					<div class="col s3"> </div>
+				</div>
+			</div>
+
+
+
+			<!-- Question - #17 -->
+			<div id="q17area" class="displayOff">
+
+				<div class="questionContainer center-align" style="font-size: 1em;"> 
+					<p>Within additional content beyond patent databases, how important are the following to you? Please allocate 100 points</p>
+				</div>
+
+				<div class="row questionTxt">
+
+					<p id="q3Points">0/100 </p>
+
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem3-1" class="txtInput pointElem1"  type="number" name="Scientific" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p> Scientific journals </p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem3-2" class="txtInput pointElem1" type="number" name="otherSci" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Other scientific databases (e.g. Chemicals, Bio Sequence)</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem3-3" class="txtInput pointElem1" type="number" name="industry" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(3,9);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Industry codes and standards</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem3-4" class="txtInput pointElem1" type="number" name="litigation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Litigation data (e.g. which patents have been / are subject to litigation)</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem3-5" class="txtInput pointElem1" type="number" name="Citation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Citation and Office action data</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem3-6" class="txtInput pointElem1" type="number" name="Licencing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Licensing & Royalty</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem3-7" class="txtInput pointElem1" type="number" name="Financial" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Financial (e.g. company revenues, R&D spend)</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem3-8" class="txtInput pointElem1" type="number" name="Pair" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Pair Data</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem3-9" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Other</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+			</div>
+
+
+			<!-- q17 - specify other(s) -->
+			<div id='q17othersInputArea' class="displayOff">
+				<p> Specify Other(s) </p>
+				<div class="row">
+					<div class="col s3"> </div>
+					<div class="col s6"> <input id="q17othersInput" class="txtInput whiteTxt" type="text" name="q17othersInput" placeholder="separte with commas. . .  1, 2, 3" oninput="fadeInNavFwd2()"> </div>
+					<div class="col s3"> </div>
+				</div>
+			</div>
+
+
+			<!-- Question - #18 -->
+			<div id="q18area" class="displayOff">
+
+				<div class="questionContainer center-align"  style="font-size: 1em;"> 
+					<p>Within ease of data delivery, how important are the following criteria to you? Please allocate 100 points</p>
+				</div>
+
+				<div class="row questionTxt">
+
+					<p id="q4Points">0/100 </p>
+
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem4-1" class="txtInput pointElem1"  type="number" name="api" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p> Stable and robust API </p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem4-2" class="txtInput pointElem1" type="number" name="Onsite" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>On site server for data delivery</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem4-3" class="txtInput pointElem1" type="number" name="industry" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(4,10);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Flexibility in data purchase</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem4-4" class="txtInput pointElem1" type="number" name="search" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Ease of Searching (use of the provider's search syntax)</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem4-5" class="txtInput pointElem1" type="number" name="documentation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Clear and detailed documentation</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem4-6" class="txtInput pointElem1" type="number" name="timliness" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Timeliness of data delivery</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem4-7" class="txtInput pointElem1" type="number" name="Download" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Download Speed</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem4-8" class="txtInput pointElem1" type="number" name="Customer" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Customer Support</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem4-9" class="txtInput pointElem1" type="number" name="Connectors" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Connectors and linkages between data</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem4-10" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Other</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+			</div>
+
+
+			<!-- q18 - specify other(s) -->
+			<div id='q18othersInputArea' class="displayOff">
+				<p> Specify Other(s) </p>
+				<div class="row">
+					<div class="col s3"> </div>
+					<div class="col s6"> <input id="q18othersInput" class="txtInput whiteTxt" type="text" name="q18othersInput" placeholder="separte with commas. . .  1, 2, 3" oninput="fadeInNavFwd2()"> </div>
+					<div class="col s3"> </div>
+				</div>
+			</div>
+
+
+
+			<!-- Question - #19 -->
+			<div id="q19area" class="displayOff">
+
+				<div class="questionContainer center-align"  style="font-size: 1em;"> 
+					<p>Within pricing & T&C how important are the following criteria to you? Please allocate 100 points.</p>
+				</div>
+
+				<div class="row questionTxt">
+
+					<p id="q5Points">0/100 </p>
+
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem5-1" class="txtInput pointElem1"  type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p> Relative pricing vs other providers </p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 5vh;"> 
+						<input id="pointElem5-2" class="txtInput pointElem1" type="number" name="re-sell" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8);"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Ability to re-sell patent data to other buyers</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem5-3" class="txtInput pointElem1" type="number" name="keet-data" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(5,8);"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Ability to keep data after expiry of contract</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem5-4" class="txtInput pointElem1" type="number" name="price-hike" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Year on year price hike</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem5-5" class="txtInput pointElem1" type="number" name="price-bundle" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Pricing by data bundles (e.g. Litigation data, Translations, Non Patent literature etc.</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem5-6" class="txtInput pointElem1" type="number" name="reputation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)">
+					</div>
+					<div class="col s4"> 
+						<p>Reputation</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem5-7" class="txtInput pointElem1" type="number" name="price-simple" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Simple pricing structure </p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 0vh;"> 
+						<input id="pointElem5-8" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
+					</div>
+					<div class="col s4"> 
+						<p>Other</p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+			</div>
+
+
+			<!-- q19 - specify other(s) -->
+			<div id='q19othersInputArea' class="displayOff">
+				<p> Specify Other(s) </p>
+				<div class="row">
+					<div class="col s3"> </div>
+					<div class="col s6"> <input id="q19othersInput" class="txtInput whiteTxt" type="text" name="q19othersInput" placeholder="separte with commas. . .  1, 2, 3" oninput="fadeInNavFwd2()"> </div>
+					<div class="col s3"> </div>
+				</div>
+			</div>
+
+
+			<!-- question nav btns -->
+			<div id="QNavBtns2" class="questionNavBtns row displayOff center-align">
+				<div id="fwdNav2" class=""> <i class="material-icons navBtn"> arrow_forward </i> </div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div id="survey3area" class="displayOff">
+
+		<!--Header-->
+		<div class="center-align header"> 
+			<p> Part Three - Use Patterns </p>
+		</div>
+
+		<div id="q20Area" class="row center-align descContainer displayOff">
+			<p> Question 1/11</p>
+			<p style="padding: 1vh;"> Why do you prefer to  buy a patent (database) bulk data vs subscribing to a search and analytics tools (e.g. Total Patent One, Derwent Innovation, Orbit Intelligence, WIPS etc.). Please choose all those which apply. </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select multiple id="q20MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="Confidentiality">Confidentiality</option>
+						    <option value="Combine patent data with other proprietary information">Combine patent data with other proprietary information </option>
+						    <option value="Use in internal workflow solution">Use in internal workflow solution</option>
+						    <option value="Customized Search">Customized Search</option>
+						    <option value="Customized Analysis">Customized Analysis</option>
+						    <option value="Cost of search and analytics tools">Cost of search and analytics tools</option>
+						    <option value="Limitation of search and analytical tools">Limitation of search and analytical tools</option> 
+					</select>
+				</div>
+
+				<input id="q20otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
+				<p id="q20otherPrompt" class="subElem addElemPrompt" onclick="$('#q20otherInput').fadeIn();"> + Others not listed? </p>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+
+		<div id="q21Area" class="row center-align descContainer displayOff">
+			<p> Question 2/11</p>
+			<p style="padding: 1vh;"> What are your use cases for the patent (databases) bulk/raw data?</p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select multiple id="q21MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="Search">Search</option>
+						    <option value="Analytics">Analytics</option>
+						    <option value="Consulting">Consulting</option>
+						    <option value="Solutions">Solutions Provider</option>
+					</select>
+				</div>
+
+				<input id="q21otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
+				<p id="q21otherPrompt" class="subElem addElemPrompt" onclick="$('#q21otherInput').fadeIn();"> + Others not listed? </p>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+
+		<div id="q22Area" class="row center-align descContainer displayOff">
+			<p> Question 3/11</p>
+			<p style="padding: 1vh;"> For your search use case, what do you search for? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select multiple id="q22MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="Prior art search">Prior art search</option>
+						    <option value="Freedom to operate">Freedom to operate</option>
+						    <option value="Invalidity search">Invalidity search</option>
+						    <option value="Competitive Intelligence">Competitive Intelligence</option>
+						    <option value="Patent Scouting">Patent Scouting</option>
+					</select>
+				</div>
+
+				<input id="q22otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
+				<p id="q22otherPrompt" class="subElem addElemPrompt" onclick="$('#q22otherInput').fadeIn();"> + Others not listed? </p>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+
+		<div id="q23Area" class="row center-align descContainer displayOff">
+			<p> Question 4/11</p>
+			<p style="padding: 1vh;"> For your search use case, do you combine patent data with other data? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select id="q23MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="yes">Yes</option>
+						    <option value="no">No</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q23YesArea" class="row center-align descContainer displayOff">
+			<p> Question 4/11</p>
+			<p style="padding: 1vh;">  What other data do you use it with? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<input id="q23Input" class="whiteTxt" type="text" name="q23Input" placeholder="Separate with commas . . . 1, 2, 3" oninput="fadeInNavFwd3();">
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<!-- Question - #24 -->
+		<div id="q24Area" class=" center-align displayOff" style="font-size: 1.5em;">
+
+			<p> Question 5/11</p>
+			<p style="padding: 1vh;">When Analyzing patent databases, what do you analyze for? Please allocate 100 points.</p>
+
+			<div class="row">
+
+				<p id="q6Points">0/100 </p>
+
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 5vh;"> 
+					<input id="pointElem6-1" class="txtInput pointElem1"  type="number" name="tech" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9);" min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p> Technology Landscaping </p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 5vh;"> 
+					<input id="pointElem6-2" class="txtInput pointElem1" type="number" name="comp" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9);"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Competitive Landscaping</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 1vh;"> 
+					<input id="pointElem6-3" class="txtInput pointElem1" type="number" name="inov" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal3(6,9);"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Innovation scouting</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 1vh;"> 
+					<input id="pointElem6-4" class="txtInput pointElem1" type="number" name="partner" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Partner identification</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 0vh;"> 
+					<input id="pointElem6-5" class="txtInput pointElem1" type="number" name="comp-anal" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Competitive analysis</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 0vh;"> 
+					<input id="pointElem6-6" class="txtInput pointElem1" type="number" name="white space id" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)">
+				</div>
+				<div class="col s4"> 
+					<p>white space identification</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 0vh;"> 
+					<input id="pointElem6-7" class="txtInput pointElem1" type="number" name="Licensing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>M&A / Licensing identification </p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 0vh;"> 
+					<input id="pointElem6-8" class="txtInput pointElem1" type="number" name="proc-anal" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Prosecution analytics</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 0vh;"> 
+					<input id="pointElem6-9" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Other</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+		</div>
+
+
+		<!-- q24 - specify other(s) -->
+		<div id='q24othersInputArea' class="displayOff">
+			<p> Specify Other(s) </p>
+			<div class="row">
+				<div class="col s3"> </div>
+				<div class="col s6"> <input id="q24othersInput" class="txtInput whiteTxt" type="text" name="q24othersInput" placeholder="separte with commas. . .  1, 2, 3" oninput="fadeInNavFwd3()"> </div>
+				<div class="col s3"> </div>
+			</div>
+		</div>
+
+
+		<div id="q25Area" class="row center-align descContainer displayOff">
+			<p> Question 6/11</p>
+			<p style="padding: 1vh;"> For your analytics use case, do you combine patent data with any other patent data? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select id="q25MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="yes">Yes</option>
+						    <option value="no">No</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q25YesArea" class="row center-align descContainer displayOff">
+			<p> Question 6/11</p>
+			<p style="padding: 1vh;">  What other data do you use it with? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<input id="q25Input" class="whiteTxt" type="text" name="q25Input" placeholder="Separate with commas . . . 1, 2, 3" oninput="fadeInNavFwd3();">
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q26Area" class="row center-align descContainer displayOff">
+			<p> Question 7/11</p>
+			<p style="padding: 1vh;"> What sources of data do you use for collecting your patent data?</p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select multiple id="q26MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
+						    <option value="Questel (Fampat/ Data Scope)">Questel (Fampat/ Data Scope)</option>
+						    <option value="LexisNexis / IPDD">LexisNexis / IPDD</option>
+						    <option value="IFI Claims  (Claims Direct)">IFI Claims  (Claims Direct)</option>
+						    <option value="Lighthouse IP">Lighthouse IP</option> 
+						    <option value="Google Patents">Google Patents</option> 
+						    <option value="European Patent Office (espacenet)">European Patent Office (espacenet)</option> 
+						    <option value="USPTO">USPTO</option> 
+					</select>
+				</div>
+
+				<input id="q26otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
+				<p id="q26otherPrompt" class="subElem addElemPrompt" onclick="$('#q26otherInput').fadeIn();"> + Others not listed? </p>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q27Area" class="row center-align descContainer displayOff">
+			<p> Question 8/11</p>
+			<p style="padding: 1vh;">What is the reason for using more then one source of data?</p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select multiple id="q27MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="Completeness">Completeness of data (e.g. maximum number of patent offices)</option>
+						    <option value="Accuracy">Accuracy of data (i.e. different offices have different quality of data)</option>
+						    <option value="Cost">Cost (i.e. different providers have different costs )</option>
+						    <option value="I do my own data cleansing">I do my own data cleansing</option>
+					</select>
+				</div>
+
+				<input id="q27otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
+				<p id="q27otherPrompt" class="subElem addElemPrompt" onclick="$('#q27otherInput').fadeIn();"> + Others not listed? </p>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q28Area" class="row center-align descContainer displayOff">
+			<p> Question 9/11</p>
+			<p style="padding: 1vh;">What use cases does the patent data enable in your solution?</p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select multiple id="q27MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="prior art search">Prior art search</option>
+						    <option value="Freedom to operate">Freedom to operate</option>
+						    <option value="Invalidity search">Invalidity search</option>
+						    <option value="Technology Landscaping">Technology Landscaping</option>
+						    <option value="Competitive Landscaping">Competitive Landscaping</option>
+						    <option value="Innovation Scouting">Innovation Scouting</option>
+					        <option value="Partner Identification">Partner Identification</option>
+					        <option value="Competitive Analysis">Competitive Analysis</option>
+					        <option value="White space Identification">White space identification</option>
+					        <option value="M&A Licensing identification">M&A Licensing identification</option>
+					        <option value="Competitive Analysis">Prosecution Analytics</option>
+					</select>
+				</div>
+
+				<input id="q28otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
+				<p id="q28otherPrompt" class="subElem addElemPrompt" onclick="$('#q28otherInput').fadeIn();"> + Others not listed? </p>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q29Area" class="row center-align descContainer displayOff">
+			<p> Question 10/11</p>
+			<p style="padding: 1vh;"> Do you combine patent data with any other data (e.g. litigation, news, business etc.)?</p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select id="q29MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="yes">Yes</option>
+						    <option value="no">No</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q29YesArea" class="row center-align descContainer displayOff">
+			<p> Question 10/11</p>
+			<p> Which data? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<input id="q29Input" class="whiteTxt" type="text" name="q29Input" placeholder="Separate with commas . . . 1, 2, 3" oninput="fadeInNavFwd3();">
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q30Area" class="row center-align descContainer displayOff">
+			<p> Question 11/11</p>
+			<p style="padding: 1vh;">Do you further process the patent data before using in your solution? Please select all that you do.</p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
+					<select multiple id="q30MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="Name Normalization">Name normalization</option>
+						    <option value="Legal Status Clean Up">Legal status clean up</option>
+						    <option value="Ownership data refinement"> Ownership data refinement</option>
+						    <option value="Expiry date calculation">Expiry date calculation</option>
+						    <option value="Connector to non patent litreature">Connector to non-patent literature</option>
+						    <option value="Add Litigation data">Add Litigation data</option>
+					        <option value="Add news and business data">Add news and business data</option>
+					</select>
+				</div>
+
+				<input id="q30otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
+				<p id="q30otherPrompt" class="subElem addElemPrompt" onclick="$('#q30otherInput').fadeIn();"> + Others not listed? </p>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+		<!-- question nav btns -->
+		<div id="QNavBtns3" class="questionNavBtns row  center-align">
+			<div id="fwdNav3" class="displayOff"> <i class="material-icons navBtn"> arrow_forward </i> </div>
+		</div>
+
+	</div>
+
+
+	<!-- part 4 -->
+	<div id="survey4area" class="displayOff"> 
+
+
+		<!--Header-->
+		<div class="center-align header"> 
+			<p> Part Four - IPDD Specifics </p>
+		</div>
+
+		<div id="q31Area" class="row center-align descContainer displayOff">
+			<p> Question 1/8</p>
+			<p style="padding: 1vh;"> Did you use LexisNexis IPDD today? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
+					<select id="q31MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="yes">Yes</option>
+						    <option value="no">No</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+
+		<div id="q32Area" class="row center-align descContainer displayOff">
+			<p> Question 2/8</p>
+			<p style="padding: 1vh;"> How familiar are you with IPDD? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
+					<select id="q32MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="current">We currently use this product</option>
+						    <option value="past">We used to use this product in the past but currently do not use it</option>
+						    <option value="seen">Previously have seen a product demo / received sample data / received an offer </option>
+						    <option value="know">Know of reputation</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+
+		<div id="q33Area" class="row center-align descContainer displayOff">
+			<p> Question 3/8</p>
+			<p style="padding: 1vh;"> Why did  you purchase LexisNexis IPDD originally? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+
+				<input id="q33Input" class="whiteTxt" type="text" name="original" placeholder=". . ." oninput="fadeInNavFwd4();">
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q34Area" class="row center-align descContainer displayOff">
+			<p> Question 4/8</p>
+			<p style="padding: 1vh;"> Why did you stop using LexisNexis IPDD? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+
+				<input id="q34Input" class="whiteTxt" type="text" name="original" placeholder=". . ." oninput="fadeInNavFwd4();">
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q35Area" class="row center-align descContainer displayOff">
+			<p> Question 5/8 (*notes said to remove this q... valuable or not?)</p>
+			<p style="padding: 1vh;"> How likely are you to keep using LexiNexis IPDD? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
+					<select id="q35MultiInput"> 
+					        <option value="" disabled selected>		      	
+						    </option>
+						    <option value="1">1 (Not likely at all)</option>
+						    <option value="2">2</option>
+						    <option value="3">3</option>
+						    <option value="4">4</option>
+						    <option value="4">5</option>
+						    <option value="6">6</option>
+						    <option value="7">7</option>
+						    <option value="4">8</option>
+						    <option value="9">9</option>
+						    <option value="10">10 (Extremely likely)</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+		<div id="q36Area" class="row center-align descContainer displayOff">
+			<p> Question 6/8</p>
+			<p style="padding: 1vh;"> Why did you not to buy LexisNexis IPDD? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+
+				<input id="q36Input" class="whiteTxt" type="text" name="original" placeholder=". . ." oninput="fadeInNavFwd4();">
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+
+		<!-- Question - #37 -->
+		<div id="q37Area" class=" center-align displayOff" style="font-size: 1.5em;">
+
+			<p> Question 7/8</p>
+			<p style="padding: 1vh;">Which improvements would make you more likely to buy LexisNexis IPDD? Please allocate 100 points.</p>
+
+			<div class="row">
+
+				<p id="q8Points">0/100 </p>
+
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 5vh;"> 
+					<input id="pointElem8-1" class="txtInput pointElem1"  type="number" name="improve quality of content" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6);" min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p> Improve quality of content (e.g. full text, normalization, legal status, company hierarchy etc.) </p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 5vh;"> 
+					<input id="pointElem8-2" class="txtInput pointElem1" type="number" name="data from more offices" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6);"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Data from more patent offices (e.g. Thailand, South Africa, Turkey, Israel etc.)</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 1vh;"> 
+					<input id="pointElem8-3" class="txtInput pointElem1" type="number" name="content delivery" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal4(8,6);"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Improve content delivery (e.g. Better API, on-premise server, speed to data download, speed to update data)</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 1vh;"> 
+					<input id="pointElem8-4" class="txtInput pointElem1" type="number" name="product support" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6)"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Improve product support (e.g. documentation, customer support etc.)</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 0vh;"> 
+					<input id="pointElem8-5" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6)"min = '0'; max = '100';>
+				</div>
+				<div class="col s4"> 
+					<p>Improve pricing vs competitors </p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+			<div class="row questionTxt">
+				<div class="col s4"> </div>
+				<div class="col s2" style="padding-top: 0vh;"> 
+					<input id="pointElem8-6" class="txtInput pointElem1" type="number" name="Increase content" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6)">
+				</div>
+				<div class="col s4"> 
+					<p>Increase content (e.g. Chemical, litigation, News, Business etc.)</p>
+				</div>
+				<div class="col s2"> </div>
+			</div>
+
+		</div>
+
+
+		<div id="q38Area" class="row center-align descContainer displayOff">
+			<p> Question 8/8</p>
+			<p style="padding: 1vh;"> What other improvements would increase your likelihood of choosing LexisNexis IPDD? </p>
+
+
+			<div class="col s4"> </div>
+
+			<div class="col s4">
+
+				<input id="q38Input" class="whiteTxt" type="text" name="original" placeholder=". . ." oninput="fadeInNavFwd4();">
+			</div>
+
+			<div class="col s4"> </div>
+		</div>	
+
+
+
+		<!-- question nav btns -->
+		<div id="QNavBtns4" class="questionNavBtns row  center-align">
+			<div id="fwdNav4" class="displayOff"> <i class="material-icons navBtn"> arrow_forward </i> </div>
+		</div>
+
+	</div> <!-- end 4 -->
+
+
+	<div id="endArea" class="displayOff">
+			
+		<div class="row center-align header"> 
+			<p> Thank you for taking our 2020 IPDD Questionnaire </p>
+		</div>
+
+	</div>
+
+</body>
+<script type="text/javascript">
+
+	//set properties...
+	let questionNum = 1;
+	let responses = {};
+	
+	//user clicked to start survey...
+	function startSurvey(){
+		//fade out landing area
+		$('#landingArea').fadeOut();
+		//fade in part 1...
+		$('#survey1area').fadeIn();
+	}
+
+	//materialize form inits
+	$(document).ready(function(){
+	    $('select').formSelect();
+	});
+
+	//on input for question 1...
+	function fadeInNav(){
+		//fade in nav btns
+		$('#QNavBtns').fadeIn();
+	}
+
+	//on input for adding custom ip db
+	$('#otherIPDDInput').change(function(){
+		$('#QNavBtns').fadeIn();
+		$('#fwdNav').fadeIn();
+	});
+
+	//on input for others
+	function fadeInNavFwd(){
+		$('#fwdNav').fadeIn();
+	}
+	function fadeInNavFwd2(){
+		$('#fwdNav2').fadeIn();
+	}
+	function fadeInNavFwd3(){
+		$('#fwdNav3').fadeIn();
+	}
+	function fadeInNavFwd4(){
+		$('#fwdNav4').fadeIn();
+	}
+
+	//fwd nav onclick...
+	$('#fwdNav').click(function(){
+		if(questionNum==1){
+			//add response
+			responses[1] = $('#q1MultiInput').val();
+			if(responses[1] == 'Other'){
+				questionNum = 1.5;
+				//fade out q1
+				$('#q1Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				$('#q1OtherInputArea').fadeIn();
+			}
+			else if(responses[1] == 'Asia (Other)'){
+				$('#survey1area').fadeOut();
+				$('#conclusionArea').fadeIn();
+				$('#backlinks').fadeIn();
+			}
+			else{
+				questionNum++;
+				//edit text
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Where are you physically located?');
+
+				//fade out q1
+				$('#q1Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				//fade in q2
+				$('#q2Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 1.5){
+			questionNum = 2;
+			responses[1] = 'Other: ' +  $('#q1OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('Where are you physically located?');
+			$('#q1OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q2Area').fadeIn();
+		}
+
+		else if(questionNum == 2){
+			//add response
+			responses[2]  = $('#q2MultiInput').val();
+
+			if(responses[2] == 'Other'){
+				questionNum = 2.5;
+				//fade out q2
+				$('#q2Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				$('#q2OtherInputArea').fadeIn();
+			}
+			else{
+				questionNum++;
+				//edit text
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('What type of organization do you work in?');
+				//fade out q2
+				$('#q2Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				//fade in q3
+				$('#q3Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 2.5){
+			questionNum = 3;
+			responses[2] = 'Other: ' +  $('#q2OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/20');
+			$('#questionTxt').html('What type of organization do you work in?');
+			$('#q2OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q3Area').fadeIn();
+		}
+
+		else if(questionNum == 3){
+			//add response
+			responses[3]  = $('#q3MultiInput').val();
+			
+			if(responses[3] == 'Other'){
+				questionNum = 3.5;
+				//fade out q2
+				$('#q3Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				$('#q3OtherInputArea').fadeIn();
+			}
+
+			else{
+				questionNum++;
+				//edit text
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('How familiar are you with bulk patent data?');
+				//fade out q3
+				$('#q3Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				//fade in q4
+				$('#q4Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 3.5){
+			questionNum = 4;
+			responses[3] = 'Other: ' +  $('#q3OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/20');
+			$('#questionTxt').html('How familiar are you with bulk patent data?');
+			$('#q3OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q4Area').fadeIn();
+		}
+
+		else if(questionNum == 4){
+			//add response
+			questionNum=14;
+			responses[4]  = $('#q4MultiInput').val();
+
+			if(responses[4] == 'Have heard but not used / no idea'){
+				$('#survey1area').fadeOut();
+				$('#conclusionArea').fadeIn();
+			}
+
+			//check if q3 answer is corp...else next question
+			if(responses[3] == 'Corporation'){
+				//edit text
+				questionNum=5;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('What industry is your company in?');
+				//fade out q4
+				$('#q4Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				//fade in q5
+				$('#q5Area').fadeIn();
+			}
+
+			else if(responses[3] == 'Law Firm'){
+				//edit text
+				questionNum = 8;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('What do you use this data for?');
+				//fade out q4
+				$('#q4Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				//fade in q8
+				$('#q8Area').fadeIn();
+
+			}
+
+			else if(responses[3] == 'Government/Academic'){
+				questionNum = 10;
+				$('#questionCount').html('Question ' + questionNum + '/20');
+				$('#questionTxt').html('What do you use this data for?');
+				//fade out q4
+				$('#q4Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				//fade in q10
+				$('#q10Area').fadeIn();
+			}
+
+
+
+			else if(responses[3] == 'Information Vendor'){
+				questionNum = 12;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('What do you use this data for?');
+				//fade out q4
+				$('#q4Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				//fade in q12
+				$('#q12Area').fadeIn();
+			}
+
+			else{
+				questionNum = 14;
+				//fade out q4
+				$('#q4Area').fadeOut();
+				//fade out fwd btn
+				$('#fwdNav').fadeOut();
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				//fade in q14
+				$('#q14Area').fadeIn();
+			}
+
+			
+		}
+		else if(questionNum == 5){
+			responses[5] = $('#q5MultiInput').val();
+			if(responses[5] == 'Other'){
+				//fade out q5 fade in q5 "other" input
+				$('#fwdNav').fadeOut();
+				$('#q5Area').fadeOut();
+				$('#q5OtherInputArea').fadeIn();
+				questionNum = 5.5;
+			}
+			else{
+				questionNum++;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('What do you use this data for?');
+				$('#fwdNav').fadeOut();
+				$('#q5Area').fadeOut();
+				$('#q6Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 5.5){
+			questionNum = 6;
+			responses[5] = 'Other: ' +  $('#q5OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('What do you use this data for?');
+			$('#q5OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q6Area').fadeIn();
+ 		}
+
+ 		else if(questionNum == 6){
+ 			responses[6] = $('#q6MultiInput').val();
+ 			questionNum++;
+ 			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('What department do you work in?');
+ 			$('#fwdNav').fadeOut();
+			$('#q6Area').fadeOut();
+			$('#q7Area').fadeIn();
+ 		}
+
+ 		else if(questionNum == 7){
+ 			responses[7] = $('#q7MultiInput').val();
+ 			if(responses[7] == 'Other'){
+ 				$('#fwdNav').fadeOut();
+				$('#q7Area').fadeOut();
+				$('#q7OtherInputArea').fadeIn();
+				questionNum = 7.5;
+ 			} 
+ 			else{
+ 				questionNum=14;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				$('#fwdNav').fadeOut();
+				$('#q7Area').fadeOut();
+				$('#q14Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 7.5){
+			questionNum = 14;
+			responses[7] = 'Other: ' +  $('#q7OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+			$('#q7OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q14Area').fadeIn();
+ 		}
+
+
+ 		else if(questionNum == 8){
+ 			responses[8] = $('#q8MultiInput').val();
+ 			if(responses[8] == 'Other'){
+ 				$('#fwdNav').fadeOut();
+				$('#q8Area').fadeOut();
+				$('#q8OtherInputArea').fadeIn();
+				questionNum = 8.5;
+ 			} 
+ 			else{
+ 				questionNum=9;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('How would you classify your job?');
+				$('#fwdNav').fadeOut();
+				$('#q8Area').fadeOut();
+				$('#q9Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 8.5){
+			questionNum = 9;
+			responses[8] = 'Other: ' +  $('#q8OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('How would you classify your job?');
+			$('#q8OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q9Area').fadeIn();
+ 		}
+
+ 		else if(questionNum == 9){
+ 			responses[9] = $('#q9MultiInput').val();
+ 			if(responses[9] == 'Other'){
+ 				$('#fwdNav').fadeOut();
+				$('#q9Area').fadeOut();
+				$('#q9OtherInputArea').fadeIn();
+				questionNum = 9.5;
+ 			} 
+ 			else{
+ 				questionNum=14;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				$('#fwdNav').fadeOut();
+				$('#q9Area').fadeOut();
+				$('#q14Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 9.5){
+			questionNum = 14;
+			responses[9] = 'Other: ' +  $('#q9OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+			$('#q9OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q14Area').fadeIn();
+ 		}
+
+ 		else if(questionNum == 10){
+ 			responses[10] = $('#q10MultiInput').val();
+ 			if(responses[10] == 'Other'){
+ 				$('#fwdNav').fadeOut();
+				$('#q10Area').fadeOut();
+				$('#q10OtherInputArea').fadeIn();
+				questionNum = 10.5;
+ 			} 
+ 			else{
+ 				questionNum=11;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('How would you classify your job?');
+				$('#fwdNav').fadeOut();
+				$('#q10Area').fadeOut();
+				$('#q11Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 10.5){
+			questionNum = 11;
+			responses[10] = 'Other: ' +  $('#q10OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('How would you classify your job?');
+			$('#q10OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q11Area').fadeIn();
+ 		}
+
+
+ 		else if(questionNum == 11){
+ 			responses[11] = $('#q11MultiInput').val();
+ 			if(responses[11] == 'Other'){
+ 				$('#fwdNav').fadeOut();
+				$('#q11Area').fadeOut();
+				$('#q11OtherInputArea').fadeIn();
+				questionNum = 11.5;
+ 			} 
+ 			else{
+ 				questionNum=14;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)??');
+				$('#fwdNav').fadeOut();
+				$('#q11Area').fadeOut();
+				$('#q14Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 11.5){
+			questionNum = 14;
+			responses[11] = 'Other: ' +  $('#q11OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)??');
+			$('#q11OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q14Area').fadeIn();
+ 		}
+
+  		else if(questionNum == 12){
+ 			responses[12] = $('#q12MultiInput').val();
+ 			if(responses[12] == 'Other'){
+ 				$('#fwdNav').fadeOut();
+				$('#q12Area').fadeOut();
+				$('#q12OtherInputArea').fadeIn();
+				questionNum = 12.5;
+ 			} 
+ 			else{
+ 				questionNum=13;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('How would you classify your job?');
+				$('#fwdNav').fadeOut();
+				$('#q12Area').fadeOut();
+				$('#q13Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 12.5){
+			questionNum = 13;
+			responses[12] = 'Other: ' +  $('#q12OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('How would you classify your job?');
+			$('#q12OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q13Area').fadeIn();
+ 		}
+
+ 		else if(questionNum == 13){
+ 			responses[13] = $('#q13MultiInput').val();
+ 			if(responses[13] == 'Other'){
+ 				$('#fwdNav').fadeOut();
+				$('#q13Area').fadeOut();
+				$('#q13OtherInputArea').fadeIn();
+				questionNum = 13.5;
+ 			} 
+ 			else{
+ 				questionNum=14;
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				$('#fwdNav').fadeOut();
+				$('#q13Area').fadeOut();
+				$('#q14Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 13.5){
+			questionNum = 14;
+			responses[13] = 'Other: ' +  $('#q13OtherInput').val();
+			$('#questionCount').html('Question ' + questionNum + '/14');
+			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+			$('#q13OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
+			$('#q14Area').fadeIn();
+ 		}
+
+ 		else if(questionNum == 14){
+ 			responses[14] = $('#q14MultiInput').val()
+ 			questionNum = 15;
+ 			$('#q14Area').fadeOut();
+ 			$('#survey1area').fadeOut();
+ 			$('#fwdNav').fadeOut();
+ 			$('#survey2area').fadeIn();
+ 		}
+	});
+
+
+
+	var check16 = false;
+	var check17 = false;
+	var check18 = false;
+	var check19 = false;
+
+	//section 2 nav clicks...
+	$('#fwdNav2').click(function(){
+
+ 		if(questionNum ==15){
+			//enter q 19 - if selected > 0 for pricing tc
+			if($('#pointElem1-4').val()>0){
+ 				check19 = true;
+ 				questionNum = 19;
+			}
+			//enter q 18 - if selected > 0 for ease of delivery
+			if($('#pointElem1-3').val()>0){
+ 				check18 = true;
+ 				questionNum = 18;
+			}
+			//enter q 17 - if selected > 0 for additional content
+			if($('#pointElem1-2').val()>0){
+ 				check17 = true;
+ 				questionNum = 17;
+			}
+			//enter q 16 - if selected > 0 for accuracy of underlying data
+			if($('#pointElem1-1').val()>0){
+ 				check16 = true;
+ 				questionNum = 16;
+			}
+			//check if other has points
+			if($('#pointElem1-5').val() > 0){
+				$('#fwdNav2').fadeOut();
+				$('#q15area').fadeOut();
+				//promt user to specify 'other(s)'
+				$('#q15othersInputArea').fadeIn();
+				questionNum = 15.5;
+			}
+
+			//finally, fade in appropriate question
+			$('#questionCount').html('Question ' + (questionNum-14) + '/5');
+			$('#qCont').fadeOut();
+			$('#q' + questionNum + 'area').fadeIn();
+			$('#fwdNav2').fadeOut();
+			$('#q15area').fadeOut();
+ 		}
+
+ 		else if(questionNum == 15.5){
+ 			//fade out other(s) form 
+ 			$('#q15othersInputArea').fadeOut();
+ 			$('#fwdNav2').fadeOut();
+ 			if(check16){
+ 				$('#qCont').fadeOut();
+ 				$('#q15area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q16area').fadeIn();
+ 				questionNum = 16;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check17){
+ 				$('#q15area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q17area').fadeIn();
+ 				questionNum = 17;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check18){
+ 				$('#q15area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q18area').fadeIn();
+ 				questionNum = 18;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check19){
+ 				s$('#q15area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeIn();
+ 				questionNum = 19;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else{
+ 				//part 3
+ 				enterPart3();
+ 			}
+ 		}
+
+
+ 		else if(questionNum == 16){
+ 			//check add to 100...
+
+ 			//check other > 0
+ 			if($('#pointElem2-7').val() > 0){
+ 				//prompt to specify other...
+ 				questionNum = 16.5;
+ 				$('#q16area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q16othersInputArea').fadeIn();
+ 			}
+
+ 			else if(check17){
+ 				$('#q16area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q17area').fadeIn();
+ 				questionNum = 17;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check18){
+ 				$('#q16area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q18area').fadeIn();
+ 				questionNum = 18;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check19){
+ 				$('#q16area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeIn();
+ 				questionNum = 19;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else{
+ 				//part 3
+ 				enterPart3();
+ 			}
+ 		}
+
+
+ 		else if(questionNum == 16.5){
+ 			if(check17){
+ 				$('#q16othersInputArea').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q17area').fadeIn();
+ 				questionNum = 17;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check18){
+ 				$('#q16othersInputArea').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q18area').fadeIn();
+ 				questionNum = 18;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check19){
+ 				questionNum = 19;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 				$('#q16othersInputArea').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeIn();
+ 			}
+ 			else{
+ 				//part 3
+ 				enterPart3();
+ 			}
+ 		}
+
+
+ 		else if(questionNum == 17){
+
+ 			//check other > 0
+ 			if($('#pointElem3-9').val() > 0){
+ 				//prompt to specify other...
+ 				questionNum = 17.5;
+ 				$('#q17area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q17othersInputArea').fadeIn();
+ 			}
+
+			else if(check18){
+ 				$('#q17area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q18area').fadeIn();
+ 				questionNum = 18;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check19){
+ 				$('#q17area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeIn();
+ 				questionNum = 19;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else{
+ 				//part 3
+ 				enterPart3();
+ 			}
+ 		}
+
+ 		else if(questionNum == 17.5){
+ 			if(check18){
+ 				$('#q17othersInputArea').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q18area').fadeIn();
+ 				questionNum = 18;
+ 				$('#questionCount').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else if(check19){
+ 				$('#q17othersInputArea').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeIn();
+ 				questionNum = 19;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else{
+ 				//part 3
+ 				enterPart3();
+ 			}
+ 		}
+
+ 		else if(questionNum == 18){
+
+ 			//check other > 0
+ 			if($('#pointElem4-10').val() > 0){
+ 				//prompt to specify other...
+ 				questionNum = 18.5;
+ 				$('#q18area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q18othersInputArea').fadeIn();
+ 			}
+
+ 			else if(check19){
+ 				$('#q18area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeIn();
+ 				questionNum = 19;
+ 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else{
+ 				//part 3
+ 				enterPart3();
+ 			}
+ 		}
+
+ 		else if(questionNum == 18.5){
+ 			if(check19){
+ 				$('#q18othersInputArea').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeIn();
+ 				questionNum = 19;
+ 				$('#questionCount').html('Question ' + (questionNum-14) + '/5');
+ 			}
+ 			else{
+ 				//part 3
+ 				enterPart3();
+ 			}
+ 		}
+
+ 		else if(questionNum == 19){
+ 			//check other > 0
+ 			if($('#pointElem5-8').val() > 0){ 
+ 				//prompt to specify other...
+ 				questionNum = 19.5;
+ 				$('#q19area').fadeOut();
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19othersInputArea').fadeIn();
+ 			}
+ 			else{
+ 				$('#fwdNav2').fadeOut();
+ 				$('#q19area').fadeOut();
+ 				//part 3 in
+ 				enterPart3();
+ 			}
+ 		}
+
+ 		else if(questionNum == 19.5){
+			
+			$('#q19othersInputArea').fadeOut();
+			$('#fwdNav2').fadeOut();
+			//part 3...
+			enterPart3();
+ 		}
+
+
+
+	});
+
+	//allow user to enter ip dbs not on list...
+	$('#otherIPDDPrompt').click(function(){
+		$("#otherIPDDInput").fadeIn();
+	});
+
+
+	//update total points on change...
+	function updateTotal(qID, len){
+		let totalPoints = 0;
+		let i = 1;
+		while(i < len+1){
+			let val = parseInt( $('#pointElem' + qID + '-' + i).val());
+			if(!isNaN(val))
+				totalPoints += val;
+			i++;
+		}
+		$("#q"+qID+"Points").html("" + totalPoints + "/100");
+		if(totalPoints > 100) $("#q"+qID+"Points").css('color', 'red');
+		else $("#q"+qID+"Points").css('color', 'white');
+
+		if(totalPoints == 100){
+			$('#QNavBtns2').fadeIn();
+			$('#fwdNav2').fadeIn();
+		}
+		else{
+			$('#fwdNav2').fadeOut();
+		}
+	}
+
+	//update total points on change...
+	function updateTotal3(qID, len){
+		let totalPoints = 0;
+		let i = 1;
+		while(i < len+1){
+			let val = parseInt( $('#pointElem' + qID + '-' + i).val());
+			if(!isNaN(val))
+				totalPoints += val;
+			i++;
+		}
+		$("#q"+qID+"Points").html("" + totalPoints + "/100");
+		if(totalPoints > 100) $("#q"+qID+"Points").css('color', 'red');
+		else $("#q"+qID+"Points").css('color', 'white');
+
+		if(totalPoints == 100){
+			$('#QNavBtns3').fadeIn();
+			$('#fwdNav3').fadeIn();
+		}
+		else{
+			$('#fwdNav3').fadeOut();
+		}
+	}
+
+
+	function enterPart3(){
+		$('#survey2area').fadeOut();
+		$('#survey3area').fadeIn();
+
+		if(responses[3] == 'Corporation' || responses[3] == 'Law Firm' || responses[3] == 'Government/Academic' ){
+			//open question 20
+			$('#q20Area').fadeIn();
+			questionNum = 20;
+		}
+		else{
+			//open question 21
+			$('#q21Area').fadeIn();
+			questionNum = 21;
+		}
+	}
+
+	$('#fwdNav3').click(function(){
+		if(questionNum == 20){
+			responses[20] = $('#q20MultiInput').val();
+			$('#q20Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+			$('#q21Area').fadeIn();
+			questionNum++;
+		}
+
+		else if(questionNum == 21){
+			responses[21] = $('#q21MultiInput').val();
+			$('#q21Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+
+			//fade in 22 if answer to 21 included 'search'
+			if(responses[21].includes('Search')){
+				$('#q22Area').fadeIn();
+				questionNum = 22;
+			}
+			else{
+				//else fade in q 23
+				$('#q23Area').fadeIn();
+				questionNum = 23;
+			}
+		}
+
+		else if(questionNum == 22){
+			responses[22] = $('#q22MultiInput').val();
+			$('#q22Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+			$('#q23Area').fadeIn();
+			questionNum ++;
+		}
+
+		else if(questionNum == 23){
+			responses[23] = $('#q23MultiInput').val();
+			$('#q23Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+
+
+			//if answered yes... navigate to next part of question...
+			if(responses[23] == 'yes'){
+				$('#q23YesArea').fadeIn();
+				questionNum = 23.5;
+			}
+			//else....
+			else{
+				//fade in 24 if answer to q12 includes analytics
+				if(responses[21].includes('Analytics')){
+					$('#q24Area').fadeIn();
+					questionNum ++;
+				}
+				//else fade in q25
+				else{
+					$('#q25Area').fadeIn();
+					questionNum = 25;
+				}
+			}
+		}
+
+		else if(questionNum == 23.5){
+			//fade in 24 if answer to q12 includes analytics
+			$('#q23YesArea').fadeOut();
+			$('#fwdNav3').fadeOut();
+			if('Analytics' in responses[21]){
+				$('#q24Area').fadeIn();
+				questionNum=24;
+			}
+			//else fade in q25
+			else{
+				$('#q25Area').fadeIn();
+				questionNum = 25;
+			}
+		}
+
+		else if(questionNum == 24){
+			//responses[24] = $().val() figure that out later
+			$('#q24Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+
+
+			//if selected > 0 for others...
+			if($('#pointElem6-9').val() > 0){
+				$('#q24othersInputArea').fadeIn();
+				questionNum = 24.5;
+			}
+			else{
+				$('#q25Area').fadeIn();
+				questionNum = 25;
+			}
+		}
+
+		else if(questionNum == 24.5){
+
+			$('#q25Area').fadeIn();
+			questionNum = 25;
+			$('#fwdNav3').fadeOut();
+		}
+
+		else if(questionNum == 25){
+			responses[25] = $('#q25MultiInput').val();
+			$('#q25Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+
+
+			//if answered 'yes'... prompt next part of question
+			if(responses[25] == 'yes'){
+				$('#q25YesArea').fadeIn();
+				questionNum = 25.5;
+			}
+
+			//fade in q26 if answer to q3 = vendor
+			else if(responses[3] = 'Information Vendor'){
+				questionNum++;
+				$('#q26Area').fadeIn();
+			}
+			//else... q 28
+			else{
+				questionNum = 28;
+				$('#q28Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 25.5){
+			$('#q25YesArea').fadeOut();
+			$('#fwdNav3').fadeOut();
+
+			//fade in q26 if answer to q3 = vendor
+			if(responses[3] = 'Information Vendor'){
+				questionNum=26;
+				$('#q26Area').fadeIn();
+			}
+			//else... q 28
+			else{
+				questionNum = 28;
+				$('#q28Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 26){
+			$('#q26Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+
+			//if more than one answer > 0... fade in 27
+			if($('#q26MultiInput').val().length+ $('#q26otherInput').val().split(',').length > 1){
+				questionNum = 27;
+				$('#q27Area').fadeIn();
+
+			}
+			else{
+				//else (100 in single)... fade in 28
+				questionNum = 28;
+				$('#q28Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 27){
+			$('#q27Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+			questionNum++;
+			$('#q28Area').fadeIn();
+		}
+		else if(questionNum == 28){
+			$('#q28Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+			questionNum++;
+			$('#q29Area').fadeIn();
+		}
+		else if(questionNum == 29){
+			responses[29] = $('#q29MultiInput').val();
+			$('#q29Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+
+			//if answers 'yes'...
+			if(responses[29] == 'yes'){
+				questionNum=29.5;
+				$('#q29YesArea').fadeIn();
+			}
+			else{
+				questionNum++;
+				$('#q30Area').fadeIn();
+			}
+		}
+		else if(questionNum == 29.5){
+			$('#fwdNav3').fadeOut();
+			$('#q29YesArea').fadeOut();
+			$('#q30Area').fadeIn();
+			questionNum = 30;
+		}
+		else if(questionNum == 30){
+			responses[30] = $('#q30MultiInput').val();
+			$('#q30Area').fadeOut();
+			$('#fwdNav3').fadeOut();
+			$('#survey3area').fadeOut();
+			$('#survey4area').fadeIn();
+
+			//if q14 answer includes Lexis Nexis
+			if(responses[14].includes('LexisNexis / IPDD')){
+				questionNum++;
+				$('#q31Area').fadeIn();	
+			}
+			else{
+				//else end survey
+				end();
+			}
+			
+
+		}
+	});
+
+
+
+	//update total points on change...
+	function updateTotal4(qID, len){
+		let totalPoints = 0;
+		let i = 1;
+		while(i < len+1){
+			let val = parseInt( $('#pointElem' + qID + '-' + i).val());
+			if(!isNaN(val))
+				totalPoints += val;
+			i++;
+		}
+		$("#q"+qID+"Points").html("" + totalPoints + "/100");
+		if(totalPoints > 100) $("#q"+qID+"Points").css('color', 'red');
+		else $("#q"+qID+"Points").css('color', 'white');
+
+		if(totalPoints == 100){
+			$('#QNavBtns4').fadeIn();
+			$('#fwdNav4').fadeIn();
+		}
+		else{
+			$('#fwdNav4').fadeOut();
+		}
+	}
+
+	//nav btn 4 onclick... part 4 control flow
+	$('#fwdNav4').click(function(){
+		if(questionNum == 31){
+			responses[31] = $('#q31MultiInput').val();
+			questionNum++;
+			$('#q31Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+			$('#q32Area').fadeIn();
+		}
+		else if(questionNum == 32){
+			responses[32] = $('#q32MultiInput').val();
+			$('#q32Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+
+			//if q31 answer = yes... go to 33...35 ... end
+			if(responses[31] == 'yes'){
+				questionNum++;
+				$('#q33Area').fadeIn();
+			}
+			//else if q31 = no and q32 = past... go to 34 ... end
+			else if(responses[31] == 'no' && responses[32] == 'past'){
+				questionNum=34;
+				$('#q34Area').fadeIn();
+			}
+			//else if q31 = no and q32 = seen... go to 36 ...37 ... 38
+			else if(responses[31] == 'no' && responses[32] == 'seen'){
+				questionNum=36;
+				$('#q36Area').fadeIn();
+			}
+			else{
+				//end (safety catch... shouldn't be hit anyway)
+				end();
+			}
+		}
+
+		else if(questionNum == 33){
+			responses[33] = $('#q33Input').val();
+			questionNum = 35;
+			$('#q33Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+			$('#q35Area').fadeIn();
+		}
+
+		else if(questionNum == 34){
+			responses[34] = $('#q34Input').val();
+			$('#q34Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+			end();
+		}
+
+		else if(questionNum == 35){
+			responses[35] = $('#q35Input').val();
+			$('#q35Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+			end();
+		}
+
+		else if(questionNum == 36){
+			responses[36] = $('#q36Input').val();
+			questionNum++;
+			$('#q36Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+			$('#q37Area').fadeIn();
+		}
+
+		else if(questionNum == 37){
+			//responses[37] = $('#q37MultiInput').val(); figure out how to save these
+			questionNum++;
+			$('#q37Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+			$('#q38Area').fadeIn();
+		}
+
+		else if(questionNum == 38){
+			responses[38] = $('#q38Input').val();
+			$('#q38Area').fadeOut();
+			$('#fwdNav4').fadeOut();
+			end();
+		}
+
+	});
+
+	function end(){
+		$('#survey4area').fadeOut();
+		$('#endArea').fadeIn();
+	}
+
+
+
+</script>
+</html>

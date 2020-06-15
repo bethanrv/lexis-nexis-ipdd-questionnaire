@@ -1,0 +1,86 @@
+body {
+ font-family: 'Quicksand', sans-serif;
+ font-weight: 300;
+ color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-weight: 500;
+ color: white;
+}
+
+.whiteTxt{
+	color:white;
+}
+
+.welcomeContainer{
+	font-size: 3em;
+}
+
+.descContainer{
+	font-size: 1.5em;
+}
+
+.backlink{
+	color: grey;
+	font-size: 1.5em;
+}
+
+.backlink.txt:hover{
+	color: white;
+}
+
+.promtContainer{
+	padding-top: 5vh;
+	font-size: 1.5em;
+}
+
+.navBtn:hover{
+	font-size: 2em;
+}
+
+.header{
+	font-size: 3em;
+
+}
+
+.questionCount{
+	font-size: 1em;
+}
+
+.questionContainer{
+	font-size: 2em;
+}
+
+.questionTxt{
+	font-size: 0.75em;
+}
+
+
+
+.multipleChoice{
+	background-color: white;
+	border-radius: 3%;
+}
+
+.displayOff{
+	display: none;
+}
+
+.txtInput{
+	background-color: white;
+	font-size: 1em;
+	border-radius: 2.5%;
+}
+
+.subElem{
+	color: grey;
+}
+
+.addElemPrompt:hover{
+	color: white;
+}
+
+.userInput{
+	color: white;
+}
