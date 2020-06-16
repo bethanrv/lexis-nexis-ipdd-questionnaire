@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Reed Tech IPDD Survey</title>
+	<title>Lexis Nexis IPDD Survey</title>
+
+	<!-- page icon -->
+	<link rel="shortcut icon" href="https://media-exp1.licdn.com/dms/image/C4E0BAQERmNEI9NOirA/company-logo_200_200/0?e=2159024400&v=beta&t=8qY7W-oUphiZFcfb4mubieb8MQIkuD9QGR22q_XHNIQ">
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
 
 	<!-- style sheet -->
 	<link href="./css/style.css" rel="stylesheet" type="text/css">
@@ -23,17 +27,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
-<body style="background-color: black;">
+<body style="background-color: black; height: 100%; padding-bottom: 20vh;">
 
 	<!-- Landing Area -->
 	<div id="landingArea"> 
 
 		<!-- reed tech lexis nexis backlinks -->
 		<div id="backlinks" class="row" style="padding-top: 2vh;">
-			<div class="col s3"> </div>
-			<div class="col s2 center-align backlink txt" onclick="window.location.href = 'https://www.reedtech.com/';"> Reed Tech  </div>
-			<div class="col s2 center-align backlink"> | </div>
-			<div class="col s2 center-align backlink txt" onclick="window.location.href = 'https://www.lexisnexis.com/en-us/gateway.page';"> LexisNexis </div>
+			<div class="col s12 center-align backlink txt" onclick="window.location.href = 'https://www.lexisnexis.com/en-us/gateway.page';">  Lexis Nexis  </div>
 			<div class="col s3"> </div>
 		</div>
 
@@ -513,7 +514,7 @@
 			</div>
 
 			<!-- q15 - specify other(s) -->
-			<div id='q15othersInputArea' class="displayOff">
+			<div id='q15othersInputArea' class="displayOff row center-align">
 				<p> Specify Other(s) </p>
 				<div class="row">
 					<div class="col s3"> </div>
@@ -1248,7 +1249,7 @@
 
 
 		<!-- q24 - specify other(s) -->
-		<div id='q24othersInputArea' class="displayOff">
+		<div id='q24othersInputArea' class="displayOff row center-align descContainer">
 			<p> Specify Other(s) </p>
 			<div class="row">
 				<div class="col s3"> </div>
@@ -1726,6 +1727,9 @@
 	$(document).ready(function(){
 	    $('select').formSelect();
 	});
+
+
+
 
 	//on input for question 1...
 	function fadeInNav(){
@@ -2603,7 +2607,7 @@
 			//fade in 24 if answer to q12 includes analytics
 			$('#q23YesArea').fadeOut();
 			$('#fwdNav3').fadeOut();
-			if('Analytics' in responses[21]){
+			if(responses[21].includes('Analytics')){
 				$('#q24Area').fadeIn();
 				questionNum=24;
 			}
@@ -2632,7 +2636,7 @@
 		}
 
 		else if(questionNum == 24.5){
-
+			$('#q24othersInputArea').fadeOut();
 			$('#q25Area').fadeIn();
 			questionNum = 25;
 			$('#fwdNav3').fadeOut();
