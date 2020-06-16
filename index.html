@@ -27,7 +27,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
-<body style="background-color: black; height: 100%; padding-bottom: 20vh;">
+<body style="height: 100%; padding-bottom: 20vh;" class="blueBackground">
 
 	<!-- Landing Area -->
 	<div id="landingArea"> 
@@ -42,18 +42,19 @@
 		<!-- Welcome message -->
 		<div class="welcomeContainer center-align">
 
-			<p> Welcome to our 2020 IPDD Questionnaire </p>
+			<p> Thank you for taking the time to answer the LexisNexis IPDD Questionnaire</p>
 
 		</div>
 
 
 		<!-- Survey Description -->
 		<div class="center-align descContainer" style="padding-top: 3vh;"> 
-			<p> This survey is composed of Four Sections </p>
-			<p class="subElem"> - Background </p>
+			<p> This survey will take approximately 20 minutes  </p>
+			<!--
+			<p class="subElem"> - Background  </p>
 			<p class="subElem"> - Decision Making </p>
 			<p class="subElem"> - Use Patterns </p>
-			<p class="subElem"> - IPDD Specific </p>
+			<p class="subElem"> - IPDD Specific </p> -->
 		</div>
 
 
@@ -87,20 +88,20 @@
 
 		<!-- Question Area -->
 		<div class="questionContainer center-align"> 
-			<p id="questionTxt"> What country or region does you company operate in? </p>
+			<p id="questionTxt" style="padding: 3vh;"> What country or region does your company operate in? </p>
 
 			<div class="row center-align">
 				<div class="col s4"> </div>
 				<div class="col s4">
 					<!--Question 1-->
 					<div class="row">
-					<div id="q1Area" class="input-field multipleChoice col s12" onchange="fadeInNav()">
-					    <select id="q1MultiInput"> 
+					<div id="q1Area" class="multipleChoice col s12" onchange="fadeInNav()" >
+					    <select id="q1MultiInput" class="browser-default"> 
 					       <option value="" disabled selected>
 					      	
 					      </option>
 					      <option value="Asia (Multiple countries)">Asia (Multiple countries)</option>
-					      <option value="Asia (Other)">Asia (Other)</option>
+					      <option value="Asia (Other)"> Asia (Other)</option>
 					      <option value="China">China</option>
 					      <option value="Europe (Other)">Europe (Other)</option>
 					      <option value="France">France</option>
@@ -123,13 +124,13 @@
 				</div>
 
 					<!-- q1OtherInput -->
-					<div id="q1OtherInputArea" class="center-align txtInput displayOff"> 
-						<input id="q1OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q1OtherInputArea" class="center-align userInput displayOff "> 
+						<input id="q1OtherInput" class="whiteTxt"  type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 					<!-- Question 2 -->
 					<div id="q2Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q2MultiInput"> 
+					    <select id="q2MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -151,13 +152,13 @@
 					</div>
 
 					<!-- q2OtherInput -->
-					<div id="q2OtherInputArea" class="center-align userInput displayOff"> 
-						<input id="q2OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q2OtherInputArea" class="center-align userInput displayOff "> 
+						<input id="q2OtherInput" class="whiteTxt"  type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 					<!-- Question 3 -->
 					<div id="q3Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q3MultiInput"> 
+					    <select id="q3MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -177,7 +178,7 @@
 
 					<!-- Question 4 -->
 					<div id="q4Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q4MultiInput"> 
+					    <select id="q4MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -192,7 +193,7 @@
 
 					<!-- Question 5 -->
 					<div id="q5Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q5MultiInput"> 
+					    <select id="q5MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -225,14 +226,14 @@
 
 
 					<!-- q5OtherInput -->
-					<div id="q5OtherInputArea" class="center-align txtInput displayOff"> 
-						<input id="q5OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q5OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q5OtherInput" class="whiteTxt"  type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 
 					<!-- Question 6 -->
 					<div id="q6Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q6MultiInput"> 
+					    <select id="q6MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -247,7 +248,7 @@
 
 					<!-- Question 7 -->
 					<div id="q7Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q7MultiInput"> 
+					    <select id="q7MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -269,7 +270,7 @@
 
 					<!-- Question 8 -->
 					<div id="q8Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q8MultiInput"> 
+					    <select id="q8MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -288,7 +289,7 @@
 
 					<!-- Question 9 -->
 					<div id="q9Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q9MultiInput"> 
+					    <select id="q9MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -310,7 +311,7 @@
 
 					<!-- Question 10 -->
 					<div id="q10Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q10MultiInput"> 
+					    <select id="q10MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -330,7 +331,7 @@
 
 					<!-- Question 11 -->
 					<div id="q11Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q11MultiInput"> 
+					    <select id="q11MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -353,7 +354,7 @@
 
 					<!-- Question 12 -->
 					<div id="q12Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q12MultiInput"> 
+					    <select id="q12MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -373,7 +374,7 @@
 
 					<!-- Question 13 -->
 					<div id="q13Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
-					    <select id="q13MultiInput"> 
+					    <select id="q13MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
 					      </option>
@@ -395,23 +396,22 @@
 
 					<!-- Question 14 -->
 
-					<div id="q14Area" class="displayOff row">
-						<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd()">
-						    <select multiple id="q14MultiInput"> 
-						      <option value="" disabled selected>
-						      	
-						      </option>
-						      <option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
-						      <option value="Questel (Fampat/ Data Scope)">Questel (Fampat/ Data Scope) </option>
-						      <option value="LexisNexis / IPDD">LexisNexis / IPDD</option>
-						      <option value="IFI Claims  (Claims Direct)">IFI Claims  (Claims Direct)</option>
-						      <option value="Lighthouse IP">Lighthouse IP</option>
-						      <option value="Google Patents">Google Patents</option>
-						      <option value="European Patent Office (espacenet)">European Patent Office (espacenet)</option>
-						      <option value="USPTO">USPTO</option> 
+					<div id="q14Area" class="row displayOff">
+
+						<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd()">
+						    <select multiple id="q14MultiInput">
+							    <option value="" disabled>. . .</option>
+							    <option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
+							    <option value="Questel (Fampat/ Data Scope)">Questel (Fampat/ Data Scope) </option>
+							    <option value="LexisNexis / IPDD">LexisNexis / IPDD</option>
+							    <option value="IFI Claims  (Claims Direct)">IFI Claims  (Claims Direct)</option>
+							    <option value="Lighthouse IP">Lighthouse IP</option>
+							    <option value="Google Patents">Google Patents</option>
+							    <option value="European Patent Office (espacenet)">European Patent Office (espacenet)</option>
+							    <option value="USPTO">USPTO</option> 
 						    </select>
-						    <label></label>
-						</div>
+					    </div>
+
 						<input id="otherIPDDInput" class="userInput displayOff"  type="text" name="others" placeholder="separte by commas... 1, 2, 3">
 						<p id="otherIPDDPrompt" class="subElem addElemPrompt"> + Others not listed? </p>
 					</div>
@@ -459,10 +459,10 @@
 
 
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem1-1" class="txtInput pointElem1"  type="number" name="coverage" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p> Coverage / Quality of the  underlying data </p>
 					</div>
 					<div class="col s2"> </div>
@@ -470,10 +470,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem1-2" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Additional content beyond patent databases</p>
 					</div>
 					<div class="col s2"> </div>
@@ -484,8 +484,8 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem1-3" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
-						<p>Pricing and T&C</p>
+					<div class="col s4 right-align"> 
+						<p> Ease of data delivery </p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -495,18 +495,18 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem1-4" class="txtInput pointElem1" type="number" name="ease" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5)" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
-						<p>Ease of data delivery</p>
+					<div class="col s4 right-align"> 
+						<p>Pricing and T&C</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem1-5" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Other</p>
 					</div>
 					<div class="col s2"> </div>
@@ -536,10 +536,10 @@
 					<p id="q2Points">0/100 </p>
 
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem2-1" class="txtInput pointElem1"  type="number" name="Breadth" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7); " min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p> Breadth of data (e.g. # of patent offices covered) </p>
 					</div>
 					<div class="col s2"> </div>
@@ -547,10 +547,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem2-2" class="txtInput pointElem1" type="number" name="Depth" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7);"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Depth of data (e.g. # of patent offices for which provider has full text documents)</p>
 					</div>
 					<div class="col s2"> </div>
@@ -561,7 +561,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem2-3" class="txtInput pointElem1" type="number" name="cleanliness" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(2,7);"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Data cleanliness (e.g accurate ultimate owner identified,  legal status etc.)</p>
 					</div>
 					<div class="col s2"> </div>
@@ -572,7 +572,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem2-4" class="txtInput pointElem1" type="number" name="updates" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Data update frequency</p>
 					</div>
 					<div class="col s2"> </div>
@@ -580,10 +580,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem2-5" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Translation quality</p>
 					</div>
 					<div class="col s2"> </div>
@@ -591,10 +591,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem2-6" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Additional information added (e.g. manual summaries)</p>
 					</div>
 					<div class="col s2"> </div>
@@ -602,10 +602,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem2-7" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Other</p>
 					</div>
 					<div class="col s2"> </div>
@@ -638,10 +638,10 @@
 					<p id="q3Points">0/100 </p>
 
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-1" class="txtInput pointElem1"  type="number" name="Scientific" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p> Scientific journals </p>
 					</div>
 					<div class="col s2"> </div>
@@ -649,10 +649,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-2" class="txtInput pointElem1" type="number" name="otherSci" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Other scientific databases (e.g. Chemicals, Bio Sequence)</p>
 					</div>
 					<div class="col s2"> </div>
@@ -663,7 +663,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-3" class="txtInput pointElem1" type="number" name="industry" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(3,9);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Industry codes and standards</p>
 					</div>
 					<div class="col s2"> </div>
@@ -674,7 +674,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-4" class="txtInput pointElem1" type="number" name="litigation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Litigation data (e.g. which patents have been / are subject to litigation)</p>
 					</div>
 					<div class="col s2"> </div>
@@ -682,10 +682,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-5" class="txtInput pointElem1" type="number" name="Citation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Citation and Office action data</p>
 					</div>
 					<div class="col s2"> </div>
@@ -693,10 +693,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-6" class="txtInput pointElem1" type="number" name="Licencing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Licensing & Royalty</p>
 					</div>
 					<div class="col s2"> </div>
@@ -704,10 +704,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-7" class="txtInput pointElem1" type="number" name="Financial" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Financial (e.g. company revenues, R&D spend)</p>
 					</div>
 					<div class="col s2"> </div>
@@ -715,10 +715,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-8" class="txtInput pointElem1" type="number" name="Pair" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Pair Data</p>
 					</div>
 					<div class="col s2"> </div>
@@ -726,10 +726,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem3-9" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Other</p>
 					</div>
 					<div class="col s2"> </div>
@@ -761,10 +761,10 @@
 					<p id="q4Points">0/100 </p>
 
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-1" class="txtInput pointElem1"  type="number" name="api" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p> Stable and robust API </p>
 					</div>
 					<div class="col s2"> </div>
@@ -772,10 +772,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-2" class="txtInput pointElem1" type="number" name="Onsite" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>On site server for data delivery</p>
 					</div>
 					<div class="col s2"> </div>
@@ -786,7 +786,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-3" class="txtInput pointElem1" type="number" name="industry" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(4,10);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Flexibility in data purchase</p>
 					</div>
 					<div class="col s2"> </div>
@@ -797,7 +797,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-4" class="txtInput pointElem1" type="number" name="search" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Ease of Searching (use of the provider's search syntax)</p>
 					</div>
 					<div class="col s2"> </div>
@@ -805,10 +805,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-5" class="txtInput pointElem1" type="number" name="documentation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Clear and detailed documentation</p>
 					</div>
 					<div class="col s2"> </div>
@@ -816,32 +816,32 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-6" class="txtInput pointElem1" type="number" name="timliness" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Timeliness of data delivery</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
 
 				<div class="row questionTxt">
-					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s4 right-align"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-7" class="txtInput pointElem1" type="number" name="Download" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Download Speed</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
 
 				<div class="row questionTxt">
-					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s4 right-align"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-8" class="txtInput pointElem1" type="number" name="Customer" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Customer Support</p>
 					</div>
 					<div class="col s2"> </div>
@@ -849,21 +849,21 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem4-9" class="txtInput pointElem1" type="number" name="Connectors" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Connectors and linkages between data</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
 
 				<div class="row questionTxt">
-					<div class="col s4"> </div>
+					<div class="col s4 "> </div>
 					<div class="col s2" style="padding-top: 0vh;"> 
 						<input id="pointElem4-10" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Other</p>
 					</div>
 					<div class="col s2"> </div>
@@ -896,10 +896,10 @@
 					<p id="q5Points">0/100 </p>
 
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-1" class="txtInput pointElem1"  type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8);" min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p> Relative pricing vs other providers </p>
 					</div>
 					<div class="col s2"> </div>
@@ -907,10 +907,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 5vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-2" class="txtInput pointElem1" type="number" name="re-sell" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8);"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Ability to re-sell patent data to other buyers</p>
 					</div>
 					<div class="col s2"> </div>
@@ -921,7 +921,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-3" class="txtInput pointElem1" type="number" name="keet-data" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(5,8);"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Ability to keep data after expiry of contract</p>
 					</div>
 					<div class="col s2"> </div>
@@ -932,7 +932,7 @@
 					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-4" class="txtInput pointElem1" type="number" name="price-hike" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Year on year price hike</p>
 					</div>
 					<div class="col s2"> </div>
@@ -940,10 +940,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-5" class="txtInput pointElem1" type="number" name="price-bundle" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Pricing by data bundles (e.g. Litigation data, Translations, Non Patent literature etc.</p>
 					</div>
 					<div class="col s2"> </div>
@@ -951,10 +951,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-6" class="txtInput pointElem1" type="number" name="reputation" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)">
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Reputation</p>
 					</div>
 					<div class="col s2"> </div>
@@ -962,10 +962,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-7" class="txtInput pointElem1" type="number" name="price-simple" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Simple pricing structure </p>
 					</div>
 					<div class="col s2"> </div>
@@ -973,10 +973,10 @@
 
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 0vh;"> 
+					<div class="col s2" style="padding-top: 1vh;"> 
 						<input id="pointElem5-8" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
 					</div>
-					<div class="col s4"> 
+					<div class="col s4 right-align"> 
 						<p>Other</p>
 					</div>
 					<div class="col s2"> </div>
@@ -1005,6 +1005,7 @@
 	</div>
 
 
+	<!-- part 3 -->
 	<div id="survey3area" class="displayOff">
 
 		<!--Header-->
@@ -1020,18 +1021,20 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select multiple id="q20MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
+
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select multiple id="q20MultiInput">
+						    <option value="" disabled>. . .</option>
 						    <option value="Confidentiality">Confidentiality</option>
 						    <option value="Combine patent data with other proprietary information">Combine patent data with other proprietary information </option>
 						    <option value="Use in internal workflow solution">Use in internal workflow solution</option>
 						    <option value="Customized Search">Customized Search</option>
 						    <option value="Customized Analysis">Customized Analysis</option>
 						    <option value="Cost of search and analytics tools">Cost of search and analytics tools</option>
-						    <option value="Limitation of search and analytical tools">Limitation of search and analytical tools</option> 
-					</select>
+						    <option value="Limitation of search and analytical tools">Limitation of search and analytical tools</option>  
+					    </select>
+					</div>
 				</div>
 
 				<input id="q20otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
@@ -1051,15 +1054,17 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select multiple id="q21MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
-						    <option value="Search">Search</option>
+
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select multiple id="q21MultiInput">
+						    <option value="" disabled>. . .</option>
+							<option value="Search">Search</option>
 						    <option value="Analytics">Analytics</option>
 						    <option value="Consulting">Consulting</option>
 						    <option value="Solutions">Solutions Provider</option>
-					</select>
+					    </select>
+					</div>
 				</div>
 
 				<input id="q21otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
@@ -1079,16 +1084,18 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select multiple id="q22MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
-						    <option value="Prior art search">Prior art search</option>
+
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select multiple id="q22MultiInput">
+						    <option value="" disabled>. . .</option>
+							<option value="Prior art search">Prior art search</option>
 						    <option value="Freedom to operate">Freedom to operate</option>
 						    <option value="Invalidity search">Invalidity search</option>
 						    <option value="Competitive Intelligence">Competitive Intelligence</option>
 						    <option value="Patent Scouting">Patent Scouting</option>
-					</select>
+					    </select>
+					</div>
 				</div>
 
 				<input id="q22otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
@@ -1108,13 +1115,14 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select id="q23MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
-						    <option value="yes">Yes</option>
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select id="q23MultiInput" class="browser-default">
+						    <option value="" disabled>. . .</option>
+							<option value="yes">Yes</option>
 						    <option value="no">No</option>
-					</select>
+					    </select>
+					</div>
 				</div>
 			</div>
 
@@ -1148,98 +1156,98 @@
 				<p id="q6Points">0/100 </p>
 
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 5vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-1" class="txtInput pointElem1"  type="number" name="tech" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9);" min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p> Technology Landscaping </p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 5vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-2" class="txtInput pointElem1" type="number" name="comp" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9);"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Competitive Landscaping</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
 				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-3" class="txtInput pointElem1" type="number" name="inov" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal3(6,9);"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Innovation scouting</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
 				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-4" class="txtInput pointElem1" type="number" name="partner" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Partner identification</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 0vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-5" class="txtInput pointElem1" type="number" name="comp-anal" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Competitive analysis</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 0vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-6" class="txtInput pointElem1" type="number" name="white space id" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)">
 				</div>
-				<div class="col s4"> 
-					<p>white space identification</p>
+				<div class="col s4 right-align"> 
+					<p>White space identification</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 0vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-7" class="txtInput pointElem1" type="number" name="Licensing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>M&A / Licensing identification </p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 0vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-8" class="txtInput pointElem1" type="number" name="proc-anal" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Prosecution analytics</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 0vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem6-9" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Other</p>
 				</div>
 				<div class="col s2"> </div>
@@ -1268,7 +1276,7 @@
 
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select id="q25MultiInput"> 
+					<select id="q25MultiInput" class="browser-default"> 
 					        <option value="" disabled selected>		      	
 						    </option>
 						    <option value="yes">Yes</option>
@@ -1304,11 +1312,11 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select multiple id="q26MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
-						    <option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select multiple id="q26MultiInput">
+						    <option value="" disabled>. . .</option>
+							<option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
 						    <option value="Questel (Fampat/ Data Scope)">Questel (Fampat/ Data Scope)</option>
 						    <option value="LexisNexis / IPDD">LexisNexis / IPDD</option>
 						    <option value="IFI Claims  (Claims Direct)">IFI Claims  (Claims Direct)</option>
@@ -1316,7 +1324,8 @@
 						    <option value="Google Patents">Google Patents</option> 
 						    <option value="European Patent Office (espacenet)">European Patent Office (espacenet)</option> 
 						    <option value="USPTO">USPTO</option> 
-					</select>
+					    </select>
+					</div>
 				</div>
 
 				<input id="q26otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
@@ -1335,15 +1344,16 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select multiple id="q27MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
-						    <option value="Completeness">Completeness of data (e.g. maximum number of patent offices)</option>
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select multiple id="q27MultiInput">
+						    <option value="" disabled>. . .</option>
+							<option value="Completeness">Completeness of data (e.g. maximum number of patent offices)</option>
 						    <option value="Accuracy">Accuracy of data (i.e. different offices have different quality of data)</option>
 						    <option value="Cost">Cost (i.e. different providers have different costs )</option>
 						    <option value="I do my own data cleansing">I do my own data cleansing</option>
-					</select>
+					    </select>
+					</div>
 				</div>
 
 				<input id="q27otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
@@ -1362,11 +1372,11 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select multiple id="q27MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
-						    <option value="prior art search">Prior art search</option>
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select multiple id="q28MultiInput">
+						    <option value="" disabled>. . .</option>
+							<option value="prior art search">Prior art search</option>
 						    <option value="Freedom to operate">Freedom to operate</option>
 						    <option value="Invalidity search">Invalidity search</option>
 						    <option value="Technology Landscaping">Technology Landscaping</option>
@@ -1377,7 +1387,8 @@
 					        <option value="White space Identification">White space identification</option>
 					        <option value="M&A Licensing identification">M&A Licensing identification</option>
 					        <option value="Competitive Analysis">Prosecution Analytics</option>
-					</select>
+					    </select>
+					</div>
 				</div>
 
 				<input id="q28otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
@@ -1397,7 +1408,7 @@
 
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select id="q29MultiInput"> 
+					<select id="q29MultiInput" class="browser-default"> 
 					        <option value="" disabled selected>		      	
 						    </option>
 						    <option value="yes">Yes</option>
@@ -1433,18 +1444,20 @@
 			<div class="col s4"> </div>
 
 			<div class="col s4">
-				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
-					<select multiple id="q30MultiInput"> 
-					        <option value="" disabled selected>		      	
-						    </option>
-						    <option value="Name Normalization">Name normalization</option>
+
+				<div class="row">
+					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
+					    <select multiple id="q30MultiInput">
+						    <option value="" disabled>. . .</option>
+							<option value="Name Normalization">Name normalization</option>
 						    <option value="Legal Status Clean Up">Legal status clean up</option>
 						    <option value="Ownership data refinement"> Ownership data refinement</option>
 						    <option value="Expiry date calculation">Expiry date calculation</option>
 						    <option value="Connector to non patent litreature">Connector to non-patent literature</option>
 						    <option value="Add Litigation data">Add Litigation data</option>
 					        <option value="Add news and business data">Add news and business data</option>
-					</select>
+					    </select>
+					</div>
 				</div>
 
 				<input id="q30otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
@@ -1479,7 +1492,7 @@
 
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
-					<select id="q31MultiInput"> 
+					<select id="q31MultiInput" class="browser-default"> 
 					        <option value="" disabled selected>		      	
 						    </option>
 						    <option value="yes">Yes</option>
@@ -1502,7 +1515,7 @@
 
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
-					<select id="q32MultiInput"> 
+					<select id="q32MultiInput" class="browser-default"> 
 					        <option value="" disabled selected>		      	
 						    </option>
 						    <option value="current">We currently use this product</option>
@@ -1559,7 +1572,7 @@
 
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
-					<select id="q35MultiInput"> 
+					<select id="q35MultiInput" class="browser-default"> 
 					        <option value="" disabled selected>		      	
 						    </option>
 						    <option value="1">1 (Not likely at all)</option>
@@ -1608,65 +1621,65 @@
 				<p id="q8Points">0/100 </p>
 
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 5vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem8-1" class="txtInput pointElem1"  type="number" name="improve quality of content" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6);" min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p> Improve quality of content (e.g. full text, normalization, legal status, company hierarchy etc.) </p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 5vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem8-2" class="txtInput pointElem1" type="number" name="data from more offices" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6);"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Data from more patent offices (e.g. Thailand, South Africa, Turkey, Israel etc.)</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
 				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem8-3" class="txtInput pointElem1" type="number" name="content delivery" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal4(8,6);"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Improve content delivery (e.g. Better API, on-premise server, speed to data download, speed to update data)</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
 				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem8-4" class="txtInput pointElem1" type="number" name="product support" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6)"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Improve product support (e.g. documentation, customer support etc.)</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 0vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem8-5" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6)"min = '0'; max = '100';>
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Improve pricing vs competitors </p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
 
-			<div class="row questionTxt">
+			<div class="row ">
 				<div class="col s4"> </div>
-				<div class="col s2" style="padding-top: 0vh;"> 
+				<div class="col s2" style="padding-top: 1vh;"> 
 					<input id="pointElem8-6" class="txtInput pointElem1" type="number" name="Increase content" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal4(8,6)">
 				</div>
-				<div class="col s4"> 
+				<div class="col s4 right-align"> 
 					<p>Increase content (e.g. Chemical, litigation, News, Business etc.)</p>
 				</div>
 				<div class="col s2"> </div>
@@ -1709,6 +1722,31 @@
 	</div>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript">
 
 	//set properties...
@@ -1727,6 +1765,8 @@
 	$(document).ready(function(){
 	    $('select').formSelect();
 	});
+
+
 
 
 
@@ -2500,6 +2540,7 @@
 		}
 		else{
 			$('#fwdNav2').fadeOut();
+			if(totalPoints > 100) alert("You've exceeded 100 points");
 		}
 	}
 
@@ -2523,6 +2564,7 @@
 		}
 		else{
 			$('#fwdNav3').fadeOut();
+			if(totalPoints > 100) alert("You've exceeded 100 points");
 		}
 	}
 
@@ -2775,6 +2817,7 @@
 		}
 		else{
 			$('#fwdNav4').fadeOut();
+			if(totalPoints > 100) alert("You've exceeded 100 points");
 		}
 	}
 
