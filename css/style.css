@@ -9,12 +9,17 @@ h1, h2, h3, h4, h5, h6 {
  color: white;
 }
 
+.blueBackground{
+	background-color: #3263b3;
+}
+
 .whiteTxt{
 	color:white;
 }
 
 .welcomeContainer{
 	font-size: 3em;
+	padding: 3vh;
 }
 
 .descContainer{
@@ -22,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .backlink{
-	color: grey;
+	color: lightgrey;
 	font-size: 1.5em;
 }
 
@@ -59,8 +64,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .multipleChoice{
-	background-color: white;
+	font-size: 0.75em;
 	border-radius: 3%;
+}
+.multiInput{
+	background-color: white;
+	
 }
 
 .displayOff{
@@ -74,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subElem{
-	color: grey;
+	color: lightgrey;
 }
 
 .addElemPrompt:hover{
@@ -84,3 +93,4 @@ h1, h2, h3, h4, h5, h6 {
 .userInput{
 	color: white;
 }
+
