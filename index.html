@@ -33,16 +33,16 @@
 	<div id="landingArea"> 
 
 		<!-- reed tech lexis nexis backlinks -->
-		<div id="backlinks" class="row" style="padding-top: 2vh;">
-			<div class="col s12 center-align backlink txt" onclick="window.location.href = 'https://www.lexisnexis.com/en-us/gateway.page';">  Lexis Nexis  </div>
-			<div class="col s3"> </div>
+		<div id="backlinks" class="row center-align" style="padding-top: 2vh;" onclick="window.location.href = 'https://www.lexisnexis.com/en-us/gateway.page';">
+			<p class="backlink txt">  LexisNexis  </p>
+			<img class="logoImg" src = "https://i.ibb.co/pfzvXGX/output-onlinepngtools-39.png"/>
 		</div>
 
 
 		<!-- Welcome message -->
 		<div class="welcomeContainer center-align">
 
-			<p> Thank you for taking the time to answer the LexisNexis IPDD Questionnaire</p>
+			<p> LexisNexis IPDD Questionnaire</p>
 
 		</div>
 
@@ -92,7 +92,7 @@
 
 		<!-- Question Area -->
 		<div class="questionContainer center-align"> 
-			<p id="questionTxt" style="padding: 3vh;"> Which country or region does you company mainly operate in? </p>
+			<p id="questionTxt" style="padding: 3vh;"> Which country or region does your company mainly operate in? </p>
 
 			<div class="row center-align">
 				<div class="col s4"> </div>
@@ -101,7 +101,7 @@
 					<div class="row">
 					<div id="q1Area" class="multipleChoice col s12" onchange="fadeInNav()" >
 					    <select id="q1MultiInput" class="browser-default"> 
-					       <option value="" disabled selected>
+					    <option value="" disabled selected> 
 					      	
 					      </option>
 					      <option value="Asia (Multiple countries)">Asia (Multiple countries)</option>
@@ -134,6 +134,8 @@
 
 					<!-- Question 2 -->
 					<div id="q2Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
+
+						<!--
 					    <select id="q2MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
@@ -148,11 +150,15 @@
 					      <option value="Korea">Korea</option>
 					      <option value="United Kingdom">United Kingdom</option>
 					      <option value="United States">United States</option>
-					      <option value="Other">Other</option>
-
-
+					      <option value="Other">Other (Enter)</option>
 					    </select>
-					    <label></label>
+					    -->
+					   
+						<input list="q2MultiInput" id="myLocation" name="myLocation" style="background-color: white; padding-left: 1vh;" > 
+						<datalist id="q2MultiInput">
+						  
+						</datalist>
+
 					</div>
 
 					<!-- q2OtherInput -->
@@ -163,9 +169,9 @@
 					<!-- Question 3 -->
 					<div id="q3Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q3MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					     <option value="" disabled selected>
 					      	
-					      </option>
+					      </option
 					      <option value="Corporation">Corporation</option>
 					      <option value="Government/Academic">Government/Academic</option>
 					      <option value="Information Vendor">Information Vendor (search and analytics solutions)</option>
@@ -240,13 +246,18 @@
 					    <select id="q6MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
-					      </option>
+					      </option> 
 					      <option value="Search">Search</option>
 					      <option value="Analytics">Analytics</option>
 					      <option value="Both">Both</option>
-					      <option value="Other">Other</option>
+					      <option value="Other">Other (Enter)</option>
 					    </select>
 					    <label></label>
+					</div>
+
+					<!-- q6OtherInput -->
+					<div id="q6OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q6OtherInput" class="whiteTxt"  type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 
@@ -255,7 +266,7 @@
 					    <select id="q7MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
-					      </option>
+					      </option> 
 					      <option value="Legal">Legal</option>
 					      <option value="IP">IP</option>
 					      <option value="R&D">R&D</option>
@@ -267,9 +278,12 @@
 					    <label></label>
 					</div>
 
-					<!-- q7OtherInput -->
-					<div id="q7OtherInputArea" class="center-align txtInput displayOff"> 
+					<!-- q7OtherInput
+					<div id="q7OtherInputArea" class="center-align userInput displayOff"> 
 						<input id="q7OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div> -->
+					<div id="q7OtherInputArea" class="center-align userInput displayOff "> 
+						<input id="q7OtherInput" class="whiteTxt"  type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 					<!-- Question 8 -->
@@ -277,7 +291,7 @@
 					    <select id="q8MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
-					      </option>
+					      </option> 
 					      <option value="Prosecution">Prosecution</option>
 					      <option value="Litigation">Litigation</option>
 					      <option value="Both">Both</option>
@@ -286,9 +300,12 @@
 					    <label></label>
 					</div>
 
-					<!-- q8OtherInput -->
+					<!-- q8OtherInput 
 					<div id="q8OtherInputArea" class="center-align txtInput displayOff"> 
 						<input id="q8OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					</div>-->
+					<div id="q8OtherInputArea" class="center-align userInput displayOff "> 
+						<input id="q8OtherInput" class="whiteTxt"  type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 					<!-- Question 9 -->
@@ -296,7 +313,7 @@
 					    <select id="q9MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
-					      </option>
+					      </option> 
 					      <option value="Lawyer">Lawyer</option>
 					      <option value="Paralegal">Paralegal</option>
 					      <option value="Patent Specialist">Patent Specialist</option>
@@ -309,9 +326,11 @@
 					</div>
 
 					<!-- q9OtherInput -->
-					<div id="q9OtherInputArea" class="center-align txtInput displayOff"> 
-						<input id="q9OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q9OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q9OtherInput" class="whiteTxt" type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
+			
+
 
 					<!-- Question 10 -->
 					<div id="q10Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
@@ -328,8 +347,8 @@
 					</div>
 
 					<!-- q10OtherInput -->
-					<div id="q10OtherInputArea" class="center-align txtInput displayOff"> 
-						<input id="q10OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q10OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q10OtherInput"  class="whiteTxt" type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 
@@ -338,7 +357,7 @@
 					    <select id="q11MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
-					      </option>
+					      </option> 
 					      <option value="Legal">Legal</option>
 					      <option value="IP">IP</option>
 					      <option value="R&D">R&D</option>
@@ -351,15 +370,15 @@
 					</div>
 
 					<!-- q11OtherInput -->
-					<div id="q11OtherInputArea" class="center-align txtInput displayOff"> 
-						<input id="q11OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q11OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q11OtherInput"  class="whiteTxt" type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 
 					<!-- Question 12 -->
 					<div id="q12Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q12MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected> 
 					      	
 					      </option>
 					      <option value="Search">Search</option>
@@ -371,8 +390,8 @@
 					</div>
 
 					<!-- q12OtherInput -->
-					<div id="q12OtherInputArea" class="center-align txtInput displayOff"> 
-						<input id="q12OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q12OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q12OtherInput" class="whiteTxt" type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 
@@ -381,7 +400,7 @@
 					    <select id="q13MultiInput" class="browser-default"> 
 					      <option value="" disabled selected>
 					      	
-					      </option>
+					      </option> 
 					      <option value="Owner / CEO">Owner / CEO</option>
 					      <option value="Product Manager">Product Manager / Head </option>
 					      <option value="R&D">R&D</option>
@@ -393,8 +412,8 @@
 					</div>
 
 					<!-- q13OtherInput -->
-					<div id="q13OtherInputArea" class="center-align txtInput displayOff"> 
-						<input id="q13OtherInput"  type="text" name="other" onchange="fadeInNavFwd()">
+					<div id="q13OtherInputArea" class="center-align userInput displayOff"> 
+						<input id="q13OtherInput" class="whiteTxt" type="text" name="other" onchange="fadeInNavFwd()" placeholder=". . .">
 					</div>
 
 
@@ -404,7 +423,6 @@
 
 						<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd()">
 						    <select multiple id="q14MultiInput">
-							    <option value="" disabled>. . .</option>
 							    <option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
 							    <option value="Questel (Fampat/ Data Scope)">Questel (Fampat/ Data Scope) </option>
 							    <option value="LexisNexis / IPDD">LexisNexis / IPDD</option>
@@ -417,7 +435,7 @@
 					    </div>
 
 						<input id="otherIPDDInput" class="userInput displayOff"  type="text" name="others" placeholder="separte by commas... 1, 2, 3">
-						<p id="otherIPDDPrompt" class="subElem addElemPrompt"> + Others not listed? </p>
+						<p id="otherIPDDPrompt" class="subElem addElemPrompt" > + Others not listed? </p>
 					</div>
 
 					<!-- question nav btns -->
@@ -453,7 +471,7 @@
 		<div  class="questionContainer center-align" style="padding: 2vh;"> 
 			
 			<!-- Question 1 - #15 -->
-			<div id="q15area">
+			<div id="q15area" class="">
 
 
 				<div class="questionContainer center-align" style="font-size: 1em;"> 
@@ -470,10 +488,10 @@
 
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-1" class="txtInput pointElem1"  type="number" name="coverage" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
+						<input id="pointElem1-1" class="txtInput pointElem1"  type="number" name="coverage" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p> Coverage / Quality of the  underlying data </p>
+						<p> Coverage of the underlying data </p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -481,7 +499,18 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-2" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
+						<input id="pointElem1-2" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
+					</div>
+					<div class="col s4 right-align"> 
+						<p> Quality of the underlying data </p>
+					</div>
+					<div class="col s2"> </div>
+				</div>
+
+				<div class="row questionTxt">
+					<div class="col s4"> </div>
+					<div class="col s2" style="padding-top: 1vh;"> 
+						<input id="pointElem1-3" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p>Additional content beyond patent databases</p>
@@ -492,7 +521,7 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-3" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(1,5);" min = '0'; max = '100';>
+						<input id="pointElem1-4" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(1,6);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p> Ease of data delivery </p>
@@ -503,7 +532,7 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-4" class="txtInput pointElem1" type="number" name="ease" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5)" min = '0'; max = '100';>
+						<input id="pointElem1-5" class="txtInput pointElem1" type="number" name="ease" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6)" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p>Pricing and T&C</p>
@@ -514,10 +543,10 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-5" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
+						<input id="pointElem1-6" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p>Other</p>
+						<p>Other (Enter)</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -617,7 +646,7 @@
 						<input id="pointElem2-7" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(2,7)"min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p>Other</p>
+						<p>Other (Enter)</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -742,7 +771,7 @@
 						<input id="pointElem3-9" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(3,9)" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p>Other</p>
+						<p>Other (Enter)</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -811,7 +840,7 @@
 						<input id="pointElem4-4" class="txtInput pointElem1" type="number" name="search" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p>Ease of Searching (use of the provider's search syntax)</p>
+						<p>Ease of searching (use of the provider's search syntax)</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -844,7 +873,7 @@
 						<input id="pointElem4-7" class="txtInput pointElem1" type="number" name="Download" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p>Download Speed</p>
+						<p>Download speed</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -855,7 +884,7 @@
 						<input id="pointElem4-8" class="txtInput pointElem1" type="number" name="Customer" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(4,10)"min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p>Customer Support</p>
+						<p>Customer support</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -991,7 +1020,7 @@
 						<input id="pointElem5-8" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(5,8)"min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
-						<p>Other</p>
+						<p>Other (Enter)</p>
 					</div>
 					<div class="col s2"> </div>
 				</div>
@@ -1052,7 +1081,7 @@
 				</div>
 
 				<input id="q20otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
-				<p id="q20otherPrompt" class="subElem addElemPrompt" onclick="$('#q20otherInput').fadeIn();"> + Others not listed? </p>
+				<p id="q20otherPrompt" class="subElem addElemPrompt" onclick="$('#q20otherInput').fadeIn(); $('#q20otherPrompt').fadeOut();"> + Others not listed? </p>
 			</div>
 
 			<div class="col s4"> </div>
@@ -1062,7 +1091,7 @@
 
 		<div id="q21Area" class="row center-align descContainer displayOff">
 			<!--<p style="font-size: 0.5em;"> Question 2/11</p> -->
-			<p style="padding: 1vh;"> What are your use cases for the patent (databases) bulk/raw data?</p>
+			<p style="padding: 1vh;"> What are your use cases for the patent (databases) bulk/raw data? Select All that apply.</p>
 
 
 			<div class="col s4"> </div>
@@ -1082,7 +1111,7 @@
 				</div>
 
 				<input id="q21otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
-				<p id="q21otherPrompt" class="subElem addElemPrompt" onclick="$('#q21otherInput').fadeIn();"> + Others not listed? </p>
+				<p id="q21otherPrompt" class="subElem addElemPrompt" onclick="$('#q21otherInput').fadeIn(); $('#q21otherPrompt').fadeOut();"> + Others not listed? </p>
 			</div>
 
 			<div class="col s4"> </div>
@@ -1113,7 +1142,7 @@
 				</div>
 
 				<input id="q22otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
-				<p id="q22otherPrompt" class="subElem addElemPrompt" onclick="$('#q22otherInput').fadeIn();"> + Others not listed? </p>
+				<p id="q22otherPrompt" class="subElem addElemPrompt" onclick="$('#q22otherInput').fadeIn(); $('#q22otherPrompt').fadeOut();"> + Others not listed? </p>
 			</div>
 
 			<div class="col s4"> </div>
@@ -1174,7 +1203,7 @@
 					<input id="pointElem6-1" class="txtInput pointElem1"  type="number" name="tech" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9);" min = '0'; max = '100';>
 				</div>
 				<div class="col s4 right-align"> 
-					<p> Technology Landscaping </p>
+					<p> Technology landscaping </p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
@@ -1185,7 +1214,7 @@
 					<input id="pointElem6-2" class="txtInput pointElem1" type="number" name="comp" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9);"min = '0'; max = '100';>
 				</div>
 				<div class="col s4 right-align"> 
-					<p>Competitive Landscaping</p>
+					<p>Competitive landscaping</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
@@ -1262,7 +1291,7 @@
 					<input id="pointElem6-9" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal3(6,9)"min = '0'; max = '100';>
 				</div>
 				<div class="col s4 right-align"> 
-					<p>Other</p>
+					<p>Other (Enter)</p>
 				</div>
 				<div class="col s2"> </div>
 			</div>
@@ -1343,7 +1372,7 @@
 				</div>
 
 				<input id="q26otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
-				<p id="q26otherPrompt" class="subElem addElemPrompt" onclick="$('#q26otherInput').fadeIn();"> + Others not listed? </p>
+				<p id="q26otherPrompt" class="subElem addElemPrompt" onclick="$('#q26otherInput').fadeIn(); $('#q26otherPrompt').fadeOut();"> + Others not listed? </p>
 			</div>
 
 			<div class="col s4"> </div>
@@ -1352,7 +1381,7 @@
 
 		<div id="q27Area" class="row center-align descContainer displayOff">
 			<!--<p style="font-size: 0.5em;"> Question 8/11</p>-->
-			<p style="padding: 1vh;">What is the reason for using more then one source of data?</p>
+			<p style="padding: 1vh;">What is the reason for using more than one source of data?</p>
 
 
 			<div class="col s4"> </div>
@@ -1361,9 +1390,9 @@
 				<div class="row">
 					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
 					    <select multiple id="q27MultiInput">
-						    <option value="" disabled>. . .</option>
+						    <option value="" disabled>. . .</option> 
 							<option value="Completeness">Completeness of data (e.g. maximum number of patent offices)</option>
-						    <option value="Accuracy">Accuracy of data (i.e. different offices have different quality of data)</option>
+						    <option value="Accuracy">Accuracy of data (i.e. different providers have different qualities of data)</option>
 						    <option value="Cost">Cost (i.e. different providers have different costs )</option>
 						    <option value="I do my own data cleansing">I do my own data cleansing</option>
 					    </select>
@@ -1371,7 +1400,7 @@
 				</div>
 
 				<input id="q27otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
-				<p id="q27otherPrompt" class="subElem addElemPrompt" onclick="$('#q27otherInput').fadeIn();"> + Others not listed? </p>
+				<p id="q27otherPrompt" class="subElem addElemPrompt" onclick="$('#q27otherInput').fadeIn(); $('#q27otherPrompt').fadeOut();"> + Others not listed? </p>
 			</div>
 
 			<div class="col s4"> </div>
@@ -1393,20 +1422,20 @@
 							<option value="prior art search">Prior art search</option>
 						    <option value="Freedom to operate">Freedom to operate</option>
 						    <option value="Invalidity search">Invalidity search</option>
-						    <option value="Technology Landscaping">Technology Landscaping</option>
-						    <option value="Competitive Landscaping">Competitive Landscaping</option>
-						    <option value="Innovation Scouting">Innovation Scouting</option>
-					        <option value="Partner Identification">Partner Identification</option>
-					        <option value="Competitive Analysis">Competitive Analysis</option>
+						    <option value="Technology Landscaping">Technology landscaping</option>
+						    <option value="Competitive Landscaping">Competitive landscaping</option>
+						    <option value="Innovation Scouting">Innovation scouting</option>
+					        <option value="Partner Identification">Partner identification</option>
+					        <option value="Competitive Analysis">Competitive analysis</option>
 					        <option value="White space Identification">White space identification</option>
-					        <option value="M&A Licensing identification">M&A Licensing identification</option>
-					        <option value="Competitive Analysis">Prosecution Analytics</option>
+					        <option value="M&A Licensing identification">M&A licensing identification</option>
+					        <option value="Competitive Analysis">Prosecution analytics</option>
 					    </select>
 					</div>
 				</div>
 
 				<input id="q28otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
-				<p id="q28otherPrompt" class="subElem addElemPrompt" onclick="$('#q28otherInput').fadeIn();"> + Others not listed? </p>
+				<p id="q28otherPrompt" class="subElem addElemPrompt" onclick="$('#q28otherInput').fadeIn(); $('#q28otherPrompt').fadeOut();"> + Others not listed? </p>
 			</div>
 
 			<div class="col s4"> </div>
@@ -1475,7 +1504,7 @@
 				</div>
 
 				<input id="q30otherInput" class="userInput displayOff col s12"  type="text" name="others" placeholder="separte by commas... 1, 2, 3" oninput="fadeInNavFwd3(); ">
-				<p id="q30otherPrompt" class="subElem addElemPrompt" onclick="$('#q30otherInput').fadeIn();"> + Others not listed? </p>
+				<p id="q30otherPrompt" class="subElem addElemPrompt" onclick="$('#q30otherInput').fadeIn(); $('#q30otherPrompt').fadeOut();"> + Others not listed? </p>
 			</div>
 
 			<div class="col s4"> </div>
@@ -1530,8 +1559,8 @@
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
 					<select id="q32MultiInput" class="browser-default"> 
-					        <option value="" disabled selected>		      	
-						    </option>
+					      <!--  <option value="" disabled selected>		      	
+						    </option>-->
 						    <option value="current">We currently use this product</option>
 						    <option value="past">We used to use this product in the past but currently do not use it</option>
 						    <option value="seen">Previously have seen a product demo </option>
@@ -1729,8 +1758,12 @@
 
 	<div id="endArea" class="displayOff">
 			
-		<div class="row center-align header"> 
+		<div class="row center-align " style="padding-top: 10vh;"> 
+
+			<img class="logoImg" src = "https://i.ibb.co/pfzvXGX/output-onlinepngtools-39.png"/>
+
 			<p> Thank you for taking our 2020 IPDD Questionnaire </p>
+			
 		</div>
 
 	</div>
@@ -1766,6 +1799,7 @@
 	//set properties...
 	let questionNum = 1;
 	let responses = {};
+	let countries = new Set();
 	
 	//user clicked to start survey...
 	function startSurvey(){
@@ -1778,6 +1812,24 @@
 	//materialize form inits
 	$(document).ready(function(){
 	    $('select').formSelect();
+
+	    //getting list of countries
+	    var xhttp = new XMLHttpRequest();
+	    xhttp.onreadystatechange = function() {
+	    	if (this.readyState == 4 && this.status == 200) {
+	    		let XMLcountries = this.responseText.substring(1, this.responseText.indexOf(']')).replace(/^\s+|\s+$/g, '');
+	    		XMLcountries = XMLcountries.split('},');
+		  		
+		  		XMLcountries.forEach(function(country){
+		  			let countryName = country.substring(country.indexOf("'")+1, country.indexOf(',')-1);
+		  			countries.add(countryName);
+		  		});
+	    	}
+	    };
+	    xhttp.open("GET", "https://gist.githubusercontent.com/keeguon/2310008/raw/bdc2ce1c1e3f28f9cab5b4393c7549f38361be4e/countries.json", true);
+  		xhttp.send();
+
+
 	});
 
 
@@ -1816,6 +1868,28 @@
 		$('#progress-fill').css('width', progressPercent + "%");
 	}
 
+
+	//populate q2 with country options
+	function populateQ2Options(){
+		$('#q2MultiInput').html(''); //clear options
+
+		// add default option
+		//let defualtOption = "<option value='' disabled selected> Search...</option>";
+		//$('#q2MultiInput').append(defualtOption);
+
+
+		// add all countries as options
+		let options = '';
+		countries.forEach(function(country){
+			options += "<option value='"+country+"''>"+country+"</option>";
+		});
+		$('#q2MultiInput').append(options);
+
+		//add other option
+		let otherOption = "<option value='Other'>Other (Enter)</option>";
+		$('#q2MultiInput').append(options);
+	}
+
 	//fwd nav onclick...
 	$('#fwdNav').click(function(){
 		if(questionNum==1){
@@ -1836,12 +1910,12 @@
 				$('#fwdNav').fadeOut();
 				$('#q1OtherInputArea').fadeIn();
 			}
-			else if(responses[1] == 'Asia (Other)'){
-				$('#survey1area').fadeOut();
-				$('#progress-bar').fadeOut();
-				$('#conclusionArea').fadeIn();
-				$('#backlinks').fadeIn();
-			}
+			//else if(responses[1] == 'Asia (Other)'){
+			//	$('#survey1area').fadeOut();
+			//	$('#progress-bar').fadeOut();
+			//	$('#conclusionArea').fadeIn();
+			//	$('#backlinks').fadeIn();
+			// /}
 			else{
 				questionNum++;
 				//edit text
@@ -1854,6 +1928,7 @@
 				$('#fwdNav').fadeOut();
 				//fade in q2
 				$('#q2Area').fadeIn();
+				populateQ2Options();
 			}
 		}
 
@@ -1865,6 +1940,7 @@
 			$('#q1OtherInputArea').fadeOut();
 			$('#fwdNav').fadeOut();
 			$('#q2Area').fadeIn();
+			populateQ2Options();
 		}
 
 		else if(questionNum == 2){
@@ -2022,7 +2098,9 @@
 				//fade out fwd btn
 				$('#fwdNav').fadeOut();
 				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				$('#questionTxt').html('Which of the following patent databases are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+				$('#questionTxt').append(multiSelectTxt);
 				//fade in q14
 				$('#q14Area').fadeIn();
 			}
@@ -2066,11 +2144,29 @@
 			updateProgress(questionNum);
 			
  			responses[6] = $('#q6MultiInput').val();
- 			questionNum++;
- 			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('What department do you work in?');
- 			$('#fwdNav').fadeOut();
-			$('#q6Area').fadeOut();
+
+ 			if(responses[6] == 'Other'){
+ 				questionNum = 6.5;
+ 				$('#fwdNav').fadeOut();
+				$('#q6Area').fadeOut();
+				$('#q6OtherInputArea').fadeIn();
+ 			}
+ 			else{
+ 				questionNum++;
+	 			$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('What department do you work in?');
+	 			$('#fwdNav').fadeOut();
+				$('#q6Area').fadeOut();
+				$('#q7Area').fadeIn();
+ 			}
+ 		}
+
+ 		else if(questionNum == 6.5){
+ 			questionNum = 7;
+ 			responses[6] = 'Other: '  + $('#q6OtherInput').val();
+ 			$('#questionTxt').html('What department do you work in?');
+			$('#q6OtherInputArea').fadeOut();
+			$('#fwdNav').fadeOut();
 			$('#q7Area').fadeIn();
  		}
 
@@ -2089,6 +2185,8 @@
  				questionNum=14;
 				$('#questionCount').html('Question ' + questionNum + '/14');
 				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+				$('#questionTxt').append(multiSelectTxt);
 				$('#fwdNav').fadeOut();
 				$('#q7Area').fadeOut();
 				$('#q14Area').fadeIn();
@@ -2100,6 +2198,8 @@
 			responses[7] = 'Other: ' +  $('#q7OtherInput').val();
 			$('#questionCount').html('Question ' + questionNum + '/14');
 			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+			let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+			$('#questionTxt').append(multiSelectTxt);
 			$('#q7OtherInputArea').fadeOut();
 			$('#fwdNav').fadeOut();
 			$('#q14Area').fadeIn();
@@ -2142,6 +2242,7 @@
 			updateProgress(questionNum);
 			
  			responses[9] = $('#q9MultiInput').val();
+ 			console.log(responses[9]);
  			if(responses[9] == 'Other'){
  				$('#fwdNav').fadeOut();
 				$('#q9Area').fadeOut();
@@ -2214,7 +2315,7 @@
  			else{
  				questionNum=14;
 				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)??');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
 				$('#fwdNav').fadeOut();
 				$('#q11Area').fadeOut();
 				$('#q14Area').fadeIn();
@@ -2225,7 +2326,7 @@
 			questionNum = 14;
 			responses[11] = 'Other: ' +  $('#q11OtherInput').val();
 			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)??');
+			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
 			$('#q11OtherInputArea').fadeOut();
 			$('#fwdNav').fadeOut();
 			$('#q14Area').fadeIn();
@@ -2276,7 +2377,9 @@
  			else{
  				questionNum=14;
 				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				$('#questionTxt').html('Which of the following patent databases are you familiar with (e.g. prior/current user, have seen product demos, know of reputation)?');
+				let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+				$('#questionTxt').append(multiSelectTxt);
 				$('#fwdNav').fadeOut();
 				$('#q13Area').fadeOut();
 				$('#q14Area').fadeIn();
@@ -2287,7 +2390,9 @@
 			questionNum = 14;
 			responses[13] = 'Other: ' +  $('#q13OtherInput').val();
 			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+			$('#questionTxt').html('Which of the following patent databases are you familiar with (e.g. prior/current user, have seen product demos, know of reputation)?');
+			let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+			$('#questionTxt').append(multiSelectTxt);
 			$('#q13OtherInputArea').fadeOut();
 			$('#fwdNav').fadeOut();
 			$('#q14Area').fadeIn();
@@ -2322,19 +2427,24 @@
 			
 
 			//enter q 19 - if selected > 0 for pricing tc
-			if($('#pointElem1-4').val()>0){
+			if($('#pointElem1-5').val()>0){
  				check19 = true;
  				questionNum = 19;
 			}
 			//enter q 18 - if selected > 0 for ease of delivery
-			if($('#pointElem1-3').val()>0){
+			if($('#pointElem1-4').val()>0){
  				check18 = true;
  				questionNum = 18;
 			}
 			//enter q 17 - if selected > 0 for additional content
-			if($('#pointElem1-2').val()>0){
+			if($('#pointElem1-3').val()>0){
  				check17 = true;
  				questionNum = 17;
+			}
+			//enter q 16 - if selected > 0 for accuracy of underlying data
+			if($('#pointElem1-2').val()>0){
+ 				check16 = true;
+ 				questionNum = 16;
 			}
 			//enter q 16 - if selected > 0 for accuracy of underlying data
 			if($('#pointElem1-1').val()>0){
@@ -2342,7 +2452,7 @@
  				questionNum = 16;
 			}
 			//check if other has points
-			if($('#pointElem1-5').val() > 0){
+			if($('#pointElem1-6').val() > 0){
 				$('#fwdNav2').fadeOut();
 				$('#q15area').fadeOut();
 				//promt user to specify 'other(s)'
@@ -2600,6 +2710,7 @@
 	//allow user to enter ip dbs not on list...
 	$('#otherIPDDPrompt').click(function(){
 		$("#otherIPDDInput").fadeIn();
+		$('#otherIPDDPrompt').fadeOut();
 	});
 
 

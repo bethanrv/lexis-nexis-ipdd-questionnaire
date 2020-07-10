@@ -13,8 +13,23 @@ h1, h2, h3, h4, h5, h6 {
  color: white;
 }
 
+p {
+	font-size: 1.25em;
+}
+
+
 .blueBackground{
 	background-color: #3263b3;
+}
+
+.logoImg{
+	width: 7vh;
+	height: 7vh;
+}
+
+.logoImg:hover{
+	width: 8vh;
+	height: 8vh;
 }
 
 .whiteTxt{
@@ -22,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .welcomeContainer{
-	font-size: 3em;
+	font-size: 2em;
 	padding: 3vh;
 }
 
@@ -66,6 +81,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+#q2MultiInputLabel{
+	color: black; 
+	font-size: 1.2em;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
 
 .multipleChoice{
 	font-size: 0.75em;
@@ -84,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: white;
 	font-size: 1em;
 	border-radius: 2.5%;
+	width: 3vw;
 }
 
 .subElem{
