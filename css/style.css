@@ -88,10 +88,16 @@ p {
 	padding-left: 10px;
 }
 
+span {
+	color: black;
+	font-weight: 500;
+}
+
 
 .multipleChoice{
 	font-size: 0.75em;
 	border-radius: 3%;
+	color: black; 
 }
 .multiInput{
 	background-color: white;

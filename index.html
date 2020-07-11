@@ -421,9 +421,9 @@
 
 					<div id="q14Area" class="row displayOff">
 
-						<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd()">
-						    <select multiple id="q14MultiInput">
-							    <option value="Clarivate (Derwent /DWPI)">Clarivate (Derwent /DWPI)</option>
+						<div class="input-field col s12 multiInput multipleChoice " onchange="fadeInNavFwd()">
+						    <select class="black" multiple id="q14MultiInput" >
+							    <option class="black" value="Clarivate (Derwent /DWPI)" > Clarivate (Derwent /DWPI) </option>
 							    <option value="Questel (Fampat/ Data Scope)">Questel (Fampat/ Data Scope) </option>
 							    <option value="LexisNexis / IPDD">LexisNexis / IPDD</option>
 							    <option value="IFI Claims  (Claims Direct)">IFI Claims  (Claims Direct)</option>
@@ -1811,7 +1811,13 @@
 
 	//materialize form inits
 	$(document).ready(function(){
+
+
 	    $('select').formSelect();
+	    
+		
+
+
 
 	    //getting list of countries
 	    var xhttp = new XMLHttpRequest();
