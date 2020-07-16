@@ -93,6 +93,9 @@ span {
 	font-weight: 500;
 }
 
+datalist option {
+	width: 10%;
+}
 
 .multipleChoice{
 	font-size: 0.75em;

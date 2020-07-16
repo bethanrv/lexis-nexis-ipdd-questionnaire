@@ -26,6 +26,9 @@
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Script -->
+    <script src="./js/script.js"></script>
+
 </head>
 <body style="height: 100%; padding-bottom: 20vh;" class="blueBackground">
 
@@ -33,8 +36,8 @@
 	<div id="landingArea"> 
 
 		<!-- reed tech lexis nexis backlinks -->
-		<div id="backlinks" class="row center-align" style="padding-top: 2vh;" onclick="window.location.href = 'https://www.lexisnexis.com/en-us/gateway.page';">
-			<p class="backlink txt">  LexisNexis  </p>
+		<div id="backlinks" class="row center-align" style="padding-top: 5vh;" onclick="window.location.href = 'https://www.lexisnexis.com/en-us/gateway.page';">
+			<!--<p class="backlink txt">  LexisNexis  </p>-->
 			<img class="logoImg" src = "https://i.ibb.co/pfzvXGX/output-onlinepngtools-39.png"/>
 		</div>
 
@@ -99,9 +102,9 @@
 				<div class="col s4">
 					<!--Question 1-->
 					<div class="row">
-					<div id="q1Area" class="multipleChoice col s12" onchange="fadeInNav()" >
+					<div id="q1Area" class="multipleChoice col s12" onchange="fadeInNavFwd(); fadeInNav();" >
 					    <select id="q1MultiInput" class="browser-default"> 
-					    <option value="" disabled selected> 
+					    <option value="" disabled selected hidden> 
 					      	
 					      </option>
 					      <option value="Asia (Multiple countries)">Asia (Multiple countries)</option>
@@ -169,7 +172,7 @@
 					<!-- Question 3 -->
 					<div id="q3Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q3MultiInput" class="browser-default"> 
-					     <option value="" disabled selected>
+					     <option value="" disabled selected hidden>
 					      	
 					      </option
 					      <option value="Corporation">Corporation</option>
@@ -189,7 +192,7 @@
 					<!-- Question 4 -->
 					<div id="q4Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q4MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option>
 					      <option value="Data consumer / processor">Data consumer / processor</option>
@@ -204,7 +207,7 @@
 					<!-- Question 5 -->
 					<div id="q5Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q5MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option>
 					      <option value="Aerospace">Aerospace</option>
@@ -244,7 +247,7 @@
 					<!-- Question 6 -->
 					<div id="q6Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q6MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option> 
 					      <option value="Search">Search</option>
@@ -264,7 +267,7 @@
 					<!-- Question 7 -->
 					<div id="q7Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q7MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option> 
 					      <option value="Legal">Legal</option>
@@ -289,7 +292,7 @@
 					<!-- Question 8 -->
 					<div id="q8Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q8MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option> 
 					      <option value="Prosecution">Prosecution</option>
@@ -311,7 +314,7 @@
 					<!-- Question 9 -->
 					<div id="q9Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q9MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option> 
 					      <option value="Lawyer">Lawyer</option>
@@ -335,7 +338,7 @@
 					<!-- Question 10 -->
 					<div id="q10Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q10MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option>
 					      <option value="Search">Search</option>
@@ -355,7 +358,7 @@
 					<!-- Question 11 -->
 					<div id="q11Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q11MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option> 
 					      <option value="Legal">Legal</option>
@@ -378,7 +381,7 @@
 					<!-- Question 12 -->
 					<div id="q12Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q12MultiInput" class="browser-default"> 
-					      <option value="" disabled selected> 
+					      <option value="" disabled selected hidden> 
 					      	
 					      </option>
 					      <option value="Search">Search</option>
@@ -398,7 +401,7 @@
 					<!-- Question 13 -->
 					<div id="q13Area" class="input-field multipleChoice col s12 displayOff" onchange="fadeInNavFwd()">
 					    <select id="q13MultiInput" class="browser-default"> 
-					      <option value="" disabled selected>
+					      <option value="" disabled selected hidden>
 					      	
 					      </option> 
 					      <option value="Owner / CEO">Owner / CEO</option>
@@ -440,7 +443,14 @@
 
 					<!-- question nav btns -->
 					<div id="QNavBtns" class="questionNavBtns row displayOff center-align">
-						<div id="fwdNav" class=""> <i class="material-icons navBtn"> arrow_forward </i> </div>
+						<div class="col s5 right-align">
+							<div id="backNav" class="displayOff"> <i class="material-icons navBtn"> arrow_back </i> </div>
+						</div>
+						<div class="col s2"> </div>
+						<div class="col s5 left-align">
+							<div id="fwdNav" class=""> <i class="material-icons navBtn"> arrow_forward </i> </div>
+						</div>
+						
 					</div>
 					
 			    </div>
@@ -488,7 +498,7 @@
 
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-1" class="txtInput pointElem1"  type="number" name="coverage" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
+						<input id="pointElem1-1" class="txtInput pointElem1"  type="number" name="coverage" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p> Coverage of the underlying data </p>
@@ -499,7 +509,7 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-2" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
+						<input id="pointElem1-2" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p> Quality of the underlying data </p>
@@ -510,18 +520,7 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-3" class="txtInput pointElem1" type="number" name="additional" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
-					</div>
-					<div class="col s4 right-align"> 
-						<p>Additional content beyond patent databases</p>
-					</div>
-					<div class="col s2"> </div>
-				</div>
-
-				<div class="row questionTxt">
-					<div class="col s4"> </div>
-					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-4" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(1,6);" min = '0'; max = '100';>
+						<input id="pointElem1-3" class="txtInput pointElem1" type="number" name="pricing" style="width: 5vh; color: white;" placeholder="0" onchange="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p> Ease of data delivery </p>
@@ -532,7 +531,7 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-5" class="txtInput pointElem1" type="number" name="ease" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6)" min = '0'; max = '100';>
+						<input id="pointElem1-4" class="txtInput pointElem1" type="number" name="ease" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5)" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p>Pricing and T&C</p>
@@ -543,7 +542,7 @@
 				<div class="row questionTxt">
 					<div class="col s4"> </div>
 					<div class="col s2" style="padding-top: 1vh;"> 
-						<input id="pointElem1-6" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,6);" min = '0'; max = '100';>
+						<input id="pointElem1-5" class="txtInput pointElem1" type="number" name="other" style="width: 5vh; color: white;" placeholder="0" oninput="updateTotal(1,5);" min = '0'; max = '100';>
 					</div>
 					<div class="col s4 right-align"> 
 						<p>Other (Enter)</p>
@@ -1040,8 +1039,15 @@
 
 
 			<!-- question nav btns -->
-			<div id="QNavBtns2" class="questionNavBtns row displayOff center-align">
-				<div id="fwdNav2" class=""> <i class="material-icons navBtn"> arrow_forward </i> </div>
+			<div id="QNavBtns2" class="questionNavBtns row center-align">
+				<div class="col s5 right-align">
+					<div id="backNav2" class=""> <i class="material-icons navBtn"> arrow_back </i> </div>
+				</div>
+				<div class="col s2"> </div>
+				<div class="col s5 left-align">
+					<div id="fwdNav2" class="displayOff"> <i class="material-icons navBtn"> arrow_forward </i> </div>
+				</div>
+
 			</div>
 
 		</div>
@@ -1161,7 +1167,7 @@
 				<div class="row">
 					<div class="input-field col s12 multiInput multipleChoice" onchange="fadeInNavFwd3()">
 					    <select id="q23MultiInput" class="browser-default">
-						    <option value="" disabled selected="">. . .</option>
+						    <option value="" disabled selected hidden>. . .</option>
 							<option value="yes">Yes</option>
 						    <option value="no">No</option>
 					    </select>
@@ -1320,7 +1326,7 @@
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
 					<select id="q25MultiInput" class="browser-default"> 
-					        <option value="" disabled selected>		      	
+					        <option value="" disabled selected hidden>		      	
 						    </option>
 						    <option value="yes">Yes</option>
 						    <option value="no">No</option>
@@ -1452,7 +1458,7 @@
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd3()">
 					<select id="q29MultiInput" class="browser-default"> 
-					        <option value="" disabled selected>		      	
+					        <option value="" disabled selected hidden>		      	
 						    </option>
 						    <option value="yes">Yes</option>
 						    <option value="no">No</option>
@@ -1466,7 +1472,7 @@
 
 		<div id="q29YesArea" class="row center-align descContainer displayOff">
 			<!--<p style="font-size: 0.5em;"> Question 10/11</p>-->
-			<p> Which data? </p>
+			<p> What data? </p>
 
 
 			<div class="col s4"> </div>
@@ -1511,7 +1517,14 @@
 		</div>	
 		<!-- question nav btns -->
 		<div id="QNavBtns3" class="questionNavBtns row  center-align">
-			<div id="fwdNav3" class="displayOff"> <i class="material-icons navBtn"> arrow_forward </i> </div>
+			<div class="col s5 right-align">
+				<div id="backNav3" class=""> <i class="material-icons navBtn"> arrow_back </i> </div>
+			</div>
+			<div class="col s2"> </div>
+			<div class="col s5 left-align">
+				<div id="fwdNav3" class="displayOff"> <i class="material-icons navBtn"> arrow_forward </i> </div>
+			</div>
+			
 		</div>
 
 	</div>
@@ -1536,7 +1549,7 @@
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
 					<select id="q31MultiInput" class="browser-default"> 
-					        <option value="" disabled selected>		      	
+					        <option value="" disabled selected hidden>		      	
 						    </option>
 						    <option value="yes">Yes</option>
 						    <option value="no">No</option>
@@ -1616,7 +1629,7 @@
 			<div class="col s4">
 				<div class="input-field multipleChoice col s12" onchange="fadeInNavFwd4()">
 					<select id="q35MultiInput" class="browser-default"> 
-					        <option value="" disabled selected>		      	
+					        <option value="" disabled selected hidden>		      	
 						    </option>
 						    <option value="1">1 (Not likely at all)</option>
 						    <option value="2">2</option>
@@ -1750,7 +1763,14 @@
 
 		<!-- question nav btns -->
 		<div id="QNavBtns4" class="questionNavBtns row  center-align">
-			<div id="fwdNav4" class="displayOff"> <i class="material-icons navBtn"> arrow_forward </i> </div>
+			<div class="col s5 right-align">
+				<div id="backNav4" class=""> <i class="material-icons navBtn"> arrow_back </i> </div>
+			</div>
+			<div class="col s2"> </div>
+			<div class="col s5 left-align">
+				<div id="fwdNav4" class="displayOff"> <i class="material-icons navBtn"> arrow_forward </i> </div>
+			</div>
+			
 		</div>
 
 	</div> <!-- end 4 -->
@@ -1815,15 +1835,14 @@
 
 	    $('select').formSelect();
 	    
-		
 
 
 
-	    //getting list of countries
+	    //getting list of countries to populate location lists...
 	    var xhttp = new XMLHttpRequest();
 	    xhttp.onreadystatechange = function() {
 	    	if (this.readyState == 4 && this.status == 200) {
-	    		let XMLcountries = this.responseText.substring(1, this.responseText.indexOf(']')).replace(/^\s+|\s+$/g, '');
+	    		let XMLcountries = this.responseText.substring(1, this.responseText.indexOf(']')).replace(/^\s+|\s+$/g, ''); // parse data to iterate over...
 	    		XMLcountries = XMLcountries.split('},');
 		  		
 		  		XMLcountries.forEach(function(country){
@@ -1889,16 +1908,34 @@
 		countries.forEach(function(country){
 			options += "<option value='"+country+"''>"+country+"</option>";
 		});
-		$('#q2MultiInput').append(options);
+		
 
 		//add other option
 		let otherOption = "<option value='Other'>Other (Enter)</option>";
 		$('#q2MultiInput').append(options);
 	}
 
+
+	//part 1 nav btns click logic....
+
 	//fwd nav onclick...
 	$('#fwdNav').click(function(){
-		if(questionNum==1){
+		naviagePart1('fwd');
+	});
+
+
+	//back btn on click
+	$('#backNav').click(function(){
+		naviagePart1('back');
+	});
+
+	
+	//navigate thru part 1
+	function naviagePart1(direction){
+		if(questionNum==1 && direction == 'fwd'){
+
+			//fade in back nav
+			$('#backNav').fadeIn();
 
 			//update progress
 			$('#progress-bar').fadeIn();
@@ -1909,6 +1946,7 @@
 			//add response
 			responses[1] = $('#q1MultiInput').val();
 			if(responses[1] == 'Other'){
+
 				questionNum = 1.5;
 				//fade out q1
 				$('#q1Area').fadeOut();
@@ -1939,484 +1977,827 @@
 		}
 
 		else if(questionNum == 1.5){
-			questionNum = 2;
-			responses[1] = 'Other: ' +  $('#q1OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('Where are you physically located?');
-			$('#q1OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q2Area').fadeIn();
-			populateQ2Options();
+			if(direction == 'fwd'){
+				questionNum = 2;
+				responses[1] = 'Other: ' +  $('#q1OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Where are you physically located?');
+				$('#q1OtherInputArea').fadeOut();
+				$('#fwdNav').fadeOut();
+				$('#q2Area').fadeIn();
+				populateQ2Options();
+			}
+			else{
+
+				questionNum = 1;
+				//fade in q1
+				$('#q1OtherInputArea').fadeOut();
+				$('#questionTxt').html('What country of region does your company mainly operate in?');
+				$('#backNav').fadeOut();
+				$('#q1Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 2){
 
-			//update progress
-			updateProgress(questionNum);
+			if(direction == 'fwd'){
 
-			//add response
-			responses[2]  = $('#q2MultiInput').val();
+				//update progress
+				updateProgress(questionNum);
 
-			if(responses[2] == 'Other'){
-				questionNum = 2.5;
-				//fade out q2
+				//add response
+				responses[2]  = $('#q2MultiInput').val();
+
+				if(responses[2] == 'Other'){
+					questionNum = 2.5;
+					//fade out q2
+					$('#q2Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					$('#q2OtherInputArea').fadeIn();
+				}
+				else{
+					questionNum++;
+					//edit text
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('What type of organization do you work in?');
+					//fade out q2
+					$('#q2Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					//fade in q3
+					$('#q3Area').fadeIn();
+				}
+			}
+
+			else{
+				questionNum = 1;
+				//fade out q2 and fwd nav
 				$('#q2Area').fadeOut();
-				//fade out fwd btn
+				//change text back
+				$('#questionTxt').html('What country of region does your company mainly operate in?');
+				$('#backNav').fadeOut();
+				//fade in last q
+				$('#q1Area').fadeIn();
+			}
+
+		}
+
+		else if(questionNum == 2.5){
+			if(direction == 'fwd'){
+
+				questionNum = 3;
+				responses[2] = 'Other: ' +  $('#q2OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/20');
+				$('#questionTxt').html('What type of organization do you work in?');
+				$('#q2OtherInputArea').fadeOut();
 				$('#fwdNav').fadeOut();
-				$('#q2OtherInputArea').fadeIn();
+				$('#q3Area').fadeIn();
+
 			}
 			else{
-				questionNum++;
-				//edit text
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('What type of organization do you work in?');
-				//fade out q2
-				$('#q2Area').fadeOut();
-				//fade out fwd btn
+
+				//back to 2
+				questionNum = 2;
+				//fade out q2 other and fwd nav
+				$('#q2OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('Where are you physically located?');
+				//fade in last q
+				$('#q2Area').fadeIn();
+
+			}
+			
+		}
+
+		else if(questionNum == 3){
+
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				//add response
+				responses[3]  = $('#q3MultiInput').val();
+				
+				if(responses[3] == 'Other'){
+					questionNum = 3.5;
+					//fade out q2
+					$('#q3Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					$('#q3OtherInputArea').fadeIn();
+				}
+
+				else{
+					questionNum++;
+					//edit text
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('How familiar are you with bulk patent data? Are you a...');
+					//fade out q3
+					$('#q3Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					//fade in q4
+					$('#q4Area').fadeIn();
+				}
+			}
+
+			else{
+				//back to 2
+				questionNum = 2;
+				//fade out q2 other and fwd nav
+				$('#q3Area').fadeOut();
+				//change text back
+				$('#questionTxt').html('Where are you physically located?');
+				//fade in last q
+				$('#q2Area').fadeIn();
+			}
+
+			
+		}
+
+		else if(questionNum == 3.5){
+			if(direction == 'fwd'){
+				questionNum = 4;
+				responses[3] = 'Other: ' +  $('#q3OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/20');
+				$('#questionTxt').html('How familiar are you with bulk patent data?');
+				$('#q3OtherInputArea').fadeOut();
 				$('#fwdNav').fadeOut();
-				//fade in q3
+				$('#q4Area').fadeIn();
+			}
+			else{
+				//back to 3
+				questionNum = 3;
+				//fade out q2 other and fwd nav
+				$('#q3OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('What type of organization do you work in?');
+				//fade in last q
 				$('#q3Area').fadeIn();
 			}
 		}
 
-		else if(questionNum == 2.5){
-			questionNum = 3;
-			responses[2] = 'Other: ' +  $('#q2OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/20');
-			$('#questionTxt').html('What type of organization do you work in?');
-			$('#q2OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q3Area').fadeIn();
-		}
+		else if(questionNum == 4){
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				//add response
+				questionNum=14;
+				responses[4]  = $('#q4MultiInput').val();
 
-		else if(questionNum == 3){
-			//update progress
-			updateProgress(questionNum);
-			
-			//add response
-			responses[3]  = $('#q3MultiInput').val();
-			
-			if(responses[3] == 'Other'){
-				questionNum = 3.5;
-				//fade out q2
-				$('#q3Area').fadeOut();
-				//fade out fwd btn
-				$('#fwdNav').fadeOut();
-				$('#q3OtherInputArea').fadeIn();
+				if(responses[4] == 'Have heard but not used / no idea'){
+					$('#survey1area').fadeOut();
+					$('#progress-bar').fadeOut();
+					$('#conclusionArea').fadeIn();
+				}
+
+				//check if q3 answer is corp...else next question
+				if(responses[3] == 'Corporation'){
+					//edit text
+					questionNum=5;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('What industry is your company in?');
+					//fade out q4
+					$('#q4Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					//fade in q5
+					$('#q5Area').fadeIn();
+				}
+
+				else if(responses[3] == 'Law Firm'){
+					//edit text
+					questionNum = 8;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('What do you use this data for?');
+					//fade out q4
+					$('#q4Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					//fade in q8
+					$('#q8Area').fadeIn();
+
+				}
+
+				else if(responses[3] == 'Government/Academic'){
+					questionNum = 10;
+					$('#questionCount').html('Question ' + questionNum + '/20');
+					$('#questionTxt').html('What do you use this data for?');
+					//fade out q4
+					$('#q4Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					//fade in q10
+					$('#q10Area').fadeIn();
+				}
+
+
+
+				else if(responses[3] == 'Information Vendor'){
+					questionNum = 12;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('What do you use this data for?');
+					//fade out q4
+					$('#q4Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					//fade in q12
+					$('#q12Area').fadeIn();
+				}
+
+				else{
+					questionNum = 14;
+					//fade out q4
+					$('#q4Area').fadeOut();
+					//fade out fwd btn
+					$('#fwdNav').fadeOut();
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('Which of the following patent databases are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+					let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+					$('#questionTxt').append(multiSelectTxt);
+					//fade in q14
+					$('#q14Area').fadeIn();
+				}
 			}
-
 			else{
-				questionNum++;
-				//edit text
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('How familiar are you with bulk patent data? Are you a. . .');
-				//fade out q3
-				$('#q3Area').fadeOut();
-				//fade out fwd btn
-				$('#fwdNav').fadeOut();
-				//fade in q4
+				//back to 3
+				questionNum = 3;
+				//fade out q4  and fwd nav
+				$('#q4Area').fadeOut();
+				//change text back
+				$('#questionTxt').html('What type of organization do you work in?');
+				//fade in last q
+				$('#q3Area').fadeIn();
+			}
+			
+		}
+		else if(questionNum == 5){
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[5] = $('#q5MultiInput').val();
+				if(responses[5] == 'Other'){
+					//fade out q5 fade in q5 "other" input
+					$('#fwdNav').fadeOut();
+					$('#q5Area').fadeOut();
+					$('#q5OtherInputArea').fadeIn();
+					questionNum = 5.5;
+				}
+				else{
+					questionNum++;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('What do you use this data for?');
+					$('#fwdNav').fadeOut();
+					$('#q5Area').fadeOut();
+					$('#q6Area').fadeIn();
+				}
+			}
+			else{
+				//back to 4
+				questionNum = 4;
+				//fade out q5  and fwd nav
+				$('#q5Area').fadeOut();
+				//change text back
+				$('#questionTxt').html('How familiar are you with bulk patent data?');
+				//fade in last q
 				$('#q4Area').fadeIn();
 			}
 		}
 
-		else if(questionNum == 3.5){
-			questionNum = 4;
-			responses[3] = 'Other: ' +  $('#q3OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/20');
-			$('#questionTxt').html('How familiar are you with bulk patent data?');
-			$('#q3OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q4Area').fadeIn();
-		}
-
-		else if(questionNum == 4){
-			//update progress
-			updateProgress(questionNum);
-			
-			//add response
-			questionNum=14;
-			responses[4]  = $('#q4MultiInput').val();
-
-			if(responses[4] == 'Have heard but not used / no idea'){
-				$('#survey1area').fadeOut();
-				$('#progress-bar').fadeOut();
-				$('#conclusionArea').fadeIn();
-			}
-
-			//check if q3 answer is corp...else next question
-			if(responses[3] == 'Corporation'){
-				//edit text
-				questionNum=5;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('What industry is your company in?');
-				//fade out q4
-				$('#q4Area').fadeOut();
-				//fade out fwd btn
-				$('#fwdNav').fadeOut();
-				//fade in q5
-				$('#q5Area').fadeIn();
-			}
-
-			else if(responses[3] == 'Law Firm'){
-				//edit text
-				questionNum = 8;
+		else if(questionNum == 5.5){
+			if(direction == 'fwd'){
+				questionNum = 6;
+				responses[5] = 'Other: ' +  $('#q5OtherInput').val();
 				$('#questionCount').html('Question ' + questionNum + '/14');
 				$('#questionTxt').html('What do you use this data for?');
-				//fade out q4
-				$('#q4Area').fadeOut();
-				//fade out fwd btn
+				$('#q5OtherInputArea').fadeOut();
 				$('#fwdNav').fadeOut();
-				//fade in q8
-				$('#q8Area').fadeIn();
-
-			}
-
-			else if(responses[3] == 'Government/Academic'){
-				questionNum = 10;
-				$('#questionCount').html('Question ' + questionNum + '/20');
-				$('#questionTxt').html('What do you use this data for?');
-				//fade out q4
-				$('#q4Area').fadeOut();
-				//fade out fwd btn
-				$('#fwdNav').fadeOut();
-				//fade in q10
-				$('#q10Area').fadeIn();
-			}
-
-
-
-			else if(responses[3] == 'Information Vendor'){
-				questionNum = 12;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('What do you use this data for?');
-				//fade out q4
-				$('#q4Area').fadeOut();
-				//fade out fwd btn
-				$('#fwdNav').fadeOut();
-				//fade in q12
-				$('#q12Area').fadeIn();
-			}
-
-			else{
-				questionNum = 14;
-				//fade out q4
-				$('#q4Area').fadeOut();
-				//fade out fwd btn
-				$('#fwdNav').fadeOut();
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('Which of the following patent databases are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
-				let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
-				$('#questionTxt').append(multiSelectTxt);
-				//fade in q14
-				$('#q14Area').fadeIn();
-			}
-
-			
-		}
-		else if(questionNum == 5){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[5] = $('#q5MultiInput').val();
-			if(responses[5] == 'Other'){
-				//fade out q5 fade in q5 "other" input
-				$('#fwdNav').fadeOut();
-				$('#q5Area').fadeOut();
-				$('#q5OtherInputArea').fadeIn();
-				questionNum = 5.5;
-			}
-			else{
-				questionNum++;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('What do you use this data for?');
-				$('#fwdNav').fadeOut();
-				$('#q5Area').fadeOut();
 				$('#q6Area').fadeIn();
 			}
-		}
-
-		else if(questionNum == 5.5){
-			questionNum = 6;
-			responses[5] = 'Other: ' +  $('#q5OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('What do you use this data for?');
-			$('#q5OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q6Area').fadeIn();
+			else{
+				//back to 5
+				questionNum = 5;
+				//fade out q5 other and fwd nav
+				$('#q5OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('What industry is your company in?');
+				//fade in last q
+				$('#q5Area').fadeIn();
+			}
  		}
 
  		else if(questionNum == 6){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[6] = $('#q6MultiInput').val();
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[6] = $('#q6MultiInput').val();
 
- 			if(responses[6] == 'Other'){
- 				questionNum = 6.5;
- 				$('#fwdNav').fadeOut();
+	 			if(responses[6] == 'Other'){
+	 				questionNum = 6.5;
+	 				$('#fwdNav').fadeOut();
+					$('#q6Area').fadeOut();
+					$('#q6OtherInputArea').fadeIn();
+	 			}
+	 			else{
+	 				questionNum++;
+		 			$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('What department do you work in?');
+		 			$('#fwdNav').fadeOut();
+					$('#q6Area').fadeOut();
+					$('#q7Area').fadeIn();
+	 			}
+	 		}
+	 		else{
+	 			//back to 5
+				questionNum = 5;
+				//fade out q6 and fwd nav
 				$('#q6Area').fadeOut();
-				$('#q6OtherInputArea').fadeIn();
- 			}
- 			else{
- 				questionNum++;
-	 			$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('What department do you work in?');
-	 			$('#fwdNav').fadeOut();
-				$('#q6Area').fadeOut();
-				$('#q7Area').fadeIn();
- 			}
+				//change text back
+				$('#questionTxt').html('What industry is your company in?');
+				//fade in last q
+				$('#q5Area').fadeIn();
+	 		}
  		}
 
  		else if(questionNum == 6.5){
- 			questionNum = 7;
- 			responses[6] = 'Other: '  + $('#q6OtherInput').val();
- 			$('#questionTxt').html('What department do you work in?');
-			$('#q6OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q7Area').fadeIn();
+ 			if(direction == 'fwd'){
+ 				questionNum = 7;
+	 			responses[6] = 'Other: '  + $('#q6OtherInput').val();
+	 			$('#questionTxt').html('What department do you work in?');
+				$('#q6OtherInputArea').fadeOut();
+				$('#fwdNav').fadeOut();
+				$('#q7Area').fadeIn();
+ 			}
+ 			else{
+ 				//back to 6
+				questionNum = 6;
+				//fade out q6 other and fwd nav
+				$('#q6OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q6Area').fadeIn();
+ 			}
+ 			
  		}
 
  		else if(questionNum == 7){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[7] = $('#q7MultiInput').val();
- 			if(responses[7] == 'Other'){
- 				$('#fwdNav').fadeOut();
+ 			if(direction == 'fwd' ){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[7] = $('#q7MultiInput').val();
+	 			if(responses[7] == 'Other'){
+	 				$('#fwdNav').fadeOut();
+					$('#q7Area').fadeOut();
+					$('#q7OtherInputArea').fadeIn();
+					questionNum = 7.5;
+	 			} 
+	 			else{
+	 				questionNum=14;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+					let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+					$('#questionTxt').append(multiSelectTxt);
+					$('#fwdNav').fadeOut();
+					$('#q7Area').fadeOut();
+					$('#q14Area').fadeIn();
+	 			}
+	 		}
+	 		else{
+	 			//back to 6
+	 			questionNum = 6;
+				//fade out q7 and fwd nav
 				$('#q7Area').fadeOut();
-				$('#q7OtherInputArea').fadeIn();
-				questionNum = 7.5;
- 			} 
- 			else{
- 				questionNum=14;
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q6Area').fadeIn();
+	 		}
+ 		}
+
+ 		else if(questionNum == 7.5){
+ 			if(direction == 'fwd'){
+				questionNum = 14;
+				responses[7] = 'Other: ' +  $('#q7OtherInput').val();
 				$('#questionCount').html('Question ' + questionNum + '/14');
 				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
 				let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
 				$('#questionTxt').append(multiSelectTxt);
+				$('#q7OtherInputArea').fadeOut();
 				$('#fwdNav').fadeOut();
-				$('#q7Area').fadeOut();
 				$('#q14Area').fadeIn();
- 			}
- 		}
-
- 		else if(questionNum == 7.5){
-			questionNum = 14;
-			responses[7] = 'Other: ' +  $('#q7OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
-			let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
-			$('#questionTxt').append(multiSelectTxt);
-			$('#q7OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q14Area').fadeIn();
+			}
+			else{
+				//back to 7
+	 			questionNum = 7;
+				//fade out q7 and fwd nav
+				$('#q7OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('What department do you work in?');
+				//fade in last q
+				$('#q7Area').fadeIn();
+			}
  		}
 
 
  		else if(questionNum == 8){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[8] = $('#q8MultiInput').val();
- 			if(responses[8] == 'Other'){
- 				$('#fwdNav').fadeOut();
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[8] = $('#q8MultiInput').val();
+	 			if(responses[8] == 'Other'){
+	 				$('#fwdNav').fadeOut();
+					$('#q8Area').fadeOut();
+					$('#q8OtherInputArea').fadeIn();
+					questionNum = 8.5;
+	 			} 
+	 			else{
+	 				questionNum=9;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('How would you classify your job?');
+					$('#fwdNav').fadeOut();
+					$('#q8Area').fadeOut();
+					$('#q9Area').fadeIn();
+	 			}
+	 		}
+	 		else{
+	 			//back to 4
+	 			questionNum = 4;
+				//fade out q8 and fwd nav
 				$('#q8Area').fadeOut();
-				$('#q8OtherInputArea').fadeIn();
-				questionNum = 8.5;
- 			} 
- 			else{
- 				questionNum=9;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('How would you classify your job?');
-				$('#fwdNav').fadeOut();
-				$('#q8Area').fadeOut();
-				$('#q9Area').fadeIn();
- 			}
+				//change text back
+				$('#questionTxt').html('How familiar are you with bulk patent data?');
+				//fade in last q
+				$('#q4Area').fadeIn();
+	 		}
  		}
 
  		else if(questionNum == 8.5){
-			questionNum = 9;
-			responses[8] = 'Other: ' +  $('#q8OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('How would you classify your job?');
-			$('#q8OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q9Area').fadeIn();
- 		}
+ 			if(direction == 'fwd'){
+				questionNum = 9;
+				responses[8] = 'Other: ' +  $('#q8OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('How would you classify your job?');
+				$('#q8OtherInputArea').fadeOut();
+				$('#fwdNav').fadeOut();
+				$('#q9Area').fadeIn();
+			}
+			else{
+				//back to 8
+	 			questionNum = 8;
+				//fade out q8 other and fwd nav
+				$('#q8OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q8Area').fadeIn();
+			}
+	 	}
 
  		else if(questionNum == 9){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[9] = $('#q9MultiInput').val();
- 			console.log(responses[9]);
- 			if(responses[9] == 'Other'){
- 				$('#fwdNav').fadeOut();
+ 			if(direction == 'fwd'){
+
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[9] = $('#q9MultiInput').val();
+	 			console.log(responses[9]);
+	 			if(responses[9] == 'Other'){
+	 				$('#fwdNav').fadeOut();
+					$('#q9Area').fadeOut();
+					$('#q9OtherInputArea').fadeIn();
+					questionNum = 9.5;
+	 			} 
+	 			else{
+	 				questionNum=14;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+					$('#fwdNav').fadeOut();
+					$('#q9Area').fadeOut();
+					$('#q14Area').fadeIn();
+	 			}
+	 		}
+
+	 		else{
+	 			//back to 8
+	 			questionNum = 8;
+				//fade out q9 and fwd nav
 				$('#q9Area').fadeOut();
-				$('#q9OtherInputArea').fadeIn();
-				questionNum = 9.5;
- 			} 
- 			else{
- 				questionNum=14;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
-				$('#fwdNav').fadeOut();
-				$('#q9Area').fadeOut();
-				$('#q14Area').fadeIn();
- 			}
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q8Area').fadeIn();
+
+	 		}
  		}
 
  		else if(questionNum == 9.5){
-			questionNum = 14;
-			responses[9] = 'Other: ' +  $('#q9OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
-			$('#q9OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q14Area').fadeIn();
+ 			if(direction == 'fwd'){
+				questionNum = 14;
+				responses[9] = 'Other: ' +  $('#q9OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				$('#q9OtherInputArea').fadeOut();
+				$('#fwdNav').fadeOut();
+				$('#q14Area').fadeIn();
+			}
+			else{
+				//back to 9
+				questionNum = 9;
+				//fade out q9 and fwd nav
+				$('#q9OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('How would you classify your job?');
+				//fade in last q
+				$('#q9Area').fadeIn();
+			}
  		}
 
  		else if(questionNum == 10){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[10] = $('#q10MultiInput').val();
- 			if(responses[10] == 'Other'){
- 				$('#fwdNav').fadeOut();
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[10] = $('#q10MultiInput').val();
+	 			if(responses[10] == 'Other'){
+	 				$('#fwdNav').fadeOut();
+					$('#q10Area').fadeOut();
+					$('#q10OtherInputArea').fadeIn();
+					questionNum = 10.5;
+	 			} 
+	 			else{
+	 				questionNum=11;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('How would you classify your job?');
+					$('#fwdNav').fadeOut();
+					$('#q10Area').fadeOut();
+					$('#q11Area').fadeIn();
+	 			}
+	 		}
+	 		else{
+	 			//back to 4
+	 			questionNum = 4;
+				//fade out q10 and fwd nav
 				$('#q10Area').fadeOut();
-				$('#q10OtherInputArea').fadeIn();
-				questionNum = 10.5;
- 			} 
- 			else{
- 				questionNum=11;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('How would you classify your job?');
-				$('#fwdNav').fadeOut();
-				$('#q10Area').fadeOut();
-				$('#q11Area').fadeIn();
- 			}
+				//change text back
+				$('#questionTxt').html('How familiar are you with bulk patent data?');
+				//fade in last q
+				$('#q4Area').fadeIn();
+	 		}
  		}
 
  		else if(questionNum == 10.5){
-			questionNum = 11;
-			responses[10] = 'Other: ' +  $('#q10OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('How would you classify your job?');
-			$('#q10OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q11Area').fadeIn();
+ 			if(direction == 'fwd'){
+				questionNum = 11;
+				responses[10] = 'Other: ' +  $('#q10OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('How would you classify your job?');
+				$('#q10OtherInputArea').fadeOut();
+				$('#fwdNav').fadeOut();
+				$('#q11Area').fadeIn();
+			}
+			else{
+				//back to 10
+				questionNum = 10;
+				//fade out q10 other and fwd nav
+				$('#q10OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q10Area').fadeIn();
+			}
  		}
 
 
  		else if(questionNum == 11){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[11] = $('#q11MultiInput').val();
- 			if(responses[11] == 'Other'){
- 				$('#fwdNav').fadeOut();
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[11] = $('#q11MultiInput').val();
+	 			if(responses[11] == 'Other'){
+	 				$('#fwdNav').fadeOut();
+					$('#q11Area').fadeOut();
+					$('#q11OtherInputArea').fadeIn();
+					questionNum = 11.5;
+	 			} 
+	 			else{
+	 				questionNum=14;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+					$('#fwdNav').fadeOut();
+					$('#q11Area').fadeOut();
+					$('#q14Area').fadeIn();
+	 			}
+	 		}
+	 		else{
+	 			//back to 10
+				questionNum = 10;
+				//fade out q11 and fwd nav
 				$('#q11Area').fadeOut();
-				$('#q11OtherInputArea').fadeIn();
-				questionNum = 11.5;
- 			} 
- 			else{
- 				questionNum=14;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
-				$('#fwdNav').fadeOut();
-				$('#q11Area').fadeOut();
-				$('#q14Area').fadeIn();
- 			}
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q10Area').fadeIn();
+	 		}
  		}
 
  		else if(questionNum == 11.5){
-			questionNum = 14;
-			responses[11] = 'Other: ' +  $('#q11OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
-			$('#q11OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q14Area').fadeIn();
+	 			if(direction == 'fwd'){
+				questionNum = 14;
+				responses[11] = 'Other: ' +  $('#q11OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('Which of the following patent databases  are you familiar with  (e.g. prior/current user, have seen product demos, know of reputation)?');
+				$('#q11OtherInputArea').fadeOut();
+				$('#fwdNav').fadeOut();
+				$('#q14Area').fadeIn();
+			}
+			else{
+				//back to 11
+				questionNum = 11;
+				//fade out q11 and fwd nav
+				$('#q11OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('How would you classify your job?');
+				//fade in last q
+				$('#q11Area').fadeIn();
+			}
  		}
 
   		else if(questionNum == 12){
-  			//update progress
-			updateProgress(questionNum);
-			
- 			responses[12] = $('#q12MultiInput').val();
- 			if(responses[12] == 'Other'){
- 				$('#fwdNav').fadeOut();
+  			if(direction == 'fwd'){
+	  			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[12] = $('#q12MultiInput').val();
+	 			if(responses[12] == 'Other'){
+	 				$('#fwdNav').fadeOut();
+					$('#q12Area').fadeOut();
+					$('#q12OtherInputArea').fadeIn();
+					questionNum = 12.5;
+	 			} 
+	 			else{
+	 				questionNum=13;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('How would you classify your job?');
+					$('#fwdNav').fadeOut();
+					$('#q12Area').fadeOut();
+					$('#q13Area').fadeIn();
+	 			}
+	 		}
+	 		else{
+	 			//back to 4
+	 			questionNum = 4;
+				//fade out q12 and fwd nav
 				$('#q12Area').fadeOut();
-				$('#q12OtherInputArea').fadeIn();
-				questionNum = 12.5;
- 			} 
- 			else{
- 				questionNum=13;
-				$('#questionCount').html('Question ' + questionNum + '/14');
-				$('#questionTxt').html('How would you classify your job?');
-				$('#fwdNav').fadeOut();
-				$('#q12Area').fadeOut();
-				$('#q13Area').fadeIn();
- 			}
+				//change text back
+				$('#questionTxt').html('How familiar are you with bulk patent data?');
+				//fade in last q
+				$('#q4Area').fadeIn();
+	 		}
  		}
 
  		else if(questionNum == 12.5){
-			questionNum = 13;
-			responses[12] = 'Other: ' +  $('#q12OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('How would you classify your job?');
-			$('#q12OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q13Area').fadeIn();
+ 			if(direction == 'fwd'){
+				questionNum = 13;
+				responses[12] = 'Other: ' +  $('#q12OtherInput').val();
+				$('#questionCount').html('Question ' + questionNum + '/14');
+				$('#questionTxt').html('How would you classify your job?');
+				$('#q12OtherInputArea').fadeOut();
+				$('#fwdNav').fadeOut();
+				$('#q13Area').fadeIn();
+			}
+			else{
+				//back to 12
+				questionNum = 12;
+				//fade out q12 and fwd nav
+				$('#q12OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q12Area').fadeIn();
+			}
  		}
 
  		else if(questionNum == 13){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[13] = $('#q13MultiInput').val();
- 			if(responses[13] == 'Other'){
- 				$('#fwdNav').fadeOut();
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[13] = $('#q13MultiInput').val();
+	 			if(responses[13] == 'Other'){
+	 				$('#fwdNav').fadeOut();
+					$('#q13Area').fadeOut();
+					$('#q13OtherInputArea').fadeIn();
+					questionNum = 13.5;
+	 			} 
+	 			else{
+	 				questionNum=14;
+					$('#questionCount').html('Question ' + questionNum + '/14');
+					$('#questionTxt').html('Which of the following patent databases are you familiar with (e.g. prior/current user, have seen product demos, know of reputation)?');
+					let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
+					$('#questionTxt').append(multiSelectTxt);
+					$('#fwdNav').fadeOut();
+					$('#q13Area').fadeOut();
+					$('#q14Area').fadeIn();
+	 			}
+	 		}
+	 		else{
+	 			//back to 12
+				questionNum = 12;
+				//fade out q13 and fwd nav
 				$('#q13Area').fadeOut();
-				$('#q13OtherInputArea').fadeIn();
-				questionNum = 13.5;
- 			} 
- 			else{
- 				questionNum=14;
+				//change text back
+				$('#questionTxt').html('What do you use this data for?');
+				//fade in last q
+				$('#q12Area').fadeIn();
+	 		}
+ 		}
+
+ 		else if(questionNum == 13.5){
+ 			if(direction == 'fwd'){
+				questionNum = 14;
+				responses[13] = 'Other: ' +  $('#q13OtherInput').val();
 				$('#questionCount').html('Question ' + questionNum + '/14');
 				$('#questionTxt').html('Which of the following patent databases are you familiar with (e.g. prior/current user, have seen product demos, know of reputation)?');
 				let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
 				$('#questionTxt').append(multiSelectTxt);
+				$('#q13OtherInputArea').fadeOut();
 				$('#fwdNav').fadeOut();
-				$('#q13Area').fadeOut();
 				$('#q14Area').fadeIn();
- 			}
- 		}
-
- 		else if(questionNum == 13.5){
-			questionNum = 14;
-			responses[13] = 'Other: ' +  $('#q13OtherInput').val();
-			$('#questionCount').html('Question ' + questionNum + '/14');
-			$('#questionTxt').html('Which of the following patent databases are you familiar with (e.g. prior/current user, have seen product demos, know of reputation)?');
-			let multiSelectTxt = "<p style='font-size:0.4em;'> Select All That Apply </p>";
-			$('#questionTxt').append(multiSelectTxt);
-			$('#q13OtherInputArea').fadeOut();
-			$('#fwdNav').fadeOut();
-			$('#q14Area').fadeIn();
+			}
+			else{
+				//back to 13
+				questionNum = 13;
+				//fade out q13.5 and fwd nav
+				$('#q13OtherInputArea').fadeOut();
+				//change text back
+				$('#questionTxt').html('How do you classify your job?');
+				//fade in last q
+				$('#q13Area').fadeIn();
+			}
  		}
 
  		else if(questionNum == 14){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			responses[14] = $('#q14MultiInput').val()
- 			questionNum = 15;
- 			$('#q14Area').fadeOut();
- 			$('#survey1area').fadeOut();
- 			$('#fwdNav').fadeOut();
- 			$('#survey2area').fadeIn();
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			responses[14] = $('#q14MultiInput').val()
+	 			questionNum = 15;
+	 			$('#q14Area').fadeOut();
+	 			$('#survey1area').fadeOut();
+	 			$('#QNavBtns').fadeOut();
+	 			$('#survey2area').fadeIn();
+	 			$('#q15area').fadeIn();
+	 		}
+	 		else{
+	 			//if q3 = corp... back to q7
+	 			if(responses[3] == 'Corporation'){
+	 				questionNum = 7;
+	 				$('#q14Area').fadeOut();//fade out q 14
+	 				$('#questionTxt').html('What department do you work in?'); //change question txt
+	 				$('#q7Area').fadeIn(); //fade in question area
+	 			}
+	 			//if q3 = law... back to q9
+	 			else if(responses[3] == 'Law Firm'){
+	 				questionNum = 9;
+	 				$('#q14Area').fadeOut();//fade out q 14
+	 				$('#questionTxt').html('How would you classify your job?'); //change question txt
+	 				$('#q9Area').fadeIn(); //fade in question area
+	 			}
+	 			//if q3 = gov... back to q11
+	 			else if(responses[3] == 'Government/Academic'){
+	 				questionNum = 11;
+	 				$('#q14Area').fadeOut();//fade out q 14
+	 				$('#questionTxt').html('How would you classify your job?'); //change question txt
+	 				$('#q11Area').fadeIn(); //fade in question area
+	 			}
+	 			//if q3 = info... back to q13
+	 			else if(responses[3] == 'Information Vendor'){
+	 				questionNum = 13;
+	 				$('#q14Area').fadeOut();//fade out q 14
+	 				$('#questionTxt').html('How would you classify your job?'); //change question txt
+	 				$('#q13Area').fadeIn(); //fade in question area
+	 			}
+	 			//else... back to q4
+	 			else{
+	 				questionNum = 4;
+					$('#q14Area').fadeOut();//fade out q 14
+					//change text back
+					$('#questionTxt').html('How familiar are you with bulk patent data?');
+					//fade in last q
+					$('#q4Area').fadeIn();
+	 			}
+	 		}
  		}
-	});
-
+	}
 
 
 	var check16 = false;
@@ -2426,292 +2807,421 @@
 
 	//section 2 nav clicks...
 	$('#fwdNav2').click(function(){
+		navigateSection2('fwd');
+	});
+	$('#backNav2').click(function(){
+		navigateSection2('back');
+	});
 
- 		if(questionNum ==15){
- 			//update progress
-			updateProgress(questionNum);
-			
 
-			//enter q 19 - if selected > 0 for pricing tc
-			if($('#pointElem1-5').val()>0){
- 				check19 = true;
- 				questionNum = 19;
-			}
-			//enter q 18 - if selected > 0 for ease of delivery
-			if($('#pointElem1-4').val()>0){
- 				check18 = true;
- 				questionNum = 18;
-			}
-			//enter q 17 - if selected > 0 for additional content
-			if($('#pointElem1-3').val()>0){
- 				check17 = true;
- 				questionNum = 17;
-			}
-			//enter q 16 - if selected > 0 for accuracy of underlying data
-			if($('#pointElem1-2').val()>0){
- 				check16 = true;
- 				questionNum = 16;
-			}
-			//enter q 16 - if selected > 0 for accuracy of underlying data
-			if($('#pointElem1-1').val()>0){
- 				check16 = true;
- 				questionNum = 16;
-			}
-			//check if other has points
-			if($('#pointElem1-6').val() > 0){
-				$('#fwdNav2').fadeOut();
+	//navigate thru section 2
+	function navigateSection2(direction){
+		if(questionNum == 15){
+
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+
+				//enter q 19 - if selected > 0 for pricing tc
+				if($('#pointElem1-4').val()>0){
+	 				check19 = true;
+	 				questionNum = 19;
+				}
+				//enter q 18 - if selected > 0 for ease of delivery
+				if($('#pointElem1-3').val()>0){
+	 				check18 = true;
+	 				questionNum = 18;
+				}
+				//enter q 17 - if selected > 0 for additional content // THIS RESPONSE WAS REMOVED - default ask q17...
+				//if($('#pointElem1-3').val()>0){
+				if(true){
+	 				check17 = true;
+	 				questionNum = 17;
+				}
+				//enter q 16 - if selected > 0 for accuracy of underlying data
+				if($('#pointElem1-2').val()>0){
+	 				check16 = true;
+	 				questionNum = 16;
+				}
+				//enter q 16 - if selected > 0 for accuracy of underlying data
+				if($('#pointElem1-1').val()>0){
+	 				check16 = true;
+	 				questionNum = 16;
+				}
+				//check if other has points
+				if($('#pointElem1-5').val() > 0){
+					$('#fwdNav2').fadeOut();
+					$('#q15area').fadeOut();
+					//promt user to specify 'other(s)'
+					$('#q15othersInputArea').fadeIn();
+					questionNum = 15.5;
+				}
+
+				//finally, fade in appropriate question
 				$('#q15area').fadeOut();
-				//promt user to specify 'other(s)'
-				$('#q15othersInputArea').fadeIn();
-				questionNum = 15.5;
+				$('#fwdNav2').fadeOut();
+				$('#q' + questionNum + 'area').fadeIn();
 			}
 
-			//finally, fade in appropriate question
-			
-			$('#fwdNav2').fadeOut();
-			$('#q15area').fadeOut();
-			$('#q' + questionNum + 'area').fadeIn();
+			else{
+				//back to 14
+				questionNum = 14;
+
+				$('#q15area').fadeOut();
+				$('#survey2area').fadeOut();
+				$('#questionTxt').html('Which of the following patent databases are you familiar with?');
+	 			$('#survey1area').fadeIn();
+	 			$('#QNavBtns2').fadeOut();
+	 			$('#QNavBtns').fadeIn();
+	 			$('#q14Area').fadeIn();
+
+			}
 
  		}
 
  		else if(questionNum == 15.5){
- 			//fade out other(s) form 
- 			$('#q15othersInputArea').fadeOut();
- 			$('#fwdNav2').fadeOut();
- 			if(check16){
- 				$('#qCont').fadeOut();
- 				$('#q15area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q16area').fadeIn();
- 				questionNum = 16;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check17){
- 				$('#q15area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q17area').fadeIn();
- 				questionNum = 17;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check18){
- 				$('#q15area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q18area').fadeIn();
- 				questionNum = 18;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check19){
- 				s$('#q15area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeIn();
- 				questionNum = 19;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else{
- 				//part 3
- 				enterPart3();
- 			}
+ 			if(direction == 'fwd'){
+	 			//fade out other(s) form 
+	 			$('#q15othersInputArea').fadeOut();
+	 			$('#fwdNav2').fadeOut();
+	 			if(check16){
+	 				$('#qCont').fadeOut();
+	 				$('#q15area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q16area').fadeIn();
+	 				questionNum = 16;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check17){
+	 				$('#q15area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q17area').fadeIn();
+	 				questionNum = 17;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check18){
+	 				$('#q15area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q18area').fadeIn();
+	 				questionNum = 18;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check19){
+	 				s$('#q15area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19area').fadeIn();
+	 				questionNum = 19;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else{
+	 				//part 3
+	 				enterPart3();
+	 			}
+	 		}
+	 		else{
+	 			//back to 15
+	 			questionNum = 15;
+	 			$('#q15othersInputArea').fadeOut();
+	 			$('#q15area').fadeIn();
+	 		}
  		}
 
 
  		else if(questionNum == 16){
- 			//update progress
-			updateProgress(questionNum);
-			
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
 
- 			//check other > 0
- 			if($('#pointElem2-7').val() > 0){
- 				//prompt to specify other...
- 				questionNum = 16.5;
- 				$('#q16area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q16othersInputArea').fadeIn();
- 			}
+	 			//check other > 0
+	 			if($('#pointElem2-7').val() > 0){
+	 				//prompt to specify other...
+	 				questionNum = 16.5;
+	 				$('#q16area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q16othersInputArea').fadeIn();
+	 			}
 
- 			else if(check17){
- 				$('#q16area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q17area').fadeIn();
- 				questionNum = 17;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check18){
- 				$('#q16area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q18area').fadeIn();
- 				questionNum = 18;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check19){
- 				$('#q16area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeIn();
- 				questionNum = 19;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else{
- 				//part 3
- 				enterPart3();
- 			}
+	 			else if(check17){
+	 				$('#q16area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q17area').fadeIn();
+	 				questionNum = 17;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check18){
+	 				$('#q16area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q18area').fadeIn();
+	 				questionNum = 18;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check19){
+	 				$('#q16area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19area').fadeIn();
+	 				questionNum = 19;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else{
+	 				//part 3
+	 				enterPart3();
+	 			}
+	 		}
+	 		else{
+	 			//back to 15
+	 			questionNum = 15;
+	 			$('#q16area').fadeOut();
+	 			$('#q15area').fadeIn();
+
+	 		}
  		}
 
 
  		else if(questionNum == 16.5){
- 			if(check17){
- 				$('#q16othersInputArea').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q17area').fadeIn();
- 				questionNum = 17;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check18){
- 				$('#q16othersInputArea').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q18area').fadeIn();
- 				questionNum = 18;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check19){
- 				questionNum = 19;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 				$('#q16othersInputArea').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeIn();
- 			}
- 			else{
- 				//part 3
- 				enterPart3();
- 			}
+	 		if(direction == 'fwd'){	
+	 			if(check17){
+	 				$('#q16othersInputArea').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q17Area').fadeIn();
+	 				questionNum = 17;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check18){
+	 				$('#q16othersInputArea').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q18Area').fadeIn();
+	 				questionNum = 18;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check19){
+	 				questionNum = 19;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 				$('#q16othersInputArea').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19Area').fadeIn();
+	 			}
+	 			else{
+	 				//part 3
+	 				enterPart3();
+	 			}
+	 		}
+	 		else{
+	 			//back to 16
+	 			questionNum = 16;
+	 			$('#q16othersInputArea').fadeOut();
+	 			$('#q16area').fadeIn();
+	 		}
  		}
 
 
  		else if(questionNum == 17){
- 			//update progress
-			updateProgress(questionNum);
-			
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
 
- 			//check other > 0
- 			if($('#pointElem3-9').val() > 0){
- 				//prompt to specify other...
- 				questionNum = 17.5;
- 				$('#q17area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q17othersInputArea').fadeIn();
- 			}
+	 			//check other > 0
+	 			if($('#pointElem3-9').val() > 0){
+	 				//prompt to specify other...
+	 				questionNum = 17.5;
+	 				$('#q17area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q17othersInputArea').fadeIn();
+	 			}
 
-			else if(check18){
- 				$('#q17area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q18area').fadeIn();
- 				questionNum = 18;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check19){
- 				$('#q17area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeIn();
- 				questionNum = 19;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else{
- 				//part 3
- 				enterPart3();
- 			}
+				else if(check18){
+	 				$('#q17area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q18area').fadeIn();
+	 				questionNum = 18;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check19){
+	 				$('#q17area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19area').fadeIn();
+	 				questionNum = 19;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else{
+	 				//part 3
+	 				enterPart3();
+	 			}
+	 		}
+	 		else{
+	 			//if q15 underlying data > 0... back to 16
+	 			if($('#pointElem1-1').val() > 0){
+	 				questionNum = 16;
+	 				$('#q17area').fadeOut();
+	 				$('#q16area').fadeIn();	
+	 			}
+	 			//else, back to 15
+	 			else{
+	 				questionNum = 15
+	 				$('#q17area').fadeOut();
+	 				$('#q15area').fadeIn();	
+	 			}
+	 		}
  		}
 
  		else if(questionNum == 17.5){
- 			if(check18){
- 				$('#q17othersInputArea').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q18area').fadeIn();
- 				questionNum = 18;
- 				$('#questionCount').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else if(check19){
- 				$('#q17othersInputArea').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeIn();
- 				questionNum = 19;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+ 			if(direction == 'fwd'){
+	 			if(check18){
+	 				$('#q17othersInputArea').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q18area').fadeIn();
+	 				questionNum = 18;
+	 				$('#questionCount').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else if(check19){
+	 				$('#q17othersInputArea').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19area').fadeIn();
+	 				questionNum = 19;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else{
+	 				//part 3
+	 				enterPart3();
+ 				}
  			}
  			else{
- 				//part 3
- 				enterPart3();
+ 				questionNum = 17
+ 				$('#q17othersInputArea').fadeOut();
+ 				$('#q17area').fadeIn();
  			}
  		}
 
  		else if(questionNum == 18){
- 			//update progress
-			updateProgress(questionNum);
-			
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
 
- 			//check other > 0
- 			if($('#pointElem4-10').val() > 0){
- 				//prompt to specify other...
- 				questionNum = 18.5;
- 				$('#q18area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q18othersInputArea').fadeIn();
- 			}
+	 			//check other > 0
+	 			if($('#pointElem4-10').val() > 0){
+	 				//prompt to specify other...
+	 				questionNum = 18.5;
+	 				$('#q18area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q18othersInputArea').fadeIn();
+	 			}
 
- 			else if(check19){
- 				$('#q18area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeIn();
- 				questionNum = 19;
- 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else{
- 				//part 3
- 				enterPart3();
- 			}
+	 			else if(check19){
+	 				$('#q18area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19area').fadeIn();
+	 				questionNum = 19;
+	 				$('#questionCount2').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else{
+	 				//part 3
+	 				enterPart3();
+	 			}
+	 		}
+	 		else{
+	 			if(check17){
+	 				questionNum = 17;
+	 				$('#q18area').fadeOut();
+	 				$('#q17area').fadeIn();
+	 			}
+	 			else if(check16){
+	 				questionNum = 16;
+	 				$('#q18area').fadeOut();
+	 				$('#q16area').fadeIn();	
+	 			}
+	 			//else, back to 15
+	 			else{
+	 				questionNum = 15
+	 				$('#q18area').fadeOut();
+	 				$('#q15area').fadeIn();	
+	 			}
+	 		}
  		}
 
  		else if(questionNum == 18.5){
- 			if(check19){
- 				$('#q18othersInputArea').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeIn();
- 				questionNum = 19;
- 				$('#questionCount').html('Question ' + (questionNum-14) + '/5');
- 			}
- 			else{
- 				//part 3
- 				enterPart3();
- 			}
+ 			if(direction == 'fwd'){
+	 			if(check19){
+	 				$('#q18othersInputArea').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19area').fadeIn();
+	 				questionNum = 19;
+	 				$('#questionCount').html('Question ' + (questionNum-14) + '/5');
+	 			}
+	 			else{
+	 				//part 3
+	 				enterPart3();
+	 			}
+	 		}
+	 		else{
+	 			//back to 18
+	 			questionNum = 18;
+	 			$('#q18othersInputArea').fadeOut();
+	 			$('#q18area').fadeIn();
+	 		}
  		}
 
  		else if(questionNum == 19){
- 			//update progress
-			updateProgress(questionNum);
-			
- 			//check other > 0
- 			if($('#pointElem5-8').val() > 0){ 
- 				//prompt to specify other...
- 				questionNum = 19.5;
- 				$('#q19area').fadeOut();
- 				$('#fwdNav2').fadeOut();
- 				$('#q19othersInputArea').fadeIn();
- 			}
- 			else{
- 				$('#fwdNav2').fadeOut();
- 				$('#q19area').fadeOut();
- 				//part 3 in
- 				enterPart3();
- 			}
+ 			if(direction == 'fwd'){
+	 			//update progress
+				updateProgress(questionNum);
+				
+	 			//check other > 0
+	 			if($('#pointElem5-8').val() > 0){ 
+	 				//prompt to specify other...
+	 				questionNum = 19.5;
+	 				$('#q19area').fadeOut();
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19othersInputArea').fadeIn();
+	 			}
+	 			else{
+	 				$('#fwdNav2').fadeOut();
+	 				$('#q19area').fadeOut();
+	 				//part 3 in
+	 				enterPart3();
+	 			}
+	 		}
+	 		else{
+	 			if(check18){
+	 				questionNum = 18;
+	 				$('#q19area').fadeOut();
+	 				$('#q18area').fadeIn();
+	 			}
+	 			else if(check17){
+	 				questionNum = 17;
+	 				$('#q19area').fadeOut();
+	 				$('#q17area').fadeIn();
+	 			}
+	 			else if(check16){
+	 				questionNum = 16;
+	 				$('#q19area').fadeOut();
+	 				$('#q16area').fadeIn();
+	 			}
+	 			else{
+	 				questionNum = 15;
+	 				$('#q19area').fadeOut();
+	 				$('#q15area').fadeIn();
+	 			}
+	 		}
  		}
 
  		else if(questionNum == 19.5){
-			
-			$('#q19othersInputArea').fadeOut();
-			$('#fwdNav2').fadeOut();
-			//part 3...
-			enterPart3();
+			if(direction == 'fwd'){
+				$('#q19othersInputArea').fadeOut();
+				$('#fwdNav2').fadeOut();
+				//part 3...
+				enterPart3();
+			}
+			else{
+				questionNum = 19;
+				$('#q19othersInputArea').fadeOut();
+				$('#q19area').fadeIn();
+			}
  		}
 
 
-
-	});
+	} //end nav section 2
 
 	//allow user to enter ip dbs not on list...
 	$('#otherIPDDPrompt').click(function(){
@@ -2768,86 +3278,237 @@
 		}
 	}
 
+	let check20 = false;
 
 	function enterPart3(){
 		$('#survey2area').fadeOut();
 		$('#survey3area').fadeIn();
+		$('#QNavBtns2').fadeOut();
+		$('#QNavBtns3').fadeIn();
 
 		if(responses[3] == 'Corporation' || responses[3] == 'Law Firm' || responses[3] == 'Government/Academic' ){
 			//open question 20
 			$('#q20Area').fadeIn();
+			check20 = true;
 			questionNum = 20;
 		}
 		else{
 			//open question 21
+			check20 = false;
 			$('#q21Area').fadeIn();
 			questionNum = 21;
 		}
 	}
 
 	$('#fwdNav3').click(function(){
+		navigatePart3('fwd');
+	});
+
+	$('#backNav3').click(function(){
+		navigatePart3('back');
+	});
+
+	let check22 = false;
+	let check27  = false;
+
+	//navigate thru part 3
+	function navigatePart3(direction){
 		if(questionNum == 20){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[20] = $('#q20MultiInput').val();
-			$('#q20Area').fadeOut();
-			$('#fwdNav3').fadeOut();
-			$('#q21Area').fadeIn();
-			questionNum++;
-		}
-
-		else if(questionNum == 21){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[21] = $('#q21MultiInput').val();
-			$('#q21Area').fadeOut();
-			$('#fwdNav3').fadeOut();
-
-			//fade in 22 if answer to 21 included 'search'
-			if(responses[21].includes('Search')){
-				$('#q22Area').fadeIn();
-				questionNum = 22;
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[20] = $('#q20MultiInput').val();
+				$('#q20Area').fadeOut();
+				$('#fwdNav3').fadeOut();
+				$('#q21Area').fadeIn();
+				questionNum++;
 			}
 			else{
-				//else fade in q 23
-				$('#q23Area').fadeIn();
-				questionNum = 23;
+				if(check19){
+	 				questionNum = 19;
+	 				$('#q20Area').fadeOut();
+	 				$('#survey3area').fadeOut();
+	 				$('#QNavBtns3').fadeOut();
+	 				$('#QNavBtns2').fadeIn();
+					$('#survey2area').fadeIn();
+	 				$('#q19area').fadeIn();
+	 			}
+				else if(check18){
+	 				questionNum = 18;
+	 				$('#q20Area').fadeOut();
+	 				$('#survey3area').fadeOut();
+	 				$('#QNavBtns3').fadeOut();
+	 				$('#QNavBtns2').fadeIn();
+					$('#survey2area').fadeIn();
+	 				$('#q18area').fadeIn();
+	 			}
+	 			else if(check17){
+	 				questionNum = 17;
+	 				$('#q20Area').fadeOut();
+	 				$('#survey3area').fadeOut();
+	 				$('#QNavBtns3').fadeOut();
+	 				$('#QNavBtns2').fadeIn();
+					$('#survey2area').fadeIn();
+	 				$('#q17area').fadeIn();
+	 			}
+	 			else if(check16){
+	 				questionNum = 16;
+	 				$('#q20Area').fadeOut();
+	 				$('#survey3area').fadeOut();
+					$('#survey2area').fadeIn();
+	 				$('#q16area').fadeIn();
+	 			}
+	 			else{
+	 				questionNum = 15;
+	 				$('#q20Area').fadeOut();
+	 				$('#survey3area').fadeOut();
+	 				$('#QNavBtns3').fadeOut();
+	 				$('#QNavBtns2').fadeIn();
+					$('#survey2area').fadeIn();
+	 				$('#q15area').fadeIn();
+	 			}
+			}
+		}
+		else if(questionNum == 21){
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[21] = $('#q21MultiInput').val();
+				$('#q21Area').fadeOut();
+				$('#fwdNav3').fadeOut();
+
+				//fade in 22 if answer to 21 included 'search'
+				if(responses[21].includes('Search')){
+					$('#q22Area').fadeIn();
+					questionNum = 22;
+					check22 = true;
+				}
+				else{
+					//else fade in q 23
+					$('#q23Area').fadeIn();
+					questionNum = 23;
+					check22 = false;
+				}
+			}
+			else{
+				//if q3 = corp/law/gov... back to 20
+				if(check20){
+					questionNum = 20;
+					$('#q21Area').fadeOut();
+					$('#q20Area').fadeIn();
+				}
+				else{
+					if(check19){
+		 				questionNum = 19;
+		 				$('#q21Area').fadeOut();
+		 				$('#survey3area').fadeOut();
+						$('#survey2area').fadeIn();
+		 				$('#q19area').fadeIn();
+		 			}
+					else if(check18){
+		 				questionNum = 18;
+		 				$('#q21Area').fadeOut();
+		 				$('#survey3area').fadeOut();
+						$('#survey2area').fadeIn();
+		 				$('#q18area').fadeIn();
+		 			}
+		 			else if(check17){
+		 				questionNum = 17;
+		 				$('#q21Area').fadeOut();
+		 				$('#survey3area').fadeOut();
+						$('#survey2area').fadeIn();
+		 				$('#q17area').fadeIn();
+		 			}
+		 			else if(check16){
+		 				questionNum = 16;
+		 				$('#q21Area').fadeOut();
+		 				$('#survey3area').fadeOut();
+						$('#survey2area').fadeIn();
+		 				$('#q16area').fadeIn();
+		 			}
+		 			else{
+		 				questionNum = 15;
+		 				$('#q21Area').fadeOut();
+		 				$('#survey3area').fadeOut();
+						$('#survey2area').fadeIn();
+		 				$('#q15area').fadeIn();
+		 			}
+				}
+
 			}
 		}
 
 		else if(questionNum == 22){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[22] = $('#q22MultiInput').val();
-			$('#q22Area').fadeOut();
-			$('#fwdNav3').fadeOut();
-			$('#q23Area').fadeIn();
-			questionNum ++;
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[22] = $('#q22MultiInput').val();
+				$('#q22Area').fadeOut();
+				$('#fwdNav3').fadeOut();
+				$('#q23Area').fadeIn();
+				questionNum ++;
+			}
+			else{
+				questionNum = 21;
+				$('#q22Area').fadeOut();
+				$('#q21Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 23){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[23] = $('#q23MultiInput').val();
-			$('#q23Area').fadeOut();
-			$('#fwdNav3').fadeOut();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[23] = $('#q23MultiInput').val();
+				$('#q23Area').fadeOut();
+				$('#fwdNav3').fadeOut();
 
 
-			//if answered yes... navigate to next part of question...
-			if(responses[23] == 'yes'){
-				$('#q23YesArea').fadeIn();
-				questionNum = 23.5;
+				//if answered yes... navigate to next part of question...
+				if(responses[23] == 'yes'){
+					$('#q23YesArea').fadeIn();
+					questionNum = 23.5;
+				}
+				//else....
+				else{
+					//fade in 24 if answer to q12 includes analytics
+					if(responses[21].includes('Analytics')){
+						$('#q24Area').fadeIn();
+						questionNum ++;
+					}
+					//else fade in q25
+					else{
+						$('#q25Area').fadeIn();
+						questionNum = 25;
+					}
+				}
 			}
-			//else....
 			else{
+				if(check22){
+					questionNum = 22;
+					$('#q23Area').fadeOut();
+					$('#q22Area').fadeIn();
+				}
+				else{
+					questionNum = 21;
+					$('#q23Area').fadeOut();
+					$('#q21Area').fadeIn();
+				}
+			}
+		}
+
+		else if(questionNum == 23.5){
+			if(direction == 'fwd'){ 
 				//fade in 24 if answer to q12 includes analytics
+				$('#q23YesArea').fadeOut();
+				$('#fwdNav3').fadeOut();
 				if(responses[21].includes('Analytics')){
 					$('#q24Area').fadeIn();
-					questionNum ++;
+					questionNum=24;
 				}
 				//else fade in q25
 				else{
@@ -2855,178 +3516,264 @@
 					questionNum = 25;
 				}
 			}
-		}
-
-		else if(questionNum == 23.5){
-			//fade in 24 if answer to q12 includes analytics
-			$('#q23YesArea').fadeOut();
-			$('#fwdNav3').fadeOut();
-			if(responses[21].includes('Analytics')){
-				$('#q24Area').fadeIn();
-				questionNum=24;
-			}
-			//else fade in q25
 			else{
-				$('#q25Area').fadeIn();
-				questionNum = 25;
+				questionNum = 23;
+				$('#q23YesArea').fadeOut();
+				$('#q23Area').fadeIn();
 			}
 		}
 
 		else if(questionNum == 24){
-			//update progress
-			updateProgress(questionNum);
-			
-			//responses[24] = $().val() figure that out later
-			$('#q24Area').fadeOut();
-			$('#fwdNav3').fadeOut();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				//responses[24] = $().val() figure that out later
+				$('#q24Area').fadeOut();
+				$('#fwdNav3').fadeOut();
 
 
-			//if selected > 0 for others...
-			if($('#pointElem6-9').val() > 0){
-				$('#q24othersInputArea').fadeIn();
-				questionNum = 24.5;
+				//if selected > 0 for others...
+				if($('#pointElem6-9').val() > 0){
+					$('#q24othersInputArea').fadeIn();
+					questionNum = 24.5;
+				}
+				else{
+					$('#q25Area').fadeIn();
+					questionNum = 25;
+				}
 			}
 			else{
-				$('#q25Area').fadeIn();
-				questionNum = 25;
+				questionNum = 23;
+				$('#q24Area').fadeOut();
+				$('#q23Area').fadeIn();
 			}
 		}
 
 		else if(questionNum == 24.5){
-			$('#q24othersInputArea').fadeOut();
-			$('#q25Area').fadeIn();
-			questionNum = 25;
-			$('#fwdNav3').fadeOut();
+			if(direction == 'fwd'){
+				$('#q24othersInputArea').fadeOut();
+				$('#q25Area').fadeIn();
+				questionNum = 25;
+				$('#fwdNav3').fadeOut();
+			}
+			else{
+				questionNum = 24;
+				$('#q24othersInputArea').fadeOut();
+				$('#q24Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 25){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[25] = $('#q25MultiInput').val();
-			$('#q25Area').fadeOut();
-			$('#fwdNav3').fadeOut();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[25] = $('#q25MultiInput').val();
+				$('#q25Area').fadeOut();
+				$('#fwdNav3').fadeOut();
 
 
-			//if answered 'yes'... prompt next part of question
-			if(responses[25] == 'yes'){
-				$('#q25YesArea').fadeIn();
-				questionNum = 25.5;
+				//if answered 'yes'... prompt next part of question
+				if(responses[25] == 'yes'){
+					$('#q25YesArea').fadeIn();
+					questionNum = 25.5;
+				}
+
+				//fade in q26 if answer to q3 = vendor
+				else if(responses[3] = 'Information Vendor'){
+					questionNum++;
+					$('#q26Area').fadeIn();
+				}
+				//else... q 28
+				else{
+					questionNum = 28;
+					$('#q28Area').fadeIn();
+				}
 			}
-
-			//fade in q26 if answer to q3 = vendor
-			else if(responses[3] = 'Information Vendor'){
-				questionNum++;
-				$('#q26Area').fadeIn();
-			}
-			//else... q 28
 			else{
-				questionNum = 28;
-				$('#q28Area').fadeIn();
+				questionNum = 24;
+				$('#q25Area').fadeOut();
+				$('#q24Area').fadeIn();
 			}
 		}
 
 		else if(questionNum == 25.5){
-			$('#q25YesArea').fadeOut();
-			$('#fwdNav3').fadeOut();
+			if(direction == 'fwd'){
+				$('#q25YesArea').fadeOut();
+				$('#fwdNav3').fadeOut();
 
-			//fade in q26 if answer to q3 = vendor
-			if(responses[3] = 'Information Vendor'){
-				questionNum=26;
-				$('#q26Area').fadeIn();
+				//fade in q26 if answer to q3 = vendor
+				if(responses[3] = 'Information Vendor'){
+					questionNum=26;
+					$('#q26Area').fadeIn();
+				}
+				//else... q 28
+				else{
+					questionNum = 28;
+					$('#q28Area').fadeIn();
+				}
 			}
-			//else... q 28
 			else{
-				questionNum = 28;
-				$('#q28Area').fadeIn();
+				questionNum = 25;
+				$('#q25YesArea').fadeOut();
+				$('#q25Area').fadeIn();
 			}
 		}
 
 		else if(questionNum == 26){
-			//update progress
-			updateProgress(questionNum);
-			
-			$('#q26Area').fadeOut();
-			$('#fwdNav3').fadeOut();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				$('#q26Area').fadeOut();
+				$('#fwdNav3').fadeOut();
 
-			//if more than one answer > 0... fade in 27
-			if($('#q26MultiInput').val().length+ $('#q26otherInput').val().split(',').length > 1){
-				questionNum = 27;
-				$('#q27Area').fadeIn();
-
+				//if more than one answer > 0... fade in 27
+				if($('#q26MultiInput').val().length+ $('#q26otherInput').val().split(',').length > 1){
+					questionNum = 27;
+					$('#q27Area').fadeIn();
+					check27 = true;
+				}
+				else{
+					//else (100 in single)... fade in 28
+					questionNum = 28;
+					$('#q28Area').fadeIn();
+					check27 = false;
+				}
 			}
 			else{
-				//else (100 in single)... fade in 28
-				questionNum = 28;
-				$('#q28Area').fadeIn();
+				questionNum = 25;
+				$('#q26Area').fadeOut();
+				$('#q25Area').fadeIn();
 			}
 		}
 
 		else if(questionNum == 27){
-			//update progress
-			updateProgress(questionNum);
-			
-			$('#q27Area').fadeOut();
-			$('#fwdNav3').fadeOut();
-			questionNum++;
-			$('#q28Area').fadeIn();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				$('#q27Area').fadeOut();
+				$('#fwdNav3').fadeOut();
+				questionNum++;
+				$('#q28Area').fadeIn();
+			}
+			else{
+				//if user is info vendor, back to q26
+				if(responses[3] == 'Information Vendor'){
+					questionNum = 26;
+					$('#q27Area').fadeOut();
+					$('#q26Area').fadeIn();
+				}
+				else{
+					//back to 25
+					questionNum = 25;
+					$('#q27Area').fadeOut();
+					$('#q25Area').fadeIn();
+				}
+			}
 		}
 		else if(questionNum == 28){
-			//update progress
-			updateProgress(questionNum);
-			
-			$('#q28Area').fadeOut();
-			$('#fwdNav3').fadeOut();
-			questionNum++;
-			$('#q29Area').fadeIn();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				$('#q28Area').fadeOut();
+				$('#fwdNav3').fadeOut();
+				questionNum++;
+				$('#q29Area').fadeIn();
+			}
+			else{
+				if(check27){
+					questionNum = 27;
+					$('#q28Area').fadeOut();
+					$('#q27Area').fadeIn();
+				}
+				else if(responses[3] == 'Information Vendor'){
+					questionNum = 26;
+					$('#q28Area').fadeOut();
+					$('#q26Area').fadeIn();
+				}
+				else{
+					questionNum = 25;
+					$('#q28Area').fadeOut();
+					$('#q25Area').fadeIn();
+				}
+			}
 		}
 		else if(questionNum == 29){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[29] = $('#q29MultiInput').val();
-			$('#q29Area').fadeOut();
-			$('#fwdNav3').fadeOut();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[29] = $('#q29MultiInput').val();
+				$('#q29Area').fadeOut();
+				$('#fwdNav3').fadeOut();
 
-			//if answers 'yes'...
-			if(responses[29] == 'yes'){
-				questionNum=29.5;
-				$('#q29YesArea').fadeIn();
+				//if answers 'yes'...
+				if(responses[29] == 'yes'){
+					questionNum=29.5;
+					$('#q29YesArea').fadeIn();
+				}
+				else{
+					questionNum++;
+					$('#q30Area').fadeIn();
+				}
 			}
 			else{
-				questionNum++;
+				questionNum = 28;
+				$('#q29Area').fadeOut();
+				$('#q28Area').fadeIn();
+			}
+
+		}
+
+		else if(questionNum == 29.5){
+			if(direction == 'fwd'){
+				$('#fwdNav3').fadeOut();
+				$('#q29YesArea').fadeOut();
+				$('#q30Area').fadeIn();
+				questionNum = 30;
+			}
+			else{
+				questionNum = 29;
+				$('#q29YesArea').fadeOut();
+				$('#q29Area').fadeIn();
+			}
+		}
+
+		else if(questionNum == 30){
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[30] = $('#q30MultiInput').val();
+				$('#q30Area').fadeOut();
+				$('#QNavBtns3').fadeOut();
+				$('#survey3area').fadeOut();
+				$('#QNavBtns4').fadeIn();
+				$('#survey4area').fadeIn();
+
+				//if q14 answer includes Lexis Nexis
+				if(responses[14].includes('LexisNexis / IPDD')){
+					questionNum++;
+					$('#q31Area').fadeIn();	
+				}
+				else{
+					//else end survey
+					end();
+				}
+			}
+			else{
+				questionNum = 29;
+				$('#q30Area').fadeOut();
 				$('#q30Area').fadeIn();
 			}
-		}
-		else if(questionNum == 29.5){
-			$('#fwdNav3').fadeOut();
-			$('#q29YesArea').fadeOut();
-			$('#q30Area').fadeIn();
-			questionNum = 30;
-		}
-		else if(questionNum == 30){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[30] = $('#q30MultiInput').val();
-			$('#q30Area').fadeOut();
-			$('#fwdNav3').fadeOut();
-			$('#survey3area').fadeOut();
-			$('#survey4area').fadeIn();
-
-			//if q14 answer includes Lexis Nexis
-			if(responses[14].includes('LexisNexis / IPDD')){
-				questionNum++;
-				$('#q31Area').fadeIn();	
-			}
-			else{
-				//else end survey
-				end();
-			}
 			
 
 		}
-	});
+	} //end nav part 3 
 
 
 
@@ -3056,110 +3803,185 @@
 
 	//nav btn 4 onclick... part 4 control flow
 	$('#fwdNav4').click(function(){
-		if(questionNum == 31){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[31] = $('#q31MultiInput').val();
-			questionNum++;
-			$('#q31Area').fadeOut();
-			$('#fwdNav4').fadeOut();
-			$('#q32Area').fadeIn();
-		}
-		else if(questionNum == 32){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[32] = $('#q32MultiInput').val();
-			$('#q32Area').fadeOut();
-			$('#fwdNav4').fadeOut();
+		navigatePart4('fwd');
+	});
 
-			//if q31 answer = yes... go to 33...35 ... end
-			if(responses[31] == 'yes'){
+	$('#backNav4').click(function(){
+		navigatePart4('back');
+	});
+
+	//navigate through part 4
+	function navigatePart4(direction){
+		if(questionNum == 31){
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[31] = $('#q31MultiInput').val();
 				questionNum++;
-				$('#q33Area').fadeIn();
-			}
-			//else if q31 = no and q32 = past... go to 34 ... end
-			else if(responses[31] == 'no' && responses[32] == 'past'){
-				questionNum=34;
-				$('#q34Area').fadeIn();
-			}
-			//else if q31 = no and q32 = seen... go to 36 ...37 ... 38
-			else if(responses[31] == 'no' && responses[32] == 'seen'){
-				questionNum=36;
-				$('#q36Area').fadeIn();
+				$('#fwdNav4').fadeOut();
+				$('#q32Area').fadeIn();
+				$('#q31Area').fadeOut();
 			}
 			else{
-				//end (safety catch... shouldn't be hit anyway)
-				end();
+				//back to section 3...
+				questionNum = 30;
+				$('#QNavBtns4').fadeOut();
+				$('#survey4area').fadeOut();
+				$('#survey3area').fadeIn();
+				$('#q30Area').fadeIn();
+				$('#QNavBtns3').fadeIn();
+				
+			}
+			
+		}
+		else if(questionNum == 32){
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[32] = $('#q32MultiInput').val();
+				$('#q32Area').fadeOut();
+				$('#fwdNav4').fadeOut();
+
+				//if q31 answer = yes... go to 33...35 ... end
+				if(responses[31] == 'yes'){
+					questionNum++;
+					$('#q33Area').fadeIn();
+				}
+				//else if q31 = no and q32 = past... go to 34 ... end
+				else if(responses[31] == 'no' && responses[32] == 'past'){
+					questionNum=34;
+					$('#q34Area').fadeIn();
+				}
+				//else if q31 = no and q32 = seen... go to 36 ...37 ... 38
+				else if(responses[31] == 'no' && responses[32] == 'seen'){
+					questionNum=36;
+					$('#q36Area').fadeIn();
+				}
+				else{
+					//end (safety catch... shouldn't be hit anyway)
+					end();
+				}
+			}
+			else{
+				//back to 31
+				questionNum = 31;
+				$('#q32Area').fadeOut();
+				$('#q31Area').fadeIn();
 			}
 		}
 
 		else if(questionNum == 33){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[33] = $('#q33Input').val();
-			questionNum = 35;
-			$('#q33Area').fadeOut();
-			$('#fwdNav4').fadeOut();
-			end();
-			//$('#q35Area').fadeIn();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[33] = $('#q33Input').val();
+				questionNum = 35;
+				$('#q33Area').fadeOut();
+				$('#fwdNav4').fadeOut();
+				end();
+				//$('#q35Area').fadeIn();
+			}
+			else{
+				//back to 32
+				questionNum = 32;
+				$('#q33Area').fadeOut();
+				$('#q32Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 34){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[34] = $('#q34Input').val();
-			$('#q34Area').fadeOut();
-			$('#fwdNav4').fadeOut();
-			end();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[34] = $('#q34Input').val();
+				$('#q34Area').fadeOut();
+				$('#fwdNav4').fadeOut();
+				end();
+			}
+			else{
+				//back to 32
+				questionNum = 32;
+				$('#q34Area').fadeOut();
+				$('q32Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 35){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[35] = $('#q35Input').val();
-			$('#q35Area').fadeOut();
-			$('#fwdNav4').fadeOut();
-			end();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[35] = $('#q35Input').val();
+				$('#q35Area').fadeOut();
+				$('#fwdNav4').fadeOut();
+				end();
+			}
+			else{
+				//back to 33
+				questionNum = 33;
+				$('#q35Area').fadeOut();
+				$('#q33Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 36){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[36] = $('#q36Input').val();
-			questionNum++;
-			$('#q36Area').fadeOut();
-			$('#fwdNav4').fadeOut();
-			$('#q37Area').fadeIn();
+			if(direction = 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[36] = $('#q36Input').val();
+				questionNum++;
+				$('#q36Area').fadeOut();
+				$('#fwdNav4').fadeOut();
+				$('#q37Area').fadeIn();
+			}
+			else{
+				//back to 32
+				questionNum = 32;
+				$('#q36Area').fadeOut();
+				$('#q32Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 37){
-			//update progress
-			updateProgress(questionNum);
-			
-			//responses[37] = $('#q37MultiInput').val(); figure out how to save these
-			questionNum++;
-			$('#q37Area').fadeOut();
-			$('#fwdNav4').fadeOut();
-			$('#q38Area').fadeIn();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				//responses[37] = $('#q37MultiInput').val(); figure out how to save these
+				questionNum++;
+				$('#q37Area').fadeOut();
+				$('#fwdNav4').fadeOut();
+				$('#q38Area').fadeIn();
+			}
+			else{
+				questionNum = 36;
+				$('#q37Area').fadeOut();
+				$('#q36Area').fadeIn();
+			}
 		}
 
 		else if(questionNum == 38){
-			//update progress
-			updateProgress(questionNum);
-			
-			responses[38] = $('#q38Input').val();
-			$('#q38Area').fadeOut();
-			$('#fwdNav4').fadeOut();
-			end();
+			if(direction == 'fwd'){
+				//update progress
+				updateProgress(questionNum);
+				
+				responses[38] = $('#q38Input').val();
+				$('#q38Area').fadeOut();
+				$('#fwdNav4').fadeOut();
+				end();
+			}
+			else{
+				questionNum = 37;
+				$('#q38Area').fadeOut();
+				$('#q37Area').fadeIn();
+			}
 		}
-
-	});
+	}
 
 	function end(){
 		$('#progress-fill').css('width', "100%");
